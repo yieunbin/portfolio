@@ -1,0 +1,350 @@
+/* 와이드 pc  */
+
+@keyframes glow{
+    from{text-shadow:0px 0px 5px #fff,0px 0px 5px var(--main-color);}
+    to{text-shadow:0px 0px 20px #fff,0px 0px 20px var(--main-color);}
+}
+	
+#content{ 
+
+    & section.areaIntro{
+        background:rgba(255,255,255,.9);
+        text-align: center;
+
+        & h3{
+            justify-content: center;
+        }
+
+        & .areaLogo{
+            margin: 100px 0 70px;
+
+            & ul{
+                width: 90%; margin: 0 auto;
+                display: flex; align-items: center;
+                gap: 20px;
+                justify-content: center;
+
+                & li{
+                    /* width: 25%; */
+                    & img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        & .areaswiper{
+            /* border: 1px solid red; */
+            width: 90%;
+            padding: 30px;
+            margin-bottom: 70px;
+            transition: .5s ease-out;
+
+            & .swiper-wrapper{
+
+                & .swiper-slide{
+                    width: auto;
+                    padding: 10px 25px;
+                    border: 1px solid #333;
+                    border-radius: 30px;
+                    transition: .3s ease-out;
+                    & h4{
+
+                        & a{
+                            font-size: 1.56rem;
+                            font-weight: 400;
+                        }
+                    }
+                    &:hover{
+                        /* background: var(--sub2-color);
+                        opacity: .5; */
+                        box-shadow: 0px 0px 10px var(--main-color);
+                    }
+                }
+                & .activeOn{
+                    background: var(--main-color);
+                    & h4{
+                        & a{
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+
+            & .swiper-scrollbar-drag{
+                background: var(--main-color);
+                opacity: .7;
+            }
+        }
+
+        & .areaBox{
+            margin: 0 auto;
+
+            & .areaTop{
+                margin-bottom: 50px;
+
+                & .subTitle{
+                    font-family: var(--pointFont);
+                    font-size: 2.5rem;
+                    
+                }
+                & div{
+                    width: 45%; 
+                    overflow: hidden;
+                    margin: 50px auto 30px auto;
+                        border-radius: 30px;
+                    &:hover{
+                        /* background: var(--sub2-color);
+                        opacity: .5; */
+                        box-shadow: 0px 0px 20px var(--main-color);
+                    }
+                    & img{
+                        width: 100%;
+                        transition: 2s ease-out;
+
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        
+                    }
+                }
+                & .bottomtxt{
+
+                }
+                       
+            }
+
+            & .areaBottom{
+
+                & > ul{
+                    display: flex; justify-content: center;
+                    gap: 30px;
+
+                    & > li{
+
+                        & ul{
+
+                            & li{
+                                & p{
+                                    margin-top:10px;
+                                }
+                            }
+                            & li:nth-of-type(1){
+                                font-size: 1.25rem;
+                                background: var(--main-color);
+                                color: #fff;
+                                margin-bottom: 10px;
+                                border-radius: 20px;
+                            }
+                            & li:nth-of-type(2){
+                                width: 100%;
+                                display: flex; gap: 2%;
+                                justify-content: center;
+
+                                & div{
+                                    width: 48%;
+                                    border-radius: 20px;
+
+                                    & img{
+                                        width: 100%;
+                                        border-radius: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* map */
+    & section.areaMap{
+        background: url(../images/sub2/map1back.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        isolation: isolate;
+        
+        text-align: center;
+        padding-bottom: 200px;
+
+        &::after{
+            content: '';
+            position: absolute;
+            background: white;
+            z-index: -1;
+            inset: 0;
+            opacity: 0.7;
+        }
+
+        & h3{
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+        & div{
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            & img{
+                width: 40%; height: 40%;
+                
+            }
+            & .mapList{
+                width: 40%;
+                margin-right: 20%;
+                & li{
+                    text-align: right;
+                    font-size: 1.56rem;
+                    padding: 15px;
+                    cursor: pointer;
+                    transition: .5s ease-out;
+
+                    &:hover{
+                        color: var(--main-color);
+                        margin-right: 20px;
+                        font-weight: 500;
+                    }
+                }
+                & .clickA{
+                    color: var(--main-color);
+                    margin-right: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+        
+    }
+
+
+        
+
+}
+#footerArea{
+    &::before{
+        content: ""; display: block;
+        width: 100%; height: 100%;
+        background: rgba(255,255,255,.7);
+        background-size: cover;
+        /* filter: contrast(20%); */
+        position: absolute; left: 0; top: 0px;
+    }
+}
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	#content section.areaIntro .areaBox .areaTop div{
+        width: 80%;
+        margin: 30px auto;
+    }
+    #content section.areaMap div img{
+        width: 50%; height: 50%;
+    }
+    #content section.areaMap div .mapList{
+        margin-right: 10%;
+    }
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+    #content section.areaIntro .areaswiper .swiper-wrapper .swiper-slide h4 a{
+        font-size: 1.25rem;
+    }
+    #content section.areaMap div{
+        gap: 0;
+        justify-content: space-around;
+    }
+    #content section.areaMap div .mapList{
+        width: 40%;height: 30%; margin-right: 0;
+        padding-right: 5%;
+    }
+    #content section.areaMap div .mapList li{
+        font-size: 1.25rem;;
+    }
+    
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+    #content section.areaIntro .areaswiper{
+        margin-bottom: 50px;
+    }
+    #content section.areaIntro .areaBox .areaTop .subTitle{
+        font-size: 1.88rem;
+    }
+    #content section.areaIntro .areaBox .areaBottom > ul{
+        gap: 20px;
+    }
+    #content section.areaIntro .areaBox .areaBottom > ul > li ul li:nth-of-type(1){
+        font-size: 1.1rem;
+    }
+    #content section.areaMap h3{
+        margin-bottom: 50px;
+    }
+    #content section.areaMap div{
+        flex-wrap: wrap;
+    }
+    #content section.areaMap div img{width: 55%; margin: 0 auto;}
+    #content section.areaMap div .mapList{
+        width: 80%; display: flex;
+        flex-wrap: wrap; padding-right: 0;
+        justify-content: space-around;
+        margin-top: 20px;
+        flex-direction: column;
+        
+    }
+    #content section.areaMap div .mapList li{
+        border: 2px solid var(--main-color);
+        border-radius: 30px;
+        padding: 10px 25px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    #content section.areaMap div .mapList li:hover{
+        margin-right: 0px;background: var(--sub-color);
+        color: #fff; border: 2px solid #fff;
+    }
+    #content section.areaMap div .mapList .clickA{
+        margin-right: 0px;
+    }
+    
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+    #content section.areaIntro .areaswiper .swiper-wrapper .swiper-slide{
+        padding: 10px 15px;
+    }
+	#content section.areaIntro .areaswiper .swiper-wrapper .swiper-slide h4 a{
+        font-size: 1.1rem;
+    }
+    #content section.areaIntro .areaLogo{
+        margin: 50px 0;
+    }
+    #content section.areaIntro .areaBox .areaBottom > ul > li ul li:nth-of-type(1){
+        margin-bottom: 15px;
+    }
+    #content section.areaIntro .areaBox .areaBottom > ul > li ul li:nth-of-type(2){
+        flex-wrap: wrap; gap: 15px;
+    }
+    #content section.areaIntro .areaBox .areaBottom > ul > li ul li:nth-of-type(2) div{
+        width: 100%;
+    }
+}
+
+/* 소형 모바일 */
+@media screen and (max-width:450px){
+    #content section.areaIntro .areaswiper .swiper-wrapper .swiper-slide h4 a{
+        font-size: 1rem;
+    }
+    #content section.areaIntro .areaBox .areaTop .subTitle{
+        font-size: 1.56rem;
+    }
+    #content section.areaIntro .areaBox .areaBottom > ul{
+        gap: 10px;
+    }
+    #content section.areaMap img{width: 80%;}
+}

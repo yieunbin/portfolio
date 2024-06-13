@@ -1,0 +1,53 @@
+{
+    "trList":[
+        {
+            "name":"Super Mario", "toptxt":"PLAY WILD!",
+            "text":"This is only place in the world where kids and grown-ups alike can return to the wild and play all out with Mario and Donkey Kong! The magic word is 'Play wild!'<br>Awaken your instinct to play!",
+            "ytlink":"https://www.youtube.com/embed/254bBGgNq-s?si=HX46etLRJelEvi4E",
+            "imglink":"./images/sub4/tr1.jpg"
+        },
+        {
+            "name":"Harry Potter", "toptxt":"Where magic is everywhere",
+            "text":"The Wizarding World of Harry Potter™ will reproduce the world from the Harry Potter™ stories, bringing it to life on a phenomenal scale at Universal Studios Japan.",
+            "ytlink":"https://www.youtube.com/embed/CpjqPl8zckM?si=kOwDw5naDw6ppt7k",
+            "imglink":"./images/sub4/tr2.jpg"
+        },
+        {
+            "name":"Minion Park", "toptxt":"A blast at Minion Park!",
+            "text":"The Minions have finally fulfilled their ambitions! All of humanity will be a part of the mayhem at the Minion Park!",
+            "ytlink":"https://www.youtube.com/embed/uKtheKRA7Hk?si=HFM8nEr4mIqb5xRW",
+            "imglink":"./images/sub4/tr3.jpg"
+        },
+        {
+            "name":"Harry Potter Castle", "toptxt":"Brighten Your Night",
+            "text":"Celebrate the four Hogwarts™ houses as they are brought to life in a stunning spectacle of dazzling lights and music. Watch in awe from Hogsmeade™ village as projections are cast against the majestic backdrop of Hogwarts™ castle inside The Wizarding World of Harry Potter™.",
+            "ytlink":"https://www.youtube.com/embed/cwjLhvlyL1M?si=BxBT0F1cN2IwoFYr",
+            "imglink":"./images/sub4/tr4.jpg"
+        },
+        {
+            "name":"Jurassic World", "toptxt":"FOV Front seat",
+            "text":"Immerse yourself in a jungle where dinosaurs have been brought back to life! Keep your wits about you as these ancient, reptilian beasts roam through the trees.<br>Welcome...to Jurassic Park.",
+            "ytlink":"https://www.youtube.com/embed/3yDkR_cDVlU?si=UJYwQP6r3vCabrKU",
+            "imglink":"./images/sub4/tr5.jpg"
+        },
+        {
+            "name":"Universal Islands of Adventure", "toptxt":"Universal Islands of Adventure",
+            "text":"Take a ride, multiple rides. Some will drench you. Some will just mess up your hair. Some will make your head spin (figuratively speaking). All of them will say: Every island is a new reality. This is your place to explore all the excitement Universal Orlando Resort has to offer.",
+            "ytlink":"https://www.youtube.com/embed/VrAQrEtUAe8?si=EICH83a64WVqqbzl",
+            "imglink":"./images/sub4/tr6.jpg"
+        },
+        {
+            "name":"Universal Volcano Bay", "toptxt":"Universal Volcano Bay",
+            "text":"Get pumped for your visit to Volcano Bay water theme park at Universal Orlando, where thrills and relaxation flow in perfect harmony. From water slides and winding rivers to a heart-stopping body plunge, experience the rush that is Volcano Bay",
+            "ytlink":"https://www.youtube.com/embed/4jV1Ngzbusw?si=5d4NfMSLY-0eJYu_",
+            "imglink":"./images/sub4/tr7.jpg"
+        },
+        {
+            "name":"Forbidden Journey", "toptxt":"Forbidden Journey",
+            "text":"After receiving the honor of the world’s number one ride for five consecutive years, the exhilarating experience that immerses you in the wizarding world has been upgraded! With ultra-realistic images, you can go beyond reality without 3D glasses.",
+            "ytlink":"https://www.youtube.com/embed/Ja_fjPS-S-4?si=dZsusM4MEmvFL5y4",
+            "imglink":"./images/sub4/tr8.jpg"
+        }
+    ]
+
+}

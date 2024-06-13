@@ -1,0 +1,190 @@
+@keyframes glow{
+    from{text-shadow:0px 0px 5px #fff,0px 0px 5px #614ad3;}
+    to{text-shadow:0px 0px 20px #fff,0px 0px 20px #614ad3;}
+}
+@keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 #CCC,
+                   0 2px 0 #CCC,
+                   0 3px 0 #CCC,
+                   0 4px 0 #CCC,
+                   0 5px 0 #CCC,
+                   0 6px 0 #CCC,
+                   0 7px 0 #CCC,
+                   0 8px 0 #CCC,
+                   0 9px 0 #CCC,
+                   0 50px 25px rgba(0, 0, 0, .2);
+    }
+}
+/* 와이드 pc  */
+
+#imgBG{display: block;}
+	
+#content{ 
+    width:auto; 
+    margin:0;
+    position: relative;  
+
+    & h2{
+        position: absolute; top: -500px;
+        width: 100%; text-align: center; font-size: 4em; color: #fff;
+        font-family: "Kalnia", serif;
+        text-shadow:3px 3px 20px rgba(0,0,0,.4);
+        transition: all 2.8s cubic-bezier(0.6, -.005, 0.32, 1.75);
+
+        & span{
+            position: relative;
+            /* top: 10px; */
+            display: inline-block;
+            /* animation: bounce .5s ease infinite alternate; */
+            color: #FFF;
+            /* text-shadow: 0 1px 0 #CCC,
+                        0 2px 0 #CCC,
+                        0 3px 0 #CCC,
+                        0 4px 0 #CCC,
+                        0 5px 0 #CCC,
+                        0 6px 0 transparent,
+                        0 7px 0 transparent,
+                        0 8px 0 transparent,
+                        0 9px 0 transparent,
+                        0 10px 10px rgba(0, 0, 0, .4); */
+                        opacity: 1;
+            transition: all 2s cubic-bezier(0.6, -.005, 0.32, 1.75);
+        }
+        /* & span:nth-of-type(2){animation-delay: .1s;}
+        & span:nth-of-type(3){animation-delay: .2s;}
+        & span:nth-of-type(4){animation-delay: .3s;}
+        & span:nth-of-type(5){animation-delay: .4s;}
+        & span:nth-of-type(6){animation-delay: .5s;}
+        & span:nth-of-type(7){animation-delay: .6s;}
+        & span:nth-of-type(8){animation-delay: .7s;} */
+    }
+    & .hide{
+        & span{
+            opacity: 0;
+        }
+        & span:nth-child(1) {
+            transform: translateX(150px) translateY(-170px); 
+        }
+        & span:nth-child(2) {
+            transform: translateX(-210px) translateY(170px); 
+        }
+        & span:nth-child(3) {
+            transform: translateX(20px) translateY(-100px); 
+        }
+        & span:nth-child(4) {
+            transform: translateX(-100px) translateY(-20px); 
+        }
+        & span:nth-child(5) {
+            transform: translateX(-70px) translateY(-200px); 
+        }
+        & span:nth-child(6) {
+            transform: translateX(200px) translateY(70px); 
+        }
+        & span:nth-child(7) {
+            transform: translateX(30px) translateY(200px); 
+        }
+        & span:nth-child(8) {
+            transform: translateX(30px) translateY(-100px); 
+        }
+        
+    }
+
+}
+    
+
+    & section{
+        padding: 100px;
+        position: relative;
+
+        & h3{
+            font-family: "Kalnia", serif;
+            font-size: 3.75rem;
+            font-weight: 400;
+            display: flex;
+            align-items: flex-end;
+            height: auto;
+            margin-bottom: 30px;
+
+            & span{
+                display: block;
+            }
+            & span:nth-of-type(1){
+                
+                font-weight: 600;
+                color: #01C4FB;
+                font-size: 5.63rem;
+            }
+            & span:nth-of-type(2){
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	#content section{
+        padding: 100px 50px;
+    }
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+    #content section{
+        padding: 50px 30px;
+    }
+	#content section h3{
+        font-size: 3.13rem;
+        margin-bottom: 30px;
+    }
+	#content section h3 span:nth-of-type(1){
+        font-size: 5rem;
+    }
+
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+	#content section h3{
+        font-size: 2.5rem;
+    }
+    #content section h3 span:nth-of-type(1){
+        font-size: 4.38rem;
+    }
+    #content section > p{
+        margin-bottom: 50px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+	html{font-size: 14px;}
+    #content section h3{
+        font-size: 2.14rem;
+    }
+    #content section h3 span:nth-of-type(1){
+        font-size: 3.75rem;
+    }
+    #content section > p{
+        margin-bottom: 50px;
+    }
+
+}
+
+/* 소형 모바일 */
+@media screen and (max-width:400px){
+    #content section{
+        padding: 30px 10px;
+    }
+    #content section h3{
+        font-size: 1.43rem;
+    }
+    #content section h3 span:nth-of-type(1){
+        font-size: 2.86rem;
+    }
+
+}
