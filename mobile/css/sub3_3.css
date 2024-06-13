@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+#content .content_area > div:nth-of-type(1){
+    display: flex; gap: 20px;
+    margin-bottom: 50px; padding: 0 10px; 
+    box-sizing: border-box;
+}
+#content .content_area > div:nth-of-type(1) p{
+    font-size: 1.43rem; font-weight: 500;
+}
+#content .content_area > div:nth-of-type(1) p:nth-of-type(2){
+    color: #666; font-weight: 400;
+}
+
+/* tab1 */
+#content .content_area .tabcontent{padding: 0 10px;
+    box-sizing: border-box;margin-bottom: 100px;}
+#content .content_area .tabcontent > div{
+    margin-bottom: 50px;
+}
+#content .content_area .tabcontent h3{
+    font-size: 1.43rem; margin-bottom: 10px;
+}
+#content .content_area .tabcontent > p{
+    text-align: justify; margin-bottom: 50px;
+}
+/* poolmap */
+#content .content_area .tabcontent .poolmap{position: relative;}
+#content .content_area .tabcontent .poolmap img:nth-of-type(1){
+    width: 100%;
+}
+#content .content_area .tabcontent .poolmap .pin{
+    width: 7%; position: absolute; text-align: center;}
+    #content .content_area .tabcontent .poolmap .pin span{font-size: .9rem;}
+#content .content_area .tabcontent .poolmap .pinA{
+    left:20%; top:43%;
+}
+#content .content_area .tabcontent .poolmap .pinB{
+    left:23%; top: 17%;
+}
+#content .content_area .tabcontent .poolmap .pinC{
+    left: 1%; top: 48%;
+}
+#content .content_area .tabcontent .poolmap .pinD{
+    right: 30%; top: 50%;
+}
+#content .content_area .tabcontent .poolmap .pinE{
+    left: 1%; top: 5%;
+}
+#content .content_area .tabcontent .poolmap .pinF{
+    left: 38%; top: -7%;
+}
+#content .content_area .tabcontent .poolmap .pinG_1{
+    right: 30%; top: -7%;
+}
+#content .content_area .tabcontent .poolmap .pinG_2{
+    right: 30%; top: 20%;
+}
+#content .content_area .tabcontent .poolmap .pinH_1{
+    right: 12%; top: -7%;
+}
+#content .content_area .tabcontent .poolmap .pinH_2{
+    right: 1%; top: -7%;
+}
+#content .content_area .tabcontent .poolmap .pinI{
+    left: 44%; bottom: 6%;
+}
+#content .content_area .tabcontent .poolmap .pinJ{
+    left: 46%; top: 10%; 
+}
+#content .content_area .tabcontent .poolmap .pinK_1{
+    left: 1%; top: 30%;
+}
+#content .content_area .tabcontent .poolmap .pinK_2{
+    left: 15%; top: 30%;
+}
+#content .content_area .tabcontent .poolmap .pinL{
+    left: 35%; top: 30%;
+}
+
+#content .content_area .tabcontent .poolpoint{}
+#content .content_area .tabcontent .poolpoint > ul{
+    display: flex;
+}
+#content .content_area .tabcontent .poolpoint > ul > li{
+    width: 50%;
+}
+#content .content_area .tabcontent .poolpoint span, #content .content_area .tabcontent .poolpoint p{
+    font-size: 1.1rem;
+}
+#content .content_area .tabcontent .poolpoint span{
+    text-transform: uppercase;
+    display: block; 
+    background: #333; color: #fff;
+    width: 30px; height: 30px;
+    border-radius: 100%;text-align: center;
+    line-height: 2rem;
+}
+#content .content_area .tabcontent .poolpoint > ul > li:nth-of-type(2) span{
+    background: #B0744D;
+}
+#content .content_area .tabcontent .poolpoint > ul li{
+    margin-bottom: 10px;
+}
+#content .content_area .tabcontent .poolpoint > ul li ul{}
+#content .content_area .tabcontent .poolpoint > ul li ul li{
+    display: flex; gap: 10px;
+}
+
+/* 메인풀 */
+#content .content_area .tabcontent .mainpool{margin-bottom: 100px;}
+#content .content_area .mainpool > div{
+    margin-bottom: 25px;
+    box-shadow: -1px 1px 5px rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 25px;
+}
+#content .content_area .mainpool .topbox{
+    position: relative; width: 100%;
+}
+#content .content_area .mainpool .topbox img{
+    width: 100%;
+    border-radius: 15px;
+}
+#content .content_area .mainpool .topbox p{
+    font-size: 1.8rem;
+    color: #fff;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 5px;
+}
+#content .content_area .mainpool div ul li{
+    margin: 10px 0;
+}
+#content .content_area .mainpool div ul li p:nth-of-type(2){
+    color: #666;
+}
+
+/* 카바나 */
+#content .content_area .tabcontent .addfac{}
+#content .content_area .tabcontent .addfac > p{
+    font-family: "Lora", serif;
+    font-size: 1.79rem;
+    font-weight: 500;
+}
+#content .content_area .tabcontent .addfac .add_tabmenu{
+    display: flex; margin: 10px 0 15px 0;
+    border-bottom: 1px solid #c8c8c8;
+}
+#content .content_area .tabcontent .addfac .add_tabmenu li{
+    width: 33.33%;
+    font-size: 1.21rem;
+    text-align: center; cursor: pointer;
+    margin-bottom: 0;
+}
+#content .content_area .tabcontent .addfac .add_tabmenu li:nth-of-type(1){
+    border-bottom: 2px solid #B0744D;
+}
+#content .content_area .tabcontent .addfac .add_tabmenu li a{
+    padding: 10px; box-sizing: border-box;
+}
+
+#content .content_area .tabcontent .addfac .addcontent{}
+#content .content_area .tabcontent .addfac .addcontent ul{
+    margin: 15px 0;
+}
+#content .content_area .tabcontent .addfac .addcontent ul li{
+    display: flex; gap: 15px;
+}
+#content .content_area .tabcontent .addfac .addcontent ul li p{
+    margin-bottom: 5px;
+}
+#content .content_area .tabcontent .addfac .addcontent img{
+    width: 100%;
+}
+
+
+/* tab2 */
+#content .content_area .tabcontent .poolinfo{}
+#content .content_area .tabcontent .poolinfo h4{
+    font-size: 1.43rem; text-align: left;
+    margin-bottom: 10px; font-weight: 400;
+}
+#content .content_area .tabcontent .poolinfo > div{
+    overflow-x: scroll;
+}
+#content .content_area .tabcontent table{
+    width: 900px;
+    text-align: center; line-height: 1.5rem;
+    border: 1px solid #666;
+    border-top: 2px solid #B0744D;
+    /* font-size: 1.11rem; */
+}
+#content .content_area .tabcontent table th, #content .content_area .tabcontent table td{
+    padding: 10px 0; border: 1px solid #666;
+}
+#content .content_area .tabcontent table th[scope="row"],
+#content .content_area .tabcontent table thead tr:first-child th:first-child{
+    position: -webkit-sticky; 
+    position: sticky; 
+    left: 0;
+    
+}
+#content .content_area .tabcontent .poolinfo table th[scope="row"]::after,
+#content .content_area .tabcontent .poolinfo table thead tr:first-child th:first-child::after {
+    content: ""; display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: .5px; height: auto;
+    background-color: #666;
+}
+#content .content_area .tabcontent .poolinfo table th[scope="row"]::before,
+#content .content_area .tabcontent .poolinfo table thead tr:first-child th:first-child::before{
+    content: ""; display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    bottom: 0;
+    width: .5px; height: auto;
+    background-color: #666;
+}
+/* #content .content_area .tabcontent table td:first-child{
+    position: -webkit-sticky; 
+    position: sticky; 
+    left: 0;
+} */
+#content .content_area .tabcontent thead{}
+#content .content_area .tabcontent thead tr{border: 1px solid #666;}
+#content .content_area .tabcontent thead tr:first-child th{
+    background: #F1EAE2; font-weight: 400;
+}
+#content .content_area .tabcontent thead tr:nth-of-type(2) th{
+    background: #FFF8EF; font-weight: 400;
+}
+#content .content_area .tabcontent tbody{}
+#content .content_area .tabcontent tbody th{
+    background: #F1EAE2; font-weight: 400;
+    border: 1px solid #666;
+}
+#content .content_area .tabcontent tbody tr{border: 1px solid #666;}
+#content .content_area .tabcontent tbody tr td{
+    border: 1px solid #666;
+}
+#content .content_area .tabcontent tbody span{font-size: 1rem;}
+
+#content .content_area .tabcontent table + p{
+    font-size: 1rem; margin-bottom: 40px;
+}
+
+#content .content_area .tabcontent ul{margin-top: 20px;}
+#content .content_area .tabcontent ul li{
+    font-size: 1rem; margin-bottom: 10px;
+}
+#content .content_area .tabcontent ul li:last-child{margin-bottom: 0;}
+
+#content .content_area .tabcontent .cavana table{width: 100%;}
+#content .content_area .tabcontent .cavana table tr th:first-child{
+    width: 30%;
+}
+#content .content_area .tabcontent .cavana h4{
+    font-size: 1.43rem; text-align: left;
+    font-weight: 400;
+}
+#content .content_area .tabcontent .cavana p{
+    margin: 10px 0;
+}
+#content .content_area .tabcontent .check img{
+    
+}
+

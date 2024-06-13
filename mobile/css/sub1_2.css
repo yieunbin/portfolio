@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+#content > div{margin: 50px 0;}
+
+#content .top_year{text-align: center;}
+#content .top_year .awardsnav{margin-top: 20px;}
+#content .top_year .awardsnav ul{
+    display: flex;  justify-content: center; gap: 30px;
+}
+#content .top_year .awardsnav ul li{}
+#content .top_year .awardsnav ul li h3{
+    font-size: 1.7rem; font-weight: 700; 
+}
+
+#content .side_btn{position: absolute; z-index: 10;
+    display: none;
+}
+#content .side_btn span{
+    background: #e4e4e4;
+    border-radius: 15px 0 0 15px;
+    display: inline-block;
+    width: 50px;
+    transition: .2s;
+}
+#content .side_btn span:nth-of-type(1){
+    position: fixed; right: -15px; top: 200px;
+}
+#content .side_btn span:nth-of-type(2){
+    position: fixed; right: 0; top: 275px;
+}
+#content .side_btn span a{
+    writing-mode: vertical-rl;
+    text-orientation:upright;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+
+#content .aw_list{position: relative;}
+#content .aw_list::before{
+    content: ""; display: block; width: 1px; height: 102%;
+    position: absolute; left: 4%; top: -15px;
+    border-left: 1px dashed #999;
+}
+#content .aw_list ul{
+    padding-left: 4%;
+}
+#content .aw_list > ul > li{position: relative;}
+#content .aw_list ul .yearList{
+    margin-bottom: 50px;
+}
+#content .aw_list ul .yearList:last-child{
+    margin-bottom: 100px;
+}
+#content .aw_list ul .yearList li{
+    margin-bottom: 10px;
+}
+#content .aw_list ul .yearList:nth-of-type(1) li:nth-of-type(3){align-items: flex-end;}
+#content .aw_list ul .yearList li:not(:first-child){
+    display: flex; gap: 15px; align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+}
+#content .aw_list ul .yearList > li:nth-of-type(1){
+    font-size: 1.6rem; font-weight: 500;
+}
+#content .aw_list ul .yearList li p:nth-of-type(2){color: #999;}
+:is(.y2024, .y2023, .y2022, .y2021, .y2020)::before{
+    content: ""; display: block; width: 20px; height: 20px;
+    background: #B0744D; position: absolute; left: -10px; top: 7px;
+    border-radius: 100px;
+}
+:is(.y2019, .y2018, .y2017)::before{
+    content: ""; display: block; width: 20px; height: 20px;
+    background: #E2B278; position: absolute; left: -10px; top: 7px;
+    border-radius: 100px;
+}
+
+
+/* 2024 */
+#content .aw_list ul li .y2024 img:nth-of-type(2){
+    width: 143px; height: 44px;
+}
+
+/* 2017 */
+#content .aw_list ul li .y2017 li img:nth-of-type(2){
+    width: 86px; height: 87px;
+}
+
+

@@ -1,0 +1,63 @@
+
+
+body {
+    color:#333;
+    background-color: #eee; font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+h1 a{margin: 50px auto 0; display: block; width: 250px; height: 80px; text-indent: -9999px; overflow: hidden;
+    background: url(http://bbeunbin.mycafe24.com/common/images/logo_maincol.svg) center no-repeat;}
+
+#content{
+    width: 85%;
+    margin: 50px auto 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px; 
+    font-weight: 500;
+    
+}
+#content h2{font-size: 1.5em;}
+#content p{color: #999; font-weight: 400; font-weight: .9em;
+margin-bottom: 50px;}
+/* #content form{ width: 90%;} */
+#content form label{font-size: .9em; display: block; margin-bottom: 5px;}
+#content form input{
+    border: 1px solid #ddd; height: 50px; border-radius: 7px; 
+    margin:0 auto 15px auto; 
+    width: 96%;
+    padding-left: 20px; 
+}
+#content form input::placeholder{font-family: 'Noto Sans KR', sans-serif; color: #ddd;}
+
+#content form input[type=submit]{
+    margin: 20px auto 0 auto; 
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 1em; 
+    border: 0; 
+    background: #B0744D; 
+    color: #fff; font-weight: 400; 
+    height: 60px; cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+#content form input:focus{outline-color: #B0744D;}
+
+#content div:nth-of-type(1){
+    text-align: center; margin: 10px 0 20px 0;
+}
+#content div:nth-of-type(1) a{font-weight: 400; color: #999; display: inline;}
+#content div:nth-of-type(1) a:last-child{
+    margin-left: 10px; 
+    position: relative;
+}
+#content div:nth-of-type(1) a:last-child::before{content: ''; display: block; position: absolute;
+    width: 1px; height: 50%; background: #999; left: -8px; top: 7px;}
+#content div:nth-of-type(2){
+    text-align: center;
+}
+#content div:nth-of-type(2) span{color: #666;}
+#content div:nth-of-type(2) a{
+    display: inline; color: #B0744D;}

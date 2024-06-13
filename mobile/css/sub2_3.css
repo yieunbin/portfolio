@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+#content .content_area > div{margin: 50px 0;}
+#content .content_area .roomcontent{padding-bottom: 0;}
+
+#content .content_area .swiper1{
+    width: 100%;
+}
+#content .content_area .swiper1 img{width: 100%;}
+#content .content_area .swiper1 .swiper-pagination-bullet-active{
+    background: #ffffff7e;
+}
+#content .content_area .suite_swiper{
+    width: 100%;
+    height: 300px;
+    margin: 50px 0 20px 0;
+}
+#content .content_area .suite_swiper .swiper-container{
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #content .content_area .suite_swiper .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  #content .content_area .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+  #content .content_area .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  #content .content_area .gallery-thumbs .swiper-slide {
+    width: 33.33%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  #content .content_area .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+#content .content_area .midcon{
+    position: relative;
+    text-align: right;
+    margin-top: 20px;
+}
+#content .content_area .midcon p{
+    /* position: absolute; left: 0; top: 0; */
+    width: 90%;
+    padding: 10px;
+    /* background: #fff; */
+    text-align: justify;
+    margin-bottom: 20px;
+}
+#content .content_area .midcon img{
+    width: 80%; height: 216px;
+}
+
+#content .content_area .suiteSet .swiper2{margin: 0 auto;}
+#content .content_area .suiteSet > p{
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin:100px 0 25px 0;
+}
+
+#content .content_area .swiper2 .swiper-wrapper{
+    /* justify-content: center; */
+}
+#content .content_area .swiper2 img{
+    width: 85%;
+    border-radius: 15px;
+}
+#content .content_area .swiper2 .swiper-slide{
+    text-align: center;
+}
+#content .content_area .swiper2 .swiper-slide p{
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    position: relative; left: 0; top: -20px;
+    font-size: 1.1rem;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow:0px 1px 5px 1px rgba(0,0,0,.3);
+}

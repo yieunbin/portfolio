@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name = "format-detection" content = "telephone=no">
+<title>회사소개-오시는길</title>
+<link rel="shortcut icon" type="image/x-icon"  href="./favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="./app_icon.png">
+<link rel="apple-touch-startup-image" href="./startup.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link rel="stylesheet" href="./css/swiper.min.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/subcommon.css">
+<link rel="stylesheet" href="./css/sub1_3.css">
+<link rel="stylesheet" href="./css/aos.css">
+<!-- <link rel="stylesheet" href="./js/package/css/swiper.min.css"> -->
+<style>
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    #headerArea h1 a{background: url("./images/logox2.png") no-repeat center;
+        background-size:105px 33px; }
+    }
+</style>
+
+<script src="./js/prefixfree.min.js"></script>
+<script src="https://kit.fontawesome.com/58aa1de25a.js" crossorigin="anonymous"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=128f475644067f8d5d0ff6a2d169221e"></script>
+<script src="./js/map.js"></script>
+<script>
+    // <![CDATA[
+    try {
+    window.addEventListener('load', function(){
+        setTimeout(scrollTo, 0, 0, 1); 
+    }, false);
+    } 
+    catch(e) {}
+    // ]]>
+</script>
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#content">본문바로가기</a>
+        <a href="#gnb">네비게이션바로가기</a>
+    </div>
+    <div id="wrap">
+        <!-- 헤 더 -->
+        <header id="headerArea"> 
+            <div class="header_top"> 
+                <h1><a href="./index.html">네스트호텔</a></h1>
+                <a href="#" class="menu_ham">
+                    <span>메뉴열기</span>
+                </a>
+            </div>      
+            <nav id="gnb">
+                <h2 class="hidden">글로벌네비게이션영역</h2>
+                <img src="./images/logo_bw.svg" alt="">
+                <ul class="mainMenu">  
+                    <li class="depth1">
+                        <h3><a href="#">ABOUT US</a><i class="fa-solid fa-chevron-down"></i></h3>
+                        <ul>
+                            <li><a href="./sub1_1.html">회사소개</a></li>
+                            <li><a href="./sub1_2.html">Nest Awards</a></li>
+                            <li><a href="./sub1_3.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1"><h3><a href="#">ROOM</a><i class="fa-solid fa-chevron-down"></i></h3>
+                        <ul>
+                            <li><a href="./sub2_1.html">스탠다드</a></li>
+                            <li><a href="./sub2_2.html">디럭스</a></li>
+                            <li><a href="./sub2_3.html">스위트</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1"><h3><a href="#">FACILITY</a><i class="fa-solid fa-chevron-down"></i></h3>
+                        <ul>
+                            <li><a href="./sub3_1.html">플라츠 레스토랑</a></li>
+                            <li><a href="./sub3_2.html">네스트델리</a></li>
+                            <li><a href="./sub3_3.html">인피니티 풀</a></li>
+                            <li><a href="./sub3_4.html">연 회</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1">
+                        <h3><a href="#">SPECIAL OFFER</a><i class="fa-solid fa-chevron-down"></i></h3>
+                        <ul>
+                            <li><a href="./sub4_1.html">이벤트</a></li>
+                            <li><a href="./sub4_2.html">멤버십</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="gnb_login">
+                    <p><a href="./login/login.html">로그인</a></p>
+                    <p><a href="./member/member_check.html">회원가입</a></p>
+                </div>
+            </nav>
+        </header>  
+
+        <!-- 비주얼 -->
+        <div class="visual">
+            <img src="./images/sub1/content1/visual1.jpg" alt="">
+            <span>ABOUT US</span>
+        </div>
+        <div class="sub_menu">
+            <a class="arrow" href="#"><span>오시는 길</span>
+            <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <ul class="aList">
+                <li><a href="./sub1_1.html">Brand Story</a></li>
+                <li><a href="./sub1_2.html">Nest Awards</a></li>
+            </ul>
+        </div>
+
+        <article id="content">
+            <div class="title_area">
+                <h2>오시는 길</h2>
+                <p>네스트호텔을 편히 찾아오실 수 있도록 안내해 드립니다.</p>
+                <span>&diams;</span>
+            </div>
+
+            <div class="contop">
+                <ul>
+                    <li>
+                        <p>LOCATION</p>
+                        <p>인천광역시 중구 영종해안남로 19-5 (운서동 2877)</p>
+                    </li>
+                    <li>
+                        <p>INQUIRY</p>
+                        <p>TEL 032 - 743 - 9000</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="map_api">
+                <div id="map"></div>
+            </div>
+
+            <!-- 공항셔틀 이용시 -->
+            <div class="airport">
+                <h3><i class="fa-solid fa-plane-departure"></i> 인천공항 무료셔틀 이용시</h3>
+                <ul>
+                    <li>
+                        <p>- 인천국제공항 제1여객터미널(1층 14C게이트) &#x2194; 네스트호텔</p>
+                        <ul>
+                            <li>
+                                <p>호텔 &#x003E; 공항</p>
+                                <p>첫차 06:00 - 막차 22:30</p>
+                            </li>
+                            <li>
+                                <p>공항 &#x003E; 호텔</p>
+                                <p>첫차 06:15 - 막차 22:45 (10~15분 소요)</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>- 인천국제공항 제2여객터미널(1층 6A게이트) ↔ 네스트호텔</p>
+                        <ul>
+                            <li>
+                                <p>호텔 &#x003E; 공항</p>
+                                <p>첫차 07:05 - 막차 21:05</p>
+                            </li>
+                            <li>
+                                <p>공항 &#x003E; 호텔</p>
+                                <p>첫차 07:30 - 막차 21:30 (15~20분 소요)</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <span class="bus_btn">무료 셔틀 시간표 보기</span>
+            </div>
+            <div class="modal_box"></div>
+            <div class="popup">
+                <span class="close_btn">닫 기</span>
+                <div>
+                    <p>인천공항 (제 1여객터미널) - 호텔 무료 셔틀 안내︎</p>
+                    <p>&#x2776; 인천 국제 공항 여객터미널 1층 14번 GATE 앞 &lt;14C&gt;셔틀버스 정류장에서 탑승</p>
+                    <p>(인천공항에서 호텔까지 <span>약 10~15분 소요</span>)</p>
+                    <p>&#x2777; 네스트호텔 로비 앞 하차</p>
+                </div>
+
+                <div class="table_box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">인천공항 출발시간</th>
+                                <th scope="col">네스트호텔 도착시간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AM 06:15</td>
+                                <td>AM 06:30</td>
+                            </tr>
+                            <tr>
+                                <td>AM 07:00</td>
+                                <td>AM 07:15</td>
+                            </tr>
+                            <tr>
+                                <td>AM 07:45</td>
+                                <td>AM 08:00</td>
+                            </tr>
+                            <tr>
+                                <td>AM 08:30</td>
+                                <td>AM 08:45</td>
+                            </tr>
+                            <tr>
+                                <td>AM 09:15</td>
+                                <td>AM 09:30</td>
+                            </tr>
+                            <tr>
+                                <td>AM 10:00</td>
+                                <td>AM 10:15</td>
+                            </tr>
+                            <tr>
+                                <td>AM 10:45</td>
+                                <td>AM 11:00</td>
+                            </tr>
+                            <tr>
+                                <td>AM 11:30</td>
+                                <td>AM 11:45</td>
+                            </tr>
+                            <tr>
+                                <td>PM 12:15</td>
+                                <td>PM 12:30</td>
+                            </tr>
+                            <tr>
+                                <td>PM 13:00</td>
+                                <td>PM 13:15</td>
+                            </tr>
+                            <tr>
+                                <td>PM 13:45</td>
+                                <td>PM 14:00</td>
+                            </tr>
+                            <tr>
+                                <td>PM 14:30</td>
+                                <td>PM 14:45</td>
+                            </tr>
+                            <tr>
+                                <td>PM 15:15</td>
+                                <td>PM 15:30</td>
+                            </tr>
+                            <tr>
+                                <td>PM 16:00</td>
+                                <td>PM 16:15</td>
+                            </tr>
+                            <tr>
+                                <td>PM 16:45</td>
+                                <td>PM 17:00</td>
+                            </tr>
+                            <tr>
+                                <td>PM 17:30</td>
+                                <td>PM 17:45</td>
+                            </tr>
+                            <tr>
+                                <td>PM 18:25</td>
+                                <td>PM 18:40</td>
+                            </tr>
+                            <tr>
+                                <td>PM 19:00</td>
+                                <td>PM 19:15</td>
+                            </tr>
+                            <tr>
+                                <td>PM 19:45</td>
+                                <td>PM 20:00</td>
+                            </tr>
+                            <tr>
+                                <td>PM 20:30</td>
+                                <td>PM 20:45</td>
+                            </tr>
+                            <tr>
+                                <td>PM 21:15</td>
+                                <td>PM 21:30</td>
+                            </tr>
+                            <tr>
+                                <td>PM 22:00</td>
+                                <td>PM 22:15</td>
+                            </tr>
+                            <tr>
+                                <td>PM 22:45</td>
+                                <td>PM 23:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 대중교통 이용시 -->
+            <div class="bus">
+                <h3><i class="fa-solid fa-bus-simple"></i> 대중교통 이용시</h3>
+                <p>무의도입구 정류장 하차</p>
+                <ul>
+                    <li>
+                        <ul>
+                            <li>- 좌석 111</li>
+                            <li>강인여객 &#x003E; 왕산차고지 (배차 간격 15분)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>- 좌석 306</li>
+                            <li>강인여객 &#x003E; 왕산차고지 (배차 간격 22분)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>- 지선 6-1(중구)</li>
+                            <li>전소 &#x003E; 하나개해수욕장 (배차 간격 180~200분)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>- 간선 222B</li>
+                            <li>인천국제공항 &#x003E; 마시란해변(전주집)<br>
+                                (배차 간격 평일 2회, 토요일 2회, 일요일 2회)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>- 마을 무의1</li>
+                            <li>무의바다누리길 &#x003E; 용유역 (배차 간격 30분 ~ 40분)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>- 중구 2-1</li>
+                            <li>인천공항T1(3층 7번) &#x003E; 용유동행정복지센터(배차 간격 60분)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="car">
+                <h3><i class="fa-solid fa-car"></i> 자가용 이용시</h3>
+                <p>인천공항고속도로 용유도~무의도 방향 진출 후 영종해안남로를 따라 약 5km 주행 후경정훈련원 방면으로 진입하시면 네스트호텔에 도착합니다.</p>
+            </div>
+
+        </article>
+
+        <!-- 푸 터 -->
+        <footer id="footerArea">
+            <div class="footer_container">
+                <a class="move_top" href="#" id="move_top">
+                    <div class="element"><span>TOP</span></div></a>
+                <img src="./images/logox2.svg" alt="네스트호텔 하단 로고" class="bottom_logo">
+
+                <div class="footer_info">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_bottom">
+                    <address>
+                        <span>네스트(주)</span>
+                        <span>인천광역시 중구 영동해안남로 19-5</span><br>
+                        <span>대표이사  김영재,이종화</span>
+                        <span>T. 032 743 9000</span>
+                        <span>이메일 info@nesthotel.co.kr</span><br>
+                    </address>
+                    <p class="copy">&copy;2024 by nest hotel Co., LTd.</p>
+                </div>
+                
+                <div class="family">
+                    <a class="arrow" href="#"><span>FAMILY SITES</span>
+                    <i class="fa-solid fa-chevron-up"></i>
+                    </a>
+                    <ul class="aList">
+                        <li><a href="https://www.designhotels.com/" target="_blank" title="디자인호텔스 사이트 새창에 열림">디자인호텔스</a></li>
+                        <li><a href="https://lrl.kr/kkgl" target="_blank" title="아고다 예약사이트 새창에 열림">아고다 예약하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- wrap end -->
+    
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/gnb.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/sub1_1.js"></script>
+    
+    <script>
+        // 스와이퍼
+    </script>
+    <script>
+        AOS.init({
+          easing: 'ease-in-out-sine'
+        });
+      </script>
+</body>
+</html>
+
+

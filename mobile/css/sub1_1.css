@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+#content > div{margin: 50px 0;}
+#content .contop{padding: 0 10px;}
+#content .contop p{
+    text-align: center;
+    line-height: 1.4rem;
+}
+#content .contop > p:nth-of-type(1){
+    font-size: 1.5rem; font-weight: 500;
+}
+#content .contop > p:nth-of-type(2){
+    color: #B0744D;
+    margin: 10px 0 20px 0;
+    font-size: 1.1rem;
+}
+#content .contop div{
+    width: 100%;text-align: justify;
+}
+#content .contop div p:nth-of-type(2){
+    margin: 20px 0;
+}
+
+#content .img_fixed{position: relative; width: 100%; height: 200px;}
+#content .img_wrap{
+    clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#content .imgbox{
+    width: 100%; height: 100%;
+    background: url(../images/sub1/content1/content1_bottomimg01.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 하단 컨텐츠 */
+#content .leftcon{ padding: 0 10px 50px 10px; position: relative;}
+#content .leftcon div{
+    width: 80%; text-align: justify;
+}
+#content .leftcon > div > p:nth-of-type(1){
+    font-size: 2rem;
+}
+#content .leftcon > div > p:nth-of-type(2){
+    color: #B0744D; font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+
+}
+#content .leftcon div div{
+    padding: 20px;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px) contrast(120%);
+    box-shadow: 0px 1px 10px 1px rgba(0,0,0,.1);
+}
+#content .leftcon div div p:nth-of-type(2){
+    margin: 20px 0;
+}
+#content .leftcon img{
+    position: absolute; right: 0; top: 50px;
+    z-index: -10;
+    width: 50%; height: 430px;
+    object-fit: cover; object-position: center;
+}
+
+#content .rightcon{
+    margin-top: 75px; padding: 0 10px 0 0;
+    position: relative; width: 100%;
+}
+#content .rightcon > div{
+    text-align: right; width: 80%;
+    position: absolute; right: 0; top: 0;
+    padding-right: 20px;
+}
+#content .rightcon img{
+    z-index: -10;
+    width: 50%; height: 430px;
+    object-fit: cover; object-position: center;
+    position: relative; right: 0; top: 50px;
+}
+#content .rightcon > div > p:nth-of-type(1){
+    font-size: 2rem; 
+}
+#content .rightcon > div > p:nth-of-type(2){
+    color: #B0744D; font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+}
+#content .rightcon div div{
+    padding: 20px;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px) contrast(120%);
+    box-shadow: 0px 1px 10px 1px rgba(0,0,0,.1);
+}
+
+
+/* 텍스트마스크 */
+#content .txtmask{
+    background-image: url("../images/sub1/content1/content_bottomimg03.jpg");
+    background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	background-clip: text;
+	color: transparent;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: 100px auto 50px auto; text-align: center;
+    width: 95%;
+}
+#content .hotelsmember{
+    text-align: center; padding: 0 10px; padding: 50px 10px 100px 10px;
+    background: url(../images/sub1/content1/hotels_backimg.jpg) center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+    position: relative;
+    z-index: -10;
+    color: #fff;
+}
+#content .hotelsmember::before{
+    content: ""; display: block; width: 100%; height: 100%;
+    position: absolute; left: 0; top: 0;
+    backdrop-filter: brightness(20%);
+    z-index: -1;
+}
+#content .hotelsmember img{width: 151px; height: 151px;}
+#content .hotelsmember > p:nth-of-type(1){
+    font-size: 1.5rem; 
+    margin: 10px 0 5px 0;
+}
+#content .hotelsmember > p:nth-of-type(2){
+    font-size: 1.1rem; margin-bottom: 10px;
+}
+#content .hotelsmember div{
+    text-align: justify;
+}
+#content .hotelsmember div p:nth-of-type(1){
+    margin-bottom: 60px; position: relative;
+}
+#content .hotelsmember div p:nth-of-type(1)::before{
+    content: ""; display: block;
+    width: 75%; height: 1px; position: absolute; left: 50%; bottom: -30px;
+    transform: translateX(-50%);
+    background: #fff;
+}
+

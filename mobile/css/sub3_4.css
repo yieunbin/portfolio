@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+#content .content_area .swiper1 img{
+    width: 100%;
+}
+/* #content .content_area .swiper1 .swiper-pagination-progressbar{
+    position: absolute !important;left: 0 !important
+    ; bottom: 0 !important; 
+} */
+
+#content .content_area .swiper-container-horizontal>.swiper-pagination-progressbar, 
+#content .content_area .swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+    top: unset !important;
+}
+#content .content_area .swiper1 .swiper-pagination-progressbar{
+    position: absolute;left: 0; bottom: 0; 
+}
+#content .content_area .swiper1 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background: #b0754dc4;
+}
+
+#content .content_area .topcon{}
+#content .content_area .topcon p{
+    text-align: justify; padding: 0 10px;
+    box-sizing: border-box;
+}
+#content .content_area .topcon p:nth-of-type(1){
+    font-size: 1.79rem; font-weight: 500;
+}
+#content .content_area .topcon p:nth-of-type(2){
+    margin: 10px 0;
+}
+
+/* menu */
+#content .content_area .bqmenu{
+    padding: 50px 10px;text-align: center;
+    background: #F6F0EB;
+}
+#content .content_area .bqmenu h3{
+    font-size: 1.79rem; font-weight: 500;
+}
+#content .content_area .bqmenu > p{
+    font-size: 1.1rem; 
+    margin: 10px 0 20px 0;
+}
+#content .content_area .bqmenu div{}
+#content .content_area .bqmenu div > ul{}
+#content .content_area .bqmenu div > ul >li{}
+#content .content_area .bqmenu div > ul >li ul{
+    position: relative;
+}
+#content .content_area .bqmenu div > ul >li ul li{
+
+}
+#content .content_area .bqmenu div > ul >li ul li img{
+    width: 100%;
+}
+#content .content_area .bqmenu div > ul >li ul li:nth-of-type(2){
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+#content .content_area .bqmenu div > ul >li ul li p{
+    font-size: 1.43rem;
+    color: #fff;
+    text-shadow:0px 0px 15px rgba(0,0,0,.6);
+    margin-bottom: 10px;
+}
+#content .content_area .bqmenu div > ul >li ul li a{
+    color: #fff;
+    text-shadow:0px 0px 15px rgba(0,0,0,.6);
+    border: 1px solid #fff;
+    padding: 5px 0;
+    width: 25%;
+    margin: 0 auto;
+}
+#content .content_area .bqmenu > p:last-child{
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* popup */
+#content .content_area .back{
+    width: 100%; height: 100%;
+    z-index: 100;
+    background: rgba(0,0,0,.6);
+    position: absolute; left: 0; top: 0;
+    display: none;
+}
+#content .content_area .popup{
+    text-align: center;
+    position: fixed; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 50%;
+    background: #fff;
+    border-top: 2px solid #b0754d;
+    border-bottom: 2px solid #b0754d;
+    z-index: 110;
+    display: none;
+}
+#content .content_area .popup div{
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+#content .content_area .popup p{
+    font-size: 2rem;
+    font-family: "Lora", serif;
+    padding-bottom: 10px;
+    border-bottom: .5px solid #999;
+}
+#content .content_area .popup ul{
+    margin-top: 10px;
+}
+#content .content_area .popup ul li{
+    line-height: 2rem;
+}
+#content .content_area .popup span{
+    position: absolute; left: 50%; bottom: 10px;
+    transform: translateX(-50%);
+    display: block; padding: 10px;
+}
+#content .content_area .popup span a{
+    color: #999; text-decoration: underline;
+}
+
+/* bq info */
+#content .content_area .bqinfo{
+    margin-bottom: 100px;
+}
+#content .content_area .bqinfo h3{
+    font-size: 1.43rem;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+#content .content_area .bqinfo ul{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #c8c8c8;
+}
+#content .content_area .bqinfo ul li{
+    width: 16.66%;
+    padding: 20px 0 10px 0;
+}
+#content .content_area .bqinfo ul li:first-child{
+    border-bottom: 2px solid #b0754d;
+}
+#content .content_area .bqinfo ul li p{
+    margin-bottom: 5px;
+}
+
+#content .content_area .bqinfo table{
+    width: 100%; text-align: center;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+#content .content_area .bqinfo table thead{
+    
+}
+#content .content_area .bqinfo table th:not(:last-child){
+    border-right: 1px solid #c8c8c8;
+}
+#content .content_area .bqinfo table td{
+    border-right: 1px solid #c8c8c8;
+    border-top: 1px solid #c8c8c8;
+}
+#content .content_area .bqinfo table td:last-child{
+    border-right: 0;
+}
+#content .content_area .bqinfo table thead tr{}
+#content .content_area .bqinfo table thead tr th{
+    font-weight: 500; 
+}
+
+
