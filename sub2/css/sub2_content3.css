@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* 스위트룸 실제 본문 내용 css */
+
+#content .content_area{}
+
+.tapmenu{overflow: hidden; width: 580px; margin: 0 auto; font-size:1.67rem; font-weight: 600;}
+.tapmenu li{ text-align: center;}
+#content .content_area .tapmenu li h3{font-size: 1.67rem;}
+.tapmenu li:first-child{float: left; width: 252px;}
+.tapmenu li:nth-of-type(2){float: right; width: 282px;}
+
+.tapmenu a{position:relative;}
+
+.tapmenu a:before{
+    content:'';
+    background-color: #B0744D;
+    position:absolute;
+    left:0;
+    bottom:0px;
+    width:100%;
+    height:4px;
+    z-index:-1;
+    transition:all .3s ease-in-out;
+}
+
+.tapmenu a:hover:before{bottom:0; height:100%;}
+.tapmenu a:hover{color:#fff;}
+/* .tapmenu .now{background: #B0744D; color: #fff;} */
+
+#content .content_area h3, #content .content_area h4{font-size: 2.22rem; text-align: center;}
+#content .content_area p{
+    font-size: 1.11rem;}
+
+/* 객실 안내 */
+#content .content_area .room_info{display: flex; justify-content: space-between; gap: 38px; width: 980px; margin: 100px auto 144px auto;}
+#content .content_area .room_info li{overflow: hidden;}
+#content .content_area .room_info li p:first-child{float: left;}
+#content .content_area .room_info li p:nth-of-type(2){float: right;
+    margin-left: 30px;}
+#content .content_area .room_info li p{font-size: 1.67rem;}
+#content .content_area .room_info li p:first-child{font-weight: 600;
+    color: #B0744D;}
+
+/* 이미지갤러리 */
+#content .content_area .img_gallery{position: relative; margin-bottom: 237px;}
+#content .content_area .img_gallery div{border: 5px solid #fff;
+    transition: all 0.5s ease-out;}
+#content .content_area .img_gallery div img{transition: all 0.5s ease-out;}
+
+#content .content_area .img_gallery .main{width: 984px; overflow: hidden;}
+#content .content_area .img_gallery .main img:hover{transform: scale(1.1);}
+
+#content .content_area .img_gallery div:nth-of-type(2){width: 217px; height: 630px; position: absolute; right: 338px; top: 64px; z-index: 30;}
+#content .content_area .img_gallery div:nth-of-type(3){width: 217px; height: 630px; position: absolute; right: 168px; top: -44px; z-index: 20;}
+#content .content_area .img_gallery div:nth-of-type(4){width: 217px; height: 630px; position: absolute; right: 0; top: 108px; z-index: 10;}
+#content .content_area .img_gallery div:nth-of-type(2):hover, #content .content_area .img_gallery div:nth-of-type(3):hover, #content .content_area .img_gallery div:nth-of-type(4):hover{transform: translateY(-20px) scale(1.05);}
+#content .content_area .img_gallery img{}
+
+/* suite txt */
+#content .content_area .suitetxt{overflow: hidden; position: relative;
+    margin-bottom: 200px; }
+#content .content_area .suitetxt p{
+    width: 542px; padding: 30px 20px; 
+    float: left;
+    position: absolute; left: 0; top: 80px;
+    background: #fff;
+    font-size: 1.11rem;
+    line-height: 1.5rem;
+    /* box-shadow: 2px 2px 15px 2px rgba(0,0,0,.3); */
+}
+#content .content_area .suitetxt img{float: right; width: 984px; 
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,.3);
+    margin: 20px 0;}
+
+/* just for suite */
+#content .content_area .justsuite{}
+#content .content_area .justsuite>p{font-family: "Lora", serif; font-size: 2.78rem; text-align: center;}
+#content .content_area .justsuite ul{display: flex; justify-content: space-between; margin: 100px 0 300px 0;}
+#content .content_area .justsuite ul li p{font-size: 1.39rem; text-align: center; margin-top: 25px;}
+
+#content .content_area .justsuite ul li{position: relative; overflow: hidden;}
+#content .content_area .justsuite ul li::before{content: ""; display: block;
+    width: 1000px; height: 60px;
+    transform: rotate(-45deg);
+    background: #fff; opacity: 20%;
+    position: absolute; left: -800px; top: 230px;
+    z-index: 10;
+}
+#content .content_area .justsuite ul li div{overflow: hidden;}
+#content .content_area .justsuite ul li img{transition: 0.6s;}
+#content .content_area .justsuite ul li:hover img{transform: scale(1.1);}
+#content .content_area .justsuite ul li:hover::before{left: 200px;
+    transition: 0.6s; 
+}
+
+
+
+
+
+
+
+/* 어메니티 */
+#content .content_area .amenity{position: relative;}
+#content .content_area .amenity::after{content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: -100px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity::before{
+    content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: 850px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity .service{position: relative;}
+#content .content_area .amenity .service::before{content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: 830px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity ul{overflow: hidden;margin-bottom: 100px;}
+
+#content .content_area .amenity ul li{}
+#content .content_area .amenity ul .ame01{float: left; width: 550px;
+    font-size: 2.22rem; font-weight: 700;
+}
+#content .content_area .amenity ul .ame02{float: left;width: 427px;}
+#content .content_area .amenity ul .ame03{float: right; width: 420px;}
+
+#content .content_area .amenity ul li ul li:first-child{
+    font-size: 1.67rem; color: #B0744D;
+    margin-bottom: 50px;
+}
+#content .content_area .amenity ul li ul li{
+    margin-bottom: 40px;
+    font-size: 1.11rem;
+}
+#content .content_area .amenity ul li ul li:last-child{margin-bottom: 0;}
+
+
+
+

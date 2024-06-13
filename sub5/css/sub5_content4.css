@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 네스트파크 본문 css */
+#content .content_area{position: relative; margin-top: 50px;}
+#content .content_area > div{margin: 100px 0;}
+#content .content_area p{font-size: 1.11rem;}
+
+#content .content_area .nest{
+    display: flex; gap: 76px; 
+    margin-bottom: 40px; position: relative;
+}
+#content .content_area .nest h3{
+    font-size: 2.22rem; font-weight: 600; position: relative;
+}
+#content .content_area .nest p{
+    font-weight: 300; font-size: 2.22rem;
+    color: #666;}
+#content .content_area .nest h3::before{
+    content: ""; display: block; width: 1px; height: 38px;
+    background: #333; position: absolute; right: -37px; top: 13px;
+}
+#content .content_area .nest+p{font-size: 1.67rem;}
+
+/* 이미지 리스트 */
+#content .content_area .park_img{margin-top: 50px;}
+#content .content_area .park_img > div{
+    width: 94.6%;
+    position: relative; overflow: hidden;
+    margin-bottom: 25px;
+}
+#content .content_area .park_img div .change_box{
+    text-align: right;
+    transition: all 0.5s ease-out;
+    position: relative; left: 850px; top: 0;
+}
+#content .content_area .park_img div .change_box img{
+    margin-right: 80px; transition: all 0.5s ease-out;
+}
+#content .content_area .park_img div .change_box img:hover{
+    transform: translateX(-850px);
+}
+#content .content_area .park_img div p{
+    position: absolute; left: 0; top: 0;
+    width: 700px;
+    padding: 60px 0 61px 20px;
+    backdrop-filter: blur(4px) contrast(60%) brightness(130%);
+}
+#content .content_area .park_img span{color: #B0744D; font-size: 1.39rem;}
+#content .content_area .park_img > p:last-child{ text-align: center; margin: 100px 0 200px 0;}
+
+/* 봄꽃동산 */
+#content .content_area .sflower{}
+#content .content_area .imgbox{
+    width: 2000px; height: 500px;
+    background: url(../images/content4/nestpark.jpg) 0 10px no-repeat; background-attachment: fixed; position: relative; left: 50%; top: 0; left: -280px; 
+    transition-timing-function: ease;
+    transition-duration: 1s;
+}
+#content .content_area .imgbox + p{
+    font-size: 1.11rem; text-align: justify;
+    width: 893px; margin-bottom: 150px;
+}
+
+
+
+
+

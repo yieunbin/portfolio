@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+/* 연회 실제 본문 내용 css */
+
+#content .content_area{}
+
+
+#content .content_area p{font-size: 1.11rem;}
+#content .content_area h3{font-size: 1.67rem; font-weight: 600;}
+
+#content .content_area .bq_visual{position: relative; overflow: hidden;
+    width: 2000px;transform: translateX(-300px);
+    /* width: 2000px; height: 700px;
+    transform: translateX(-300px);
+    background: 
+        linear-gradient(
+        to right,
+        rgba(20, 20, 20, 0.9) 10%,
+        rgba(20, 20, 20, 0.8) 30%,
+        rgba(20, 20, 20, 0) 50%,
+        rgba(20, 20, 20, 0) 75%,
+        rgba(20, 20, 20, 0) 100%
+      ),
+      url(../images/content1/visual01.jpg) no-repeat;
+       */
+    }
+/* #content .content_area .bq_visual img{width: 2000px; transform: translateX(-300px);} */
+#content .content_area .bq_visual ul{display: flex; position: relative;}
+#content .content_area .bq_visual div:nth-of-type(1){position: absolute;    left: -300px; top: 0;
+    color: #fff; 
+    width: 872px; height: 700px;
+    background: 
+    linear-gradient(
+    to right,
+    rgba(20, 20, 20, .95) 10%,
+    /* rgba(20, 20, 20, 0.8) 30%, */
+    rgba(20, 20, 20, 0.8) 50%,
+    rgba(20, 20, 20, 0.6) 80%,
+    rgba(20, 20, 20, 0) 100%
+  )}
+#content .content_area .bq_visual p:nth-of-type(1){
+    font-size: 2.78rem; font-weight: 700;
+    margin: 270px 0 40px 600px;
+}
+#content .content_area .bq_visual p:nth-of-type(2){
+    width: 445px; text-align: justify;
+    margin-left: 600px;
+}
+
+#content .content_area > p:nth-of-type(1){text-align: center; margin: 115px 0;}
+/* 스크롤버튼 서식 */
+#content .content_area .bq_visual .s_btn{position: absolute; left: 50%; bottom: 25px; transform: translateX(-50%);}
+#content .content_area .bq_visual .s_btn span{
+    display: inline-block; width: 15px; height: 15px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#content .content_area .bq_visual .s_btn span:last-child{margin-right: 0;}
+/* .btn_on{width: 50px !important; border-radius: 15px !important;} */
+
+/* 메뉴 */
+#content .content_area .menu_list{background: #F6F0EB; width: 2000px;
+transform: translateX(-300px); padding: 100px 0 200px 0;}
+#content .content_area .menu_list .menu_top{
+    text-align: center;
+    width: 1400px; margin: 0 auto;
+}
+#content .content_area .menu_list .menu_top h3{font-size: 2.22rem; font-weight: 600;}
+#content .content_area .menu_list .menu_top p{margin: 40px 0 100px 0;}
+
+#content .content_area .menu_list .menu_bottom{width: 1400px; margin: 0 auto;}
+#content .content_area .menu_list .menu_bottom ul{}
+#content .content_area .menu_list .menu_bottom ul li{position: relative;}
+#content .content_area .menu_list .menu_bottom ul li img{
+    
+}
+#content .content_area .menu_list .menu_bottom ul li > div{
+    width: 439px; height: 420px;
+    background: rgba(0, 0, 0, 0.057);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: #fff; 
+    text-align: center; 
+}
+
+/* 메뉴구성 */
+#content .content_area .menu_list .menu_bottom ul li ul{
+    margin-top: 60px; 
+    transition: all 0.5s ease-out;
+    opacity: 0;
+}
+#content .content_area .menu_list .menu_bottom ul li:nth-of-type(odd) div{
+    position: absolute; right: 0; top: 0;
+}
+#content .content_area .menu_list .menu_bottom ul li:nth-of-type(even) div{
+    position: absolute; left: 0; top: 0;
+}
+#content .content_area .menu_list .menu_bottom ul li ul li{
+    font-size: 1.11rem; text-align: center;
+    width: 439px; margin-bottom: 15px;
+    color: #fff; font-weight: 400;
+}
+#content .content_area .menu_list .menu_bottom ul li div p{
+    font-size: 1.67rem; font-weight: 500;
+    width: 439px;
+    position: absolute; left: 0; top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-out;
+    
+}
+#content .content_area .menu_list .menu_bottom ul li ul li:last-child{
+    margin-bottom: 0;
+}
+#content .content_area .menu_list .menu_bottom ul li div .menu_box{
+    margin-top: 50%; transform: translateY(-50%);
+}
+
+#content .content_area .menu_list .menu_bottom ul li > div:hover .menu_box p{
+    top: 0;
+}
+#content .content_area .menu_list .menu_bottom ul li > div:hover .menu_box ul{
+    opacity: 1;
+    margin-top: 40px; 
+    transition-delay: 0.3s;
+}
+#content .content_area .menu_list > p{
+    margin:40px 0 0 300px;
+    font-size: 1rem; color: #666;
+}
+
+
+/* info */
+#content .content_area .bottom_info{margin: 200px 0;}
+#content .content_area .loca{}
+#content .content_area .loca ul{display: flex; gap: 120px;}
+#content .content_area .loca ul li{display: flex; gap: 30px; }
+#content .content_area .loca ul li p{font-size: 1.67rem;}
+#content .content_area .loca ul li:nth-of-type(2) p:first-child{font-weight: 600;}
+
+#content .content_area .menu_info{margin: 100px 0;}
+#content .content_area .menu_info p:nth-of-type(1){font-size: 1.67rem; font-weight: 600; margin-bottom: 50px;}
+#content .content_area .menu_info p:nth-of-type(2){font-size: 1.67rem;}
+
+/* 수용가능인원 */
+#content .content_area .p_info{}
+#content .content_area .p_info h3{margin-bottom: 50px;}
+#content .content_area .p_info table{
+    width: 1400px; margin: 0 auto;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+#content .content_area .p_info table tr{text-align: center; height: 70px;
+    border-bottom: 1px solid #999;
+}
+#content .content_area .p_info table tr:first-child{
+    height: 111px;
+    border-bottom: 1px solid #999;
+}
+#content .content_area .p_info table tr:last-child{border-bottom: 0;}
+#content .content_area .p_info table tr th{
+    font-size: 1.11rem; font-weight: 500;
+    width: 120px;
+    border-right: 1px solid #999;
+}
+#content .content_area .p_info table tr th:nth-of-type(1){width: 200px;}
+#content .content_area .p_info table tr th:nth-of-type(2){width: 280px;}
+#content .content_area .p_info table tr th:last-child{border-right: 0;}
+#content .content_area .p_info table tr th span{font-weight: 400;}
+#content .content_area .p_info table tr th img{margin-top: 10px;
+text-align: center;}
+#content .content_area .p_info table tr td{
+    font-size: 1.11rem;
+    border-right: 1px solid #999;
+}
+#content .content_area .p_info table tr td:last-child{border-right: 0;}
+
+
+
+
+
+
+
+
+
+

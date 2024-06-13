@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* 다이닝 본문 css */
+
+#content .content_area{}
+#content .content_area > div{margin: 100px 0;}
+#content .content_area p{font-size: 1.11rem;}
+
+/* loca_info */
+#content .content_area .loca_info{margin: 0 auto; width: 730px;}
+#content .content_area .loca_info ul{display: flex; gap: 70px; }
+#content .content_area .loca_info ul li{display: flex; gap: 20px;}
+#content .content_area .loca_info ul li p{font-size: 1.39rem;}
+#content .content_area .loca_info ul li p:first-child{font-weight: 500;}
+
+/* restaurant content */
+#content .content_area .res_con{display: flex;}
+#content .content_area .res_con .rescon_left{width: 700px; }
+#content .content_area .res_con .rescon_left p{width: 469px;}
+#content .content_area .res_con .rescon_left p:first-child{
+    font-size: 2.22rem; font-weight: 600;
+    margin: 399px 0 40px 164px;
+}
+#content .content_area .res_con .rescon_left p:nth-of-type(2){
+    font-size: 1.39rem; line-height: 2rem; text-align: justify;
+    margin-left: 164px;
+}
+#content .content_area .res_con .rescon_right{width: 700px;
+    box-shadow:2px 2px 15px 2px rgba(0,0,0,.3);}
+
+/* 운영시간, 이용요금 */
+#content .content_area h3{font-size: 1.67rem; font-weight: 600; margin-bottom: 50px;}
+#content .content_area table{width: 1400px; font-size: 1.11rem;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+#content .content_area table thead{height: 80px; background: #f5f5f4;}
+#content .content_area table tbody{}
+#content .content_area table tr{width: 33%; text-align: center;}
+#content .content_area table tr th{font-weight: 400;border-bottom: 1px solid #666;}
+#content .content_area table tr td{height: 77px; line-height: 1.5rem;
+    border-bottom: 1px solid #666;}
+#content .content_area table tr td:not(:last-child), th:not(:last-child){border-right: 1px solid #666;}
+
+/* #content .content_area .time table tbody tr:first-child th{background: #f4f1ef;} */
+#content .content_area .price table thead th{font-weight: 500;}
+
+/* 유의사항 */
+#content .content_area .note{background: #EEEDE5; padding: 50px 0 50px 50px;}
+#content .content_area .note p{font-weight: 500; margin-bottom: 30px;}
+#content .content_area .note ul{}
+#content .content_area .note ul li{font-size: 1rem; margin-bottom: 15px;}
+#content .content_area .note ul li:last-child{margin-bottom: 0;}
+
+
+
+
+
+

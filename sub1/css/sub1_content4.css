@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 오시는 길 실제 본문 내용 css */
+#content .content_area{overflow: hidden;}
+#content .content_area ul{}
+#content .content_area ul li{font-size: 1.39rem;}
+
+#content .content_area .loca_info{margin: 85px auto; width: 1280px; overflow: hidden;}
+#content .content_area .loca_info ul{overflow: hidden;}
+#content .content_area .loca_info ul li{overflow: hidden;}
+#content .content_area .loca_info ul li:first-child{float: left; }
+#content .content_area .loca_info ul li:last-child{float:right;margin-left: 50px;}
+#content .content_area .loca_info ul li p:first-child{float: left;
+    font-weight: 700; margin-right: 20px;}
+#content .content_area .loca_info ul li p:last-child{float: left;}
+
+#content .content_area .map_api{margin: 100px auto; border: 2px solid #B0744D; overflow: hidden;}
+#content .content_area .map_api #map{width: 1396px; height: 700px;}
+
+#content .content_area .airport{}
+#content .content_area div h3{font-size: 2.22rem; color: #B0744D;
+    margin-bottom: 50px;}
+#content .content_area div p{font-size: 1.39rem;}
+#content .content_area .airport p{}
+
+#content .content_area .airport ul{overflow: hidden; }
+#content .content_area .airport ul:last-child{margin-bottom: 50px;}
+#content .content_area .airport ul li{overflow: hidden;}
+#content .content_area .airport ul li:first-child{float: left; 
+    margin-left: 45px; }
+#content .content_area .airport ul li:last-child{float: right; margin-right: 163px;}
+#content .content_area .airport ul li:last-child p:last-child{margin-bottom: 70px;}
+#content .content_area .airport ul li p:first-child{float: left;
+    margin-top: 25px; color: #B0744D;}
+#content .content_area .airport ul li p:last-child{float: right;margin: 25px 0 50px 20px;}
+
+#content .content_area .airport .busbtn{
+    padding: 20px;
+    border: 2px solid #B0744D;
+    cursor: pointer;
+    color: #B0744D;
+    font-size: 1.11rem;
+    transition: all 0.3s ease-out;
+    position: relative;
+    }
+#content .content_area .airport .busbtn:hover{background: #B0744D;
+    color: #fff;}
+#content .content_area .airport .busbtn::before{content: "";
+    display: block;
+    width: 1400px; height: 1px;
+    background: #ccc;
+    position: absolute; left: 0; top:155px;
+}
+
+/* 셔틀 팝업 */
+#content .content_area .modal_box{
+    position: fixed; left: 0; top: 0; 
+    z-index: 50; 
+    width: 100%; height: 100%; 
+    background: #000; 
+    opacity: .7; 
+    display: none;
+}
+#content .content_area .airport .popup{
+    width: 1000px; height: 700px;
+    border-top: 4px solid #B0744D;
+    border-bottom: 4px solid #B0744D;
+    position: fixed; top: 55%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 60; 
+    display: none;
+    box-shadow: 1px 3px 7px 0px #666;
+}
+#content .content_area .airport .popup > div:nth-of-type(1){padding: 50px;}
+#content .content_area .airport .popup p:first-child{
+    font-size: 1.39rem; margin-bottom: 30px;
+}
+#content .content_area .airport .popup p:not(:first-child){font-size: 1rem;}
+#content .content_area .airport .popup p:nth-of-type(3){
+    margin: 10px 0 20px 20px;
+}
+#content .content_area .airport .popup p span{color: #B0744D;}
+
+#content .content_area .airport .popup .table_box{
+    width: 796px; height: 370px;
+    margin: 0 auto;
+    overflow-y: auto;
+
+}
+#content .content_area .airport .popup table{
+    width: 100%;
+    margin: 0 auto;
+}
+#content .content_area .airport .popup table thead{
+    font-size: 1rem; color: #B0744D;
+    line-height: 50px;
+}
+#content .content_area .airport .popup table tbody{
+    text-align: center;
+}
+#content .content_area .airport .popup table tbody tr{
+    line-height: 45px;
+    border-top: 1px dashed #c6c6c6;
+    border-bottom: 1px dashed #c6c6c6;
+}
+#content .content_area .airport .popup img{
+    position: absolute; right: 0; top: 0;
+    cursor: pointer;
+}
+
+
+
+/* 대중교통 이용시 */
+#content .content_area .bus{margin: 200px 0;}
+#content .content_area .bus ul{margin-top: 50px; position: relative;}
+#content .content_area .bus ul li{overflow: hidden;}
+#content .content_area .bus ul li p{margin-bottom: 40px;}
+#content .content_area .bus ul li p:first-child{float: left; width: 220px; font-weight: 600;}
+#content .content_area .bus ul li p:nth-of-type(2){float: right;
+    text-align: left; width: 1030px; position: relative;}
+#content .content_area .bus ul li:last-child::before{
+    content: "";
+    display: block;
+    width: 1400px; height: 1px;
+    background: #ccc;
+    position: absolute; left: 0; top:550px;
+}
+
+#content .content_area .car{margin-bottom: 200px; position: relative;}
+#content .content_area .car::before{
+    content: "";
+    display: block;
+    width: 1400px; height: 1px;
+    background: #ccc;
+    position: absolute; left: 0; top:280px;
+}

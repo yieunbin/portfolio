@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연회-웨딩</title>
+    <style>
+        .btn_on{width: 50px !important; border-radius: 15px !important;}
+    </style>
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="./common/css/sub4common.css">
+    <link rel="stylesheet" href="./css/sub4_content2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="../common/css/aos.css">
+    <script src="./common/js/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/58aa1de25a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+        <? include '../common/sub_header.html' ?>
+
+        <!-- 비주얼 영역 -->
+        <div class="visual">
+            <img src="./common/img/visual01jpg.jpg" alt="">
+            <span>BANQUET</span>
+        </div>
+
+        <div class="sub_nav">
+            <div class="line_map">
+                <i class="fa-solid fa-house"> </i> &bull; BANQUET &bull; <strong> 웨딩</strong>
+            </div>
+            <ul>
+                <li><a href="./sub4_1.html">연 회</a>
+                    <span></span><span></span></li>
+                <li class="current"><a href="./sub4_2.html">웨 딩</a>
+                    <span></span><span></span></li>
+                
+            </ul>
+        </div>
+
+        <article id="content">
+            <!-- 경로~구분선 -->
+            <div class="title_area">
+                <h2>WEDDING</h2>
+                <p>여유가 흐르는 당신만의 웨딩</p>
+                <span>&diams;</span>
+            </div>
+            
+            <div class="content_area">
+                <div class="bq_visual" data-aos="fade-up">
+                    <ul>
+                        <li><img src="./images/content2/visual01.jpg" alt=""></li>
+                        <li><img src="./images/content2/visual02.jpg" alt=""></li>
+                        <li><img src="./images/content2/visual03.jpg" alt=""></li>
+                    </ul>
+                    <div>
+                        <p>Nest Wedding Hall</p>
+                        <p>private wedding fo you</p>
+                    </div>
+                    <div class="s_btn">
+                        <span class="img_btn">&nbsp;</span>
+                        <span class="img_btn">&nbsp;</span>
+                        <span class="img_btn">&nbsp;</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <p>모든 이의 축복의 시선 속에서 두분만의 프라이빗한 웨딩을 실현 시켜드립니다.</p>
+                    <p>풍경이 곧 작품이 되는 네스트 웨딩은 가든에서 진행되는 야외예식만의 여유로움을 느낄 수 있는 동시에 바움홀에서의 품격있는 실내웨딩이 가능합니다. 네스트는 고객의 의견과 만족감을 최우선으로 하는 진심어린 서비스로 평생 잊지 못할 감동의 순간을 선사합니다.</p>
+                </div>
+
+                <script>
+                    $(document).ready(function(){
+                    let img_btn = $('.s_btn span');
+
+                    img_btn.eq(0).addClass('btn_on');
+
+                    img_btn.click(function(){
+                        $('.s_btn span').removeClass('btn_on');
+                        $(this).addClass('btn_on');
+
+                        let i = $(this).index();
+                        console.log(i);
+                        let move = i*-2000;
+                        console.log(move);
+
+                        $('.bq_visual ul').animate({'left':move},400);
+                    });
+
+                    let a = 0;
+                    function slide(){
+                        $('.s_btn span').removeClass('btn_on');
+                        if(a==2){
+                            a=0;
+                        }else{
+                            a++;
+                        };
+                        $('.s_btn span').eq(a).addClass('btn_on');
+
+                        let move = a*-2000;
+                        console.log(move);
+                        $('.bq_visual ul').animate({'left':move},400);
+                    }
+                    let Timer = setInterval(slide, 4000);
+
+                });
+                </script>
+
+                <!-- 본문이미지 -->
+                <div class="mid_con">
+                    <div class="inside">
+                        <div>
+                            <ul data-aos="fade-right">
+                                <li><h3>Baum Wedding<span>실내</span></h3></li>
+                                <li>Flower decoration 꽃장식<br>(무대 위, 버진로드 , 입구, 신부대기실, table deco)</li>
+                                <li>무대, 포디움설치</li>
+                                <li>포토테이블</li>
+                                <li>부케세트 (부케 &amp; 코사지, 부토니아)</li>
+                            </ul>
+                        </div>
+                        <div><img src="./images/content2/inside01.jpg" alt=""></div>
+                    </div>
+                    <img src="./images/content2/inside02.jpg" alt="">
+
+                    <div class="outside">
+                        <div>
+                            <ul data-aos="fade-left">
+                                <li><h3>Garden Wedding<span>실외</span></h3></li>
+                                <li>Flower decoration 꽃장식<br>(야외 기본 플라워 데코, 신부대기실, Garden 전용 쇼파)</li>
+                                <li>테이블 센터피스 14개</li>
+                                <li>포토테이블</li>
+                                <li>부케세트 (부케 &amp; 코사지, 부토니아)</li>
+                            </ul>
+                        </div>
+                        <div><img src="./images/content2/outside01.jpg" alt=""></div>
+                    </div>
+                    <img src="./images/content2/outside02.jpg" alt="">
+                </div>
+
+                <!-- 하단 이미지갤러리 -->
+                <div class="gallery">
+                    <div class="g_top">
+                        <div>
+                            <p><span>‘</span>The beginning of</p>
+                            <p>Forever’</p>
+                        </div>
+                        <div>
+                            <img data-aos="fade-up" src="./images/content2/w_bottom1_2.jpg" alt="">
+                            <img data-aos="fade-up" data-aos-delay="200" src="./images/content2/w_bottom2_2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="g_bottom">
+                        <img src="./images/content2/w_bottom3_1.jpg" alt="" data-aos="fade-up" data-aos-delay="800">
+                        <img src="./images/content2/w_bottom4_2.jpg" alt="" data-aos="fade-up" data-aos-delay="600">
+                        <img src="./images/content2/w_bottom5_1.jpg" alt="" data-aos="fade-up" data-aos-delay="400">
+                        <img src="./images/content2/w_bottom6_1.jpg" alt="" data-aos="fade-up" data-aos-delay="200">
+                    </div>
+                </div>
+
+                <!-- info -->
+                <div class="bottom_info">
+                    <div class="loca">
+                        <ul>
+                            <li>
+                                <h3>LOCATION</h3>
+                                <p>Garden, Baum Hall</p>
+                            </li>
+                            <li>
+                                <p>CAPACITY</p>
+                                <p>최소 250~600명</p>
+                            </li>
+                            <li>
+                                <p>TEL</p>
+                                <p>032 - 743 - 9010</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- menu info -->
+                    <div class="menu_info">
+                        <h3>MENU</h3>
+                        <p>Western course, Buffet</p>
+                    </div>
+
+                    <!-- card filp -->
+                    <div class="card">
+                        <h3>CONCEPT</h3>
+                        <ul data-aos="fade-up">
+                            <li>
+                                <div class="card_box">
+                                    <div class="front">
+                                        <img src="./images/content2/concept01.jpg" alt="">
+                                        <p>venue</p>
+                                    </div>
+                                    <div class="back">
+                                        <dl>
+                                            <dt>Venue</dt>
+                                            <dd>절제된 아름다움이 반영된 프리미엄 웨딩 베뉴로 독채홀만의 프라이빗하고 여유로운 예식 시간, 세련된 연출을 바탕으로 기억에 남을만한 특별한 맞춤웨딩을 선사합니다.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card_box">
+                                    <div class="front">
+                                        <img src="./images/content2/concept02.jpg" alt="">
+                                        <p>flower</p>
+                                    </div>
+                                    <div class="back">
+                                        <dl>
+                                            <dt>Flower</dt>
+                                            <dd>트렌디하고 스타일리쉬한 컨템포러리 플라워 데커레이션으로 모든 순간을 아름답게 만들어 드립니다.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card_box">
+                                    <div class="front">
+                                        <img src="./images/content2/concept03.jpg" alt="">
+                                        <p>menu</p>
+                                    </div>
+                                    <div class="back">
+                                        <dl>
+                                            <dt>Menu</dt>
+                                            <dd>네스트호텔 전문 셰프가 제안하는 웨딩 메뉴는 소중한 발걸음을 해주신 분들에게 신선한 재료와 최고의 맛을 선보입니다.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card_box">
+                                    <div class="front">
+                                        <img src="./images/content2/concept04.jpg" alt="">
+                                        <p>benefit</p>
+                                    </div>
+                                    <div class="back">
+                                        <dl>
+                                            <dt>Benefit</dt>
+                                            <dd>로비 웰컴 샴페인 제공</dd>
+                                            <dd>무료 시식 2인</dd>
+                                            <dd>결혼 1주년 기념 혜택</dd>
+                                            <dd>허니문 객실 1박</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </article>
+
+
+
+        <? include '../common/sub_footer.html' ?>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/* 다이닝 공통 css */
+
+/* 비주얼 영역 */
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+    }   
+}
+.visual{width: 2000px; height: 400px;
+    position: relative; left: 50%; top: 0;
+    transform: translateX(-50%);}
+.visual span{font-size: 2.22rem; display: block; position: absolute;
+    top: 240px; width: 100%; text-align: center; color: #fff;
+    font-weight: 500; letter-spacing: 5px;
+    animation: zoomIn 2s ease-out 1;
+}
+
+/* 서브메뉴 영역 */
+@keyframes silde{
+    0%{width: 0;}
+    100%{width: 360px;}
+}
+
+.sub_nav{width: 1400px; position: relative; margin: 0 auto;
+    transition: all 0.5s ease-out;}
+/* .sub_nav{ width: 670px; margin: 0 auto;} */
+/* 네비 하단 실선 */
+.sub_nav::before{content: ""; display: block; width: 2000px; height: 2px;
+    background: #e9e9e9; position: absolute; left: 50%; top: 60px; z-index: -30;
+    transform: translateX(-50%);}
+/* 네비 하단 오버효과 */
+/* .sub_nav ul li span{
+    width: 100px; height: 2px; 
+    
+    position: absolute; left: 50%; top: 60px;
+    transform: translateX(-50%);
+}
+.sub_nav .subnav_ubar div{position: absolute;}
+.sub_nav .subnav_ubar div span{
+    
+    width: 100px; height: 2px;
+}
+.sub_nav .subnav_ubar div span:first-child{
+    background: red;
+    position: absolute; left: 0; top: 0;
+}
+.sub_nav .subnav_ubar div span:nth-of-type(2){
+    background: green;
+    position: absolute; right: 0; top: 0;
+} */
+
+
+.sub_nav ul{display: flex; width: 800px; height: 62px; margin: 0 auto;
+    justify-content: center;}
+.sub_nav li{text-align: center; width: 25%; 
+    position: relative;}
+.sub_nav li a{
+    font-size: 1.11rem;
+    transition: all 0.5s;
+    padding: 15px 0;
+    }
+.sub_nav li a:hover, .sub_nav ul .current{color: #B0744D; font-weight: 600;}
+.sub_nav ul .current a{color: #B0744D;}
+.sub_nav li:hover span:nth-of-type(1){width: 100px;}
+.sub_nav li:hover span:nth-of-type(2){width: 100px;}
+.sub_nav ul .current span:nth-of-type(1),
+.sub_nav ul .current span:nth-of-type(2){width: 100px}
+
+/* 네비 하단 마우스오버 효과 */
+.sub_nav ul li span:nth-of-type(1){
+    background: #B0744D;
+    position: absolute; left: 100px; top: 60px;
+    width: 0px; height: 2px;
+    z-index: 10;
+    transition: all 0.3s ease-out;
+}
+.sub_nav ul li span:nth-of-type(2){
+    background: #B0744D;
+    position: absolute; right: 100px; top: 60px;
+    width: 0px; height: 2px;
+    z-index: 10;
+    transition: all 0.3s ease-out;
+}
+
+.sub_nav .line_map{position: absolute; left: 0px; top: 20px; color: #c7c7c7; font-size: 0.78rem; word-spacing: 5px; float: left;}
+
+/* title_area 영역 */
+#content{width: 1400px; margin: 0 auto;}
+#content .title_area{
+    height: 545px; 
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+#content .title_area .line_map strong{color: #999;}
+#content .title_area h2{
+    font-size: 3.33rem; 
+    text-align: center;
+    margin: 170px 0 30px 0;
+    position: relative;
+    /* font-variant:small-caps; */
+}
+#content .title_area h2::after{content: ""; display: block;
+    width: 360px; height: 1px; 
+    background: #333;
+    position: absolute; 
+    
+    left: 730px; top: 274px;
+    animation: silde 1.5s 1;
+    animation-delay: 1.5s;
+}
+#content .title_area h2::before{content: ""; display: block;
+        width: 360px; height: 1px; 
+        background: #333;
+        position: absolute; 
+        
+        right: 740px; top: 274px;
+        animation: silde 1.5s 1;
+        animation-delay: 1.5s;
+    }
+#content .title_area p{font-size: 1.11rem; text-align: center;}
+#content .title_area span{position: absolute; left: 688px; top: 426px;
+    font-size: 1.2rem; color: #B0744D;}
+
+#content .content_area{width: 1400px; margin: 0 auto;}
+
+.point_col{color: #B0744D;}
+#content .content_area .amenity .service .ame03 ul li span{color: #B0744D;}

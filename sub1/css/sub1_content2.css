@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/* 네스트어워즈 실제 본문 내용 css */
+
+#content .content_area{width: 2000px; position: relative;
+left: 50%; top: 0; 
+transform: translateX(-50%);
+}
+#content .content_area .cup{width: 160px; margin-top: 68px;
+    position: relative; left: 50%; transform: translateX(-50%);
+    transition: all 1s ease-out;}
+#content .content_area .cup:hover{filter: brightness(110%);}
+
+
+#content .awardsnav{
+    width: 100%;
+    position: absolute; left: 0; top: 1350px;
+    z-index: 40;
+}
+#content .navOn{
+    position: fixed;  z-index: 50;
+    left: 0; top: 0px;
+    background: #d2b49f;
+}
+
+#content .awardsnav ul{overflow: hidden; width: 750px; margin: 0 auto;}
+#content .awardsnav ul li{cursor: pointer; font-size: 2.69rem;}
+#content .awardsnav ul li:first-child{float: left;}
+#content .awardsnav ul li:last-child{float: right;}
+#content .awardsnav ul li .back_col{
+    background-image: url(../images/content2/silde_bg02.jpg) right top no-repeat;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.6s ease-out;
+}
+#content .awardsnav ul li:hover .back_col{background-image: url(../images/content2/silde_bg02.jpg) left top;
+    background-clip: text;
+    color: transparent;}
+#content .awardsnav ul li .current{background-image: url(../images/content2/silde_bg02.jpg) left top;
+    background-clip: text;
+    color: transparent;}
+
+#content .content_area h3{font-size: 2.78rem;}
+
+#content .content_area p{
+    font-size: 1.11rem; 
+    line-height: 1.5rem; 
+    margin-bottom: 30px;}
+
+
+/* 본문 연도 */
+#content .content_area .awards{position: relative; margin-top: 330px;}
+/* 중앙선 */
+#content .awards::before{content: ""; display: block;
+    width: 2px; height: 3420px;
+    position: absolute; 
+    left: 50%; top: -50px;
+    /* left: 0; top: 0px; */
+    background: #666;
+}
+#content .content_area .awards ul{width: 830px; position: relative;}
+#content .content_area .awards ul:nth-child(odd):not(.brand_logo) li{
+    display: flex; gap: 30px; justify-content: flex-end;}
+#content .content_area .awards ul:nth-child(even){margin-left: 1111px;}
+#content .content_area .awards ul:nth-child(even):not(.brand_logo) li{
+        display: flex; gap: 30px;}
+:is(#now, .y2022, .y2020, .y2018){margin-left: 55px;}
+
+#content .content_area .awards ul li{}
+#content .content_area .awards > ul li:first-child{
+    font-size: 2.78rem; font-weight: 500; margin-bottom: 20px;
+}
+/* 스크롤이벤트 클래스 */
+#content .content_area .awards ul li:last-child{
+    position: relative; top: 50px; opacity: 0;
+    transition: all 0.5s ease-out;
+}
+#content .content_area .awards .awardscon li:last-child{
+    position: relative; top: 0; opacity: 1;
+}
+
+/* 연도 표식(2020-2024) */
+:is(#now, .y2022, .y2020) > li:first-child::before{
+    content: "";
+    display: block;
+    width: 35px; height: 35px;
+    background: #B0744D;
+    border-radius: 50%;
+    position: absolute; right: -133px; top: 16px;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,.2);
+}
+:is(#now, .y2022, .y2020) > li:first-child::after{
+    content: "";
+    display: block;
+    width: 70px; height: 2px;
+    border-bottom: 2px dotted #B0744D;
+    position: absolute; right: -96px; top: 30px;
+}
+:is(.y2023, .y2021) > li:first-child::before{
+    content: "";
+    display: block;
+    width: 35px; height: 35px;
+    background: #B0744D;
+    border-radius: 50%;
+    position: absolute; left: -127px; top: 19px;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,.2);
+}
+:is(.y2023, .y2021) > li:first-child::after{
+    content: "";
+    display: block;
+    width: 70px; height: 2px;
+    border-bottom: 2px dotted #B0744D;
+    position: absolute; left: -90px; top: 35px;
+}
+/* 연도 표식(2017-2019) */
+.y2018 li:first-child::before{
+    content: "";
+    display: block;
+    width: 35px; height: 35px;
+    background: #E2B278;
+    border-radius: 50%;
+    position: absolute; right: -133px; top: 16px;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,.2);
+}
+.y2018 > li:first-child::after{
+    content: "";
+    display: block;
+    width: 70px; height: 2px;
+    border-bottom: 2px dotted #E2B278;
+    position: absolute; right: -96px; top: 30px;
+}
+:is(.y2019, .y2017) > li:first-child::before{
+    content: "";
+    display: block;
+    width: 35px; height: 35px;
+    background: #E2B278;
+    border-radius: 50%;
+    position: absolute; left: -127px; top: 19px;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,.2);
+}
+:is(.y2019, .y2017) > li:first-child::after{
+    content: "";
+    display: block;
+    width: 70px; height: 2px;
+    border-bottom: 2px dotted #E2B278;
+    position: absolute; left: -90px; top: 35px;
+}
+
+
+#content .content_area .awards ul li p{}
+#content .content_area .awards ul li p:first-child{}
+#content .content_area .awards ul li p:last-child{color: #999;}
+
+:is(#now, .y2023, .y2022, .y2021, .y2020, .y2019, .y2018, .y2017){margin-top: 100px;}
+#content .content_area .awards ul img{transition: all 0.5s ease-out;}
+#content .content_area .awards ul img:hover{transform: translateY(-5px);
+    }
+
+/* 2024 */
+#content .content_area .awards #now li:nth-of-type(3) img:first-child{
+    width: 270px; height: 81px; margin-top: 100px;}
+
+/* 2017 */
+#content .content_area .awards .y2017{margin-bottom: 200px;}
+#content .content_area .awards ul li .brand_logo{overflow: hidden;}
+#content .content_area .awards ul li .brand_logo li{padding: 5px 0;}
+#content .content_area .awards ul li .brand_logo li:not(:last-of-type){margin-right: 10px;}
+#content .content_area .awards ul li .brand_logo li:nth-of-type(1){float: left;}
+#content .content_area .awards ul li .brand_logo li:nth-of-type(2){float: left;}
+#content .content_area .awards ul li .brand_logo li:nth-of-type(3){float: left;}
+#content .content_area .awards ul li .brand_logo li:nth-of-type(4){float: left;}
+
+
+

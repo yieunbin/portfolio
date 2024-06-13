@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/* 룸 실제 본문 내용 css */
+
+#content .content_area{}
+
+.tapmenu{
+    display: flex; justify-content: center;
+    width: 932px; 
+    margin: 0 auto; 
+    font-size:1.67rem; font-weight: 400;
+}
+.tapmenu li{
+    text-align: center; width: 50%;
+    border-bottom: 1px solid #B0744D;
+}
+.tapmenu li a{padding: 10px 0; transition: all 0.3s; color: #666;}
+.tapmenu li a:hover{color: #B0744D;}
+#content .content_area .tapmenu li h3{font-size: 1.67rem;}
+.tapmenu .tapnow{
+    border-top: 3px solid #B0744D;
+    border-left: 1px solid #B0744D;
+    border-right: 1px solid #B0744D;
+    border-bottom: 0px;
+    font-weight: 500;
+}
+.tapmenu .tapnow a{color: #B0744D;}
+.tapmenu li:nth-of-type(2){}
+
+
+#content .content_area h3, #content .content_area h4{font-size: 2.22rem; text-align: center;}
+#content .content_area p{
+    font-size: 1.11rem;}
+
+/* 객실 마운틴뷰 안내 */
+#content .content_area .room_info{display: flex; justify-content: space-between; gap: 38px; width: 900px; margin: 100px auto;}
+#content .content_area .room_info li{overflow: hidden;}
+#content .content_area .room_info li p:first-child{float: left;}
+#content .content_area .room_info li p:nth-of-type(2){float: right;
+    margin-left: 30px;}
+#content .content_area .room_info li p{font-size: 1.67rem;}
+#content .content_area .room_info li p:first-child{font-weight: 600;
+    color: #B0744D;}
+
+#content .content_area h4{margin: 168px 0 100px 0; position: relative;}
+#content .content_area h4:nth-of-type(1)::before{content: ""; display: block;
+    width: 1284px; height: 4228px; 
+    background: url(../images/content1/curved_backimg02.svg);
+    position: absolute; left: -300px; top: 0;
+    z-index: -100;
+}
+#content .content_area .imgbox{position: relative;}
+#content .content_area .imgbox img{transition: .5s; display: none;}
+#content .content_area .imgbox .img_btnbox{position: absolute; left: 50%; bottom: 0px; margin-bottom: 20px;}
+#content .content_area .imgbox .img_btnbox span{
+    display: inline-block;
+    width: 17px; height: 17px;
+    border-radius: 50px;
+    background: #fff;
+    margin-right: 6px;
+    
+}
+
+#content .content_area .imgbox .img_btnbox span:last-child{margin-right: 0;}
+
+/* 텍스트슬라이드 */
+@keyframes txtsilde_l{
+    from { left:1400px }
+    to{left: -11300px;  }
+}
+@keyframes txtsilde_r{
+    from {right:1400px }
+    to{left:1400px}
+}
+
+#content .content_area .txtslide{
+    font-size: 11.11rem;
+    font-weight: 800;
+    opacity: 6%;
+    position: relative;
+    margin-top: 90px;
+    z-index: 1;
+}
+#content .content_area .txtslide .track{
+    animation-name: txtsilde_l ;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation: txtsilde_l 90s infinite; */
+    /* will-change: transform; */
+    white-space: nowrap;
+    position: absolute; left: 1400px; top: 0;
+}
+
+#content .content_area .mt_imgbottom{
+    width: 1100px;
+    overflow: hidden;
+    position: relative;
+    margin: 343px 0 290px 290px;
+}
+#content .content_area .mt_imgbottom img{float: right; width: 474px;
+    border-radius: 200px 0 200px 0;}
+#content .content_area .mt_imgbottom div{float: left; width: 481px;
+    position: absolute;
+    margin-top: 160px;  
+}
+#content .content_area .mt_imgbottom div p{ text-align: justify;}
+#content .content_area .mt_imgbottom div p:first-child{margin-bottom: 50px;}
+#content .content_area .mt_imgbottom div p:last-child{}
+
+/* 씨싸이드뷰 */
+#content .content_area .txtslide02{
+    font-size: 11.11rem;
+    font-weight: 800;
+    opacity: 6%;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+}
+#content .content_area .txtslide02 .track{
+    animation-name: txtsilde_r ;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation: txtsilde_r 90s infinite; */
+    /* will-change: transform; */
+    white-space: nowrap;
+    position: absolute; left: -1400px; top: 0;
+}
+
+#content .content_area .sea_imgbottom{
+    width: 1100px;
+    overflow: hidden;
+    position: relative;
+    margin: 270px 0 500px 290px;
+}
+#content .content_area .sea_imgbottom img{float: right; width: 474px;
+    border-radius: 0 200px 0 200px;}
+#content .content_area .sea_imgbottom div{float: left; width: 481px;
+    position: absolute;
+    margin-top: 160px;  
+}
+#content .content_area .sea_imgbottom div p{text-align: justify;}
+#content .content_area .sea_imgbottom div p:first-child{margin-bottom: 50px;}
+#content .content_area .sea_imgbottom div p:last-child{margin-bottom: 0;}
+
+/* 어메니티 */
+#content .content_area .amenity{position: relative;}
+#content .content_area .amenity::after{content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: -100px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity::before{
+    content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: 710px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity .service{position: relative;}
+#content .content_area .amenity .service::before{content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: 498px;
+    transform: translateX(-50%);
+
+}
+
+#content .content_area .amenity ul{overflow: hidden;margin-bottom: 100px;}
+
+#content .content_area .amenity ul li{}
+#content .content_area .amenity ul .ame01{float: left; width: 550px;
+    font-size: 2.22rem; font-weight: 700;
+}
+#content .content_area .amenity ul .ame02{float: left;width: 427px;}
+#content .content_area .amenity ul .ame03{float: right; width: 420px;}
+
+#content .content_area .amenity ul li ul li:first-child{
+    font-size: 1.67rem; color: #B0744D;
+    margin-bottom: 50px;
+}
+#content .content_area .amenity ul li ul li{
+    margin-bottom: 40px;
+    font-size: 1.11rem;
+}
+#content .content_area .amenity ul li ul li:last-child{margin-bottom: 0;}
+
+
+
+

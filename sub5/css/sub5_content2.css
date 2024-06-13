@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* 비즈니스센터 본문 css */
+#content .content_area{position: relative;}
+#content .content_area > div{margin: 100px 0;}
+#content .content_area p{font-size: 1.11rem;}
+
+#content .content_area > p:nth-of-type(1){
+    font-size: 2.22rem; font-weight: 600;
+}
+#content .content_area > p:nth-of-type(2){
+    width: 1163px; text-align: justify;
+    margin: 40px 0 100px 0;
+}
+
+
+#content .content_area .pagenum{
+    text-align: center; word-spacing: 10px;
+    font-size: 1.11rem;
+    position: relative; left: 50%; top: -100px;
+    transform: translateX(-50%);
+    color: #999;
+}
+#content .content_area .pagenum b{color: #333;}
+#content .content_area .pagenum i{
+    padding: 0 20px; cursor: pointer; color: #333;
+    font-weight: 900; transition: all 0.3s;
+}
+#content .content_area .pagenum i:hover{color: #B0744D;}
+
+
+/* 안내사항 */
+#content .content_area .f_notice{
+    margin: 200px 0; position: relative;
+}
+#content .content_area .f_notice::before{
+    content: ""; display: block; width: 1400px; height: 530px;
+    position: absolute; left: 0; top: -100px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+#content .content_area .f_notice ul{}
+#content .content_area .f_notice ul li{
+    display: flex; gap: 100px;
+    margin-bottom: 50px;
+}
+#content .content_area .f_notice ul li p{
+    font-size: 1.39rem; 
+}
+#content .content_area .f_notice ul li p:first-child{
+    font-weight: 600; width: 120px;
+}
+
+
+#content .content_area .f_caution{margin-bottom: 200px;}
+#content .content_area .f_caution ul{margin-top: 30px; position: relative;}
+#content .content_area .f_caution ul::before{
+    content: ""; display: block; width: 1400px; height: 1px;
+    background: #ccc; position: absolute; left: 0; bottom: -90px;
+}
+#content .content_area .f_caution ul li{
+    font-size: 1.11rem; margin-bottom: 10px;
+}
+#content .content_area .f_caution ul li:last-child{margin-bottom: 0;}
+#content .content_area .f_caution ul li span{
+    color: #B0744D;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편의시설-비즈니스센터</title>
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="./common/css/sub5common.css">
+    <link rel="stylesheet" href="./css/sub5_content2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="../common/css/aos.css">
+    <link rel="stylesheet" href="../mainjs/package/css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 2000px;
+            transform: translateX(-300px);
+            padding-top: 0px;
+            padding-bottom: 30px;
+            }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 926px;
+            height: 690px;
+            }
+    </style>
+    <!-- <script src="./common/js/prefixfree.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/58aa1de25a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+        <? include '../common/sub_header.html' ?>
+
+        <!-- 비주얼 영역 -->
+        <div class="visual">
+            <img src="./common/img/visual1.jpg" alt="">
+            <span>FACILITY</span>
+        </div>
+
+        <div class="sub_nav">
+            <div class="line_map">
+                <i class="fa-solid fa-house"> </i> &bull; FACILITY &bull; <strong> 비즈니스센터</strong>
+            </div>
+            <ul>
+                <li><a href="./sub5_1.html">피트니스&amp;사우나</a>
+                    <span></span><span></span></li>
+                <li class="current"><a href="./sub5_2.html">비즈니스센터</a>
+                    <span></span><span></span></li>
+                <li><a href="./sub5_3.html">인피니티풀</a>
+                    <span></span><span></span></li>
+                <li><a href="./sub5_4.html">네스트파크</a>
+                    <span></span><span></span></li>
+                
+            </ul>
+        </div>
+
+        <article id="content">
+            <!-- 경로~구분선 -->
+            <div class="title_area">
+                <h2>BUSINESS CENTER</h2>
+                <p>건강과 휴식을 한 번에</p>
+                <span>&diams;</span>
+            </div>
+            
+            <div class="content_area">
+                <p>Business Center</p>
+                <p>업무에 불편이 없도록 디지털 업무 지원 시설을 갖춘 공간입니다. 24시간 자유롭게 이용이 가능한 업무 지원 시설로 PC, 복사, 인쇄, 스캔, FAX, 유무선 인터넷, 휴대용 통신기기 대여 서비스 등 고객님의 비즈니스에 필요한 모든 사항에 대해 올인원 서비스를 제공합니다.</p>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./images/content2/topimg1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/content2/topimg2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./images/content2/topimg3.jpg)"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+                <div class="pagenum">
+                    <i class="fa-solid fa-chevron-left"></i><b>1</b> / 3<i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <!-- 안내사항 -->
+                <div class="f_notice">
+                    <ul>
+                        <li>
+                            <p>위치</p>
+                            <p>L층</p>
+                        </li>
+                        <li>
+                            <p>이용안내</p>
+                            <p>무료 대여 : 공용 컴퓨터, FAX 수신<br>유료 대여 : 프린터(흑백), FAX 송신</p>
+                            
+                        </li>
+                        <li>
+                            <p>운영시간</p>
+                            <p>24시간</p>
+                        </li>
+                        <li>
+                            <p>이용문의</p>
+                            <p>032 - 743 - 9010</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="f_caution">
+                    <img src="./images/content1/checkimg.svg" alt="">
+                    <ul>
+                        <li>&#x203B; 호텔 사정에 따라 운영 시간이 변경될 수 있습니다.</li>
+                        <li>&#x203B;  비즈니스 센터는 객실 투숙 고객에 한해 이용 가능합니다.</li>
+                    </ul>
+                </div>
+                
+
+
+
+
+
+
+            </div>
+        </article>
+
+
+
+        <? include '../common/sub_footer.html' ?>
+        <script src="../mainjs/package/js/swiper.min.js"></script>
+        <script src="./common/js/sub5_common.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+                rotate: -15,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows : true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+            nextEl: '.fa-chevron-right',
+            prevEl: '.fa-chevron-left',
+      }
+            });
+        </script>
+
+
+    
+</body>
+</html>

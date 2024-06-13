@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+#content .title_area::before{content: ""; display: block;
+    width: 2000px; height: 445px; 
+    background: url(../img/titlearea_img.jpg);
+    position: absolute; 
+    left: -300px; top: -150px;
+    z-index: -10;
+    opacity: 70%;}
+
+
+
+/* 회사소개(brand story) 실제 본문 내용 css */
+
+#content .content_area{}
+#content .content_area > div{text-align: center;}
+#content .content_area h3{font-size: 2.22rem;}
+#content .content_area > div .point_col{
+    font-size: 1.39rem; margin: 30px 0 85px 0;
+}
+#content .content_area p{
+    font-size: 1.11rem; line-height: 1.6rem; margin-bottom: 50px;}
+
+#content .content_area .box{width: 2000px; height: 500px;
+    background: url(../images/content1/content1_bottomimg01.jpg) 0 10px no-repeat; background-attachment: fixed; position: relative; left: 50%; top: 0; left: -280px; margin: 75px 0;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+}
+
+/* nature */
+#content .content_area ul{display: flex; justify-content: space-between; margin: 100px 0;}
+#content .content_area ul li{position: relative;}
+#content .content_area ul li:first-child{}
+#content .content_area ul li:nth-of-type(2){}
+/* #content .content_area ul li:nth-of-type(2)::before{content: ""; display: block;
+  position: absolute; top: 0px; left: 0px;
+  width: 1000px;
+  height: 100px;
+  opacity: 1;
+  transform: rotate(-45deg);
+  background: rgba(255, 255, 255, 0.13);
+} */
+#content .content_area ul li p{width: 620px; text-align: justify end;}
+
+
+
+#content .content_area ul li img{transition: 0.3s;;}
+#content .content_area ul li img:hover{transform: scale(1.1);}
+/* #content .content_area ul li img:hover li::before{left: 50px;  opacity: 1; z-index: 10;} */
+
+#content .content_area ul li:nth-of-type(2){box-shadow: 1px 1px 15px 2px rgba(0,0,0,.5);
+    width: 700px; height: 700; overflow: hidden;}
+#content .content_area ul .point_col{margin: 30px 0 50px 0; font-size: 1.39rem;}
+#content .content_area ul:nth-of-type(2){margin-bottom: 150px; flex-direction: row-reverse;}
+#content .content_area ul:nth-of-type(2) li:first-child{
+    text-align: right;}
+#content .content_area ul:nth-of-type(2) li:nth-of-type(2){}
+
+
+#content .content_area .txtmask{
+    background-image: url("../images/content1/content_bottomimg03.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	background-clip: text;
+	color: transparent;
+    font-size: 9rem;
+    font-weight: 800;
+    margin-bottom: 150px;
+}
+
+#content .content_area .hotels_mem{position: relative; 
+    padding: 186px 0 120px 0;
+}
+#content .content_area .hotels_mem div{transition: all 0.3s ease-out;
+perspective: 500px;}
+
+#content .content_area .hotels_mem div:hover{transform: rotateY(180deg);}
+#content .content_area .hotels_mem p{color: #fff; line-height: 2rem;}
+#content .content_area .hotels_mem p:nth-of-type(1){
+    font-size: 2.22rem; font-weight: 700;
+    margin: 30px 0 0 0;
+}
+#content .content_area .hotels_mem p:last-child{font-size: 1rem;
+margin-top: 120px; color: #b3b3b3; position: relative;}
+#content .content_area .hotels_mem p:last-child::before{content: "";
+    display: block; width: 1400px; height: 1px; background: #fff;
+    position: absolute; left: 0; top: -60px; }
+#content .content_area .hotels_mem::before{content: ""; display: block;
+    background: url(../images/content1/content1_bottomimg04.jpg);
+    position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 2000px; height: 1080px; z-index: -10;
+    filter: brightness(20%);}

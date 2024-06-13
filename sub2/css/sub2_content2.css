@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/* 룸 실제 본문 내용 css */
+
+#content .content_area{}
+
+.tapmenu{
+    display: flex; justify-content: center;
+    width: 932px; 
+    margin: 0 auto; 
+    font-size:1.67rem; font-weight: 400;
+}
+.tapmenu li{
+    text-align: center; width: 50%;
+    border-bottom: 1px solid #B0744D;
+}
+.tapmenu li a{padding: 10px 0; transition: all 0.3s; color: #666;}
+.tapmenu li a:hover{color: #B0744D;}
+#content .content_area .tapmenu li h3{font-size: 1.67rem;}
+.tapmenu .tapnow{
+    border-top: 3px solid #B0744D;
+    border-left: 1px solid #B0744D;
+    border-right: 1px solid #B0744D;
+    border-bottom: 0px;
+    font-weight: 500;
+}
+.tapmenu .tapnow a{color: #B0744D;}
+.tapmenu li:nth-of-type(2){}
+
+#content .content_area h3, #content .content_area h4{font-size: 2.22rem; text-align: center;}
+#content .content_area p{
+    font-size: 1.11rem;}
+
+/* 객실 마운틴뷰 안내 */
+#content .content_area .room_info{display: flex; justify-content: space-between; gap: 38px; width: 1100px; margin: 100px auto;}
+#content .content_area .room_info li{overflow: hidden;}
+#content .content_area .room_info li p:first-child{float: left;}
+#content .content_area .room_info li p:nth-of-type(2){float: right;
+    margin-left: 30px;}
+#content .content_area .room_info li p{font-size: 1.67rem;}
+#content .content_area .room_info li p:first-child{font-weight: 600;
+    color: #B0744D;}
+
+#content .content_area h4{margin: 200px 0 100px 0; position: relative;}
+
+#content .content_area .room_twin{position: relative;}
+#content .content_area .room_twin .mtview_box{overflow: hidden;}
+#content .content_area .room_twin .mtimg{overflow: hidden;}
+#content .content_area .room_twin .mtimg img{float: left; width: 890px;}
+#content .content_area .room_twin .mtimg p{float: right; width: 463px;
+    text-align: justify; line-height: 2rem; font-size: 1.11rem;}
+#content .content_area .room_twin .mtimg02{
+    position: relative; left: 786px; top: -136px; 
+    width: 620px;}
+#content .content_area .room_twin .mtimg03{
+    position: relative; left: -530px; top: 104px;
+    width: 581px;
+}
+#content .content_area .room_twin .mt_bottomtxt{width: 463px;
+    position: relative; left: 790px; top: 0px;
+    text-align: justify;}
+
+/* 오션뷰 */
+#content .content_area .room_twin .seaview_box{position: relative; overflow: hidden; margin-bottom: 200px;}
+#content .content_area .room_twin .seaview_box div{overflow: hidden;}
+#content .content_area .room_twin .seaview_box div img{float: right; width: 890px;}
+#content .content_area .room_twin .seaview_box div p{float: left; width: 463px; text-align: justify; line-height: 2rem; font-size: 1.11rem;}
+#content .content_area .room_twin .seaview_box .seaimg02{width: 620px;
+    position: relative; left: 0; top: -296px;}
+#content .content_area .room_twin .seaimg03{width: 581px;
+    position: relative; right: -100px; top: 100px;}
+#content .content_area .room_twin .seaview_box .sea_bottomtxt{width: 463px;
+    position: relative; right: -162px; top: -20px; text-align: justify;}
+
+
+
+
+
+
+
+
+/* 어메니티 */
+#content .content_area .amenity{position: relative;}
+#content .content_area .amenity::after{content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: -100px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity::before{
+    content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: 710px;
+    transform: translateX(-50%);
+}
+#content .content_area .amenity .service{position: relative;}
+#content .content_area .amenity .service::before{content: ""; display: block;
+    width: 1400px; height: 1px; background: #ccc;
+    position: absolute; left: 50%; top: 498px;
+    transform: translateX(-50%);
+
+}
+
+#content .content_area .amenity ul{overflow: hidden;margin-bottom: 100px;}
+
+#content .content_area .amenity ul li{}
+#content .content_area .amenity ul .ame01{float: left; width: 550px;
+    font-size: 2.22rem; font-weight: 700;
+}
+#content .content_area .amenity ul .ame02{float: left;width: 427px;}
+#content .content_area .amenity ul .ame03{float: right; width: 420px;}
+
+#content .content_area .amenity ul li ul li:first-child{
+    font-size: 1.67rem; color: #B0744D;
+    margin-bottom: 50px;
+}
+#content .content_area .amenity ul li ul li{
+    margin-bottom: 40px;
+    font-size: 1.11rem;
+}
+#content .content_area .amenity ul li ul li:last-child{margin-bottom: 0;}
+
+
+
+/* 디럭스더블 */
+#content .content_area .room_double{position: relative;}
+#content .content_area .room_double .mtview_box{overflow: hidden;}
+#content .content_area .room_double .mtimg{overflow: hidden;}
+#content .content_area .room_double .mtimg img{float: left; width: 890px;}
+#content .content_area .room_double .mtimg p{float: right; width: 463px;
+    text-align: justify; line-height: 2rem; font-size: 1.11rem;}
+#content .content_area .room_double .mtimg02{
+    position: relative; left: 786px; top: -136px; 
+    width: 620px;}
+#content .content_area .room_double .mtimg03{
+    position: relative; left: -530px; top: 104px;
+    width: 581px;
+}
+#content .content_area .room_double .mt_bottomtxt{width: 463px;
+    position: relative; left: 790px; top: 0px;
+    text-align: justify;}
+
+/* 오션뷰 */
+#content .content_area .room_double .seaview_box{position: relative; overflow: hidden; margin-bottom: 200px;}
+#content .content_area .room_double .seaview_box div{overflow: hidden;}
+#content .content_area .room_double .seaview_box div img{float: right; width: 890px;}
+#content .content_area .room_double .seaview_box div p{float: left; width: 463px; text-align: justify; line-height: 2rem; font-size: 1.11rem;}
+#content .content_area .room_double .seaview_box .seaimg02{width: 620px;
+    position: relative; left: 0; top: -296px;}
+#content .content_area .room_double .seaimg03{width: 581px;
+    position: relative; right: -100px; top: 100px;}
+#content .content_area .room_double .seaview_box .sea_bottomtxt{width: 463px;
+    position: relative; right: -162px; top: -20px; text-align: justify;}
+
+
+
