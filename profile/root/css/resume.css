@@ -272,7 +272,10 @@ footer .footer_inner a:hover i {
     width: auto; }
 
   #contentArea .toggle-container dt {
-    margin: 0 0 20px 0; } }
+    margin: 0 0 20px 0; }
+
+  header .head_ttl .detail {
+    font-size: 1.5vmax; } }
 @media screen and (max-width: 640px) {
   header .image {
     margin: 0 auto;

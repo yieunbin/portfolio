@@ -11,9 +11,9 @@ $(document).ready(function() {
 
             if (!container.classList.contains('active')) { 
                 $(this).parent().find('i').addClass('rotate');
-                container.classList.add('active'); 
+                container.classList.add('active');
 
-                container.style.height = 'auto';
+                container.style.height = 'auto'; 
                 var height = container.clientHeight + 'px'; 
                 container.style.height = '0px';
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
                     container.style.height = height;
                 }, 0);
             
-            } else { 
+            } else { // active 가 있다면 (열려있는 상태)
                 $('i').removeClass('rotate');
                 container.style.height = '0px';
                 container.addEventListener('transitionend', function () { 

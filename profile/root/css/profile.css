@@ -544,6 +544,7 @@ img {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 500%); }
+        transform: translate(-50%, 400%);
+        font-size: 1.39rem; }
 
 /*# sourceMappingURL=profile.css.map */
