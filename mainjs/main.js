@@ -381,7 +381,6 @@ $('.fac_container ul').hover(function(){
         success : function(data){
     
             let rcontent = data.roominfo;
-            let txt = '';
 
             $('.room_container .room_menu li').removeClass('now');
             $('.room_container .room_menu li h4').css('color','#999')
@@ -390,19 +389,19 @@ $('.fac_container ul').hover(function(){
             $('.room_container .room_menu li:first span').css('width','100%');
             $('.room_container .room_menu li:first').addClass('now');
 
-            txt = '';
-            txt += '<ul>';
-            txt += '<li class="r_twin">';
-            txt += '<dl>';
-            txt += '<dt>'+rcontent[0].roomtype+'</dt>';
-            txt += '<dd>'+rcontent[0].roomp+'</dd>';
-            txt += '<dd class="view_par"><a class="view_m" href="'+rcontent[0].link+'">view more</a></dd>';
-            txt += '</dl>';
-            txt += '<div class="room_img">';
-            txt += '<img src="./mainimages/'+rcontent[0].imgsrc+'" alt="">';
-            txt += '</div>';
-            txt += '</li>';
-            txt += '</ul>';
+            let txt = `
+                        <ul>
+                            <li class="r_twin">
+                                <dl>
+                                    <dt>${rcontent[0].roomtype}</dt>
+                                    <dd>${rcontent[0].roomp}</dd>
+                                    <dd class="view_par"><a class="view_m" href="${rcontent[0].link}">view more</a></dd>
+                                </dl>
+                                <div class="room_img">
+                                    <img src="./mainimages/${rcontent[0].imgsrc}" alt="">
+                                </div>
+                            </li>
+                        </ul>`;
 
             $('.room_bottom').html(txt);
             $('.room_bottom ul li dl dt').css({'top':'0px','opacity':'1'});
@@ -415,19 +414,19 @@ $('.fac_container ul').hover(function(){
                 let i = $(this).index('.room_menu li');
                 console.log(i);
 
-                txt = '';
-                txt += '<ul>';
-                txt += '<li class="r_twin">';
-                txt += '<dl>';
-                txt += '<dt>' + rcontent[i].roomtype + '</dt>';
-                txt += '<dd>' + rcontent[i].roomp + '</dd>';
-                txt += '<dd class="view_par"><a href="' + rcontent[i].link + '" class="view_m">view more</a></dd>';
-                txt += '</dl>';
-                txt += '<div class="room_img">';
-                txt += '<img src="./mainimages/' + rcontent[i].imgsrc + '" alt="">';
-                txt += '</div>';
-                txt += '</li>';
-                txt += '</ul>';
+                let txt = `
+                    <ul>
+                        <li class="r_twin">
+                            <dl>
+                                <dt>${rcontent[i].roomtype}</dt>
+                                <dd>${rcontent[i].roomp}</dd>
+                                <dd class="view_par"><a href="${rcontent[i].link}" class="view_m">view more</a></dd>
+                            </dl>
+                            <div class="room_img">
+                                <img src="./mainimages/${rcontent[i].imgsrc}" alt="">
+                            </div>
+                        </li>
+                    </ul>`;
 
                 $('.room_container .room_menu li h4').css('color','#999')
                 $('.room_container .room_menu li span').css('width','0');

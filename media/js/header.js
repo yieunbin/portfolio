@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let vsh = $('.vidoeBox').height();
-    let on_off=false;  //false(안오버)  true(오버)
-    let up_down = 'up';  //비주얼위에 있으면 'up',아래에 있으면'down'
+    let on_off=false;  
+    let up_down = 'up';  
 
     $('#headerArea').mouseenter(function(){
         // var scroll = $(window).scrollTop();
@@ -21,13 +21,13 @@ $(document).ready(function(){
     });
 
     //  햄버거메뉴
-    var onoff = false; //false(메뉴열림) true(메뉴닫힘)
+    var onoff = false; 
     let bodyH = $(window).height();
     $(".menuOpen").click(function(e){
         e.preventDefault();
         if(onoff == false){
         $("#gnb").slideDown('slow');
-        $('#headerArea').addClass('mn_open');//메뉴모양변경
+        $('#headerArea').addClass('mn_open');
         $('.hamback').fadeIn('slow');
         $('hamback').fadeIn('slow');
         onoff = true;
@@ -49,20 +49,20 @@ $(document).ready(function(){
     //     $("#gnb").height(winh);
     // }
     
-    var current=0; // 0(해상도가 모바일), 1(소형테블릿이상)
+    var current=0; 
 
     $(window).resize(function(){ 
-        var screenSize = $(window).width();  //가로 해상도
-        if( screenSize > 768){  //소형테블릿 이상이면
+        var screenSize = $(window).width();  
+        if( screenSize > 768){ 
             $("#gnb").show();
             $("#gnb").height('auto');
-                current=1; //소형테블릿이상
+                current=1; 
         }
         if(current==1 && screenSize <= 768){
             $("#gnb").hide();
             $("#gnb").height('auto');
             onoff = false;
-            current=0; //모바일
+            current=0;
         }
     }); 
     

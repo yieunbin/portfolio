@@ -37,11 +37,10 @@ $(document).ready(function(){
         autoHeight: true,
         slidesPerView: 1,
         loop: false,
-        pagination: {   //페이지 네이션
+        pagination: {  
             el: '.pagination1',
             //dynamicBullets: true,
             clickable: true,
-            //type: 'fraction'   //  현재/총개수 (페이지네이션블릿은 사라진다)
         }
     });
 
@@ -49,20 +48,19 @@ $(document).ready(function(){
     var swiper2 = new Swiper('.swiper2', {
         //autoHeight: true,
         slidesPerView: 1,
-        spaceBetween: 20,  //단사이 여백
+        spaceBetween: 20,  
         loop: true,
         centeredSlides: true,
         initialSlide : 1,
 
-        navigation: {    //이전/다음 버튼
+        navigation: {    
             nextEl: '.next2',
             prevEl: '.prev2',
         },
-        pagination: {   //페이지 네이션
+        pagination: { 
             el: '.pagination2',
             //dynamicBullets: true,
             clickable: true,
-            //type: 'fraction'   //  현재/총개수 (페이지네이션블릿은 사라진다)
         },
         breakpoints:{
             641:{
