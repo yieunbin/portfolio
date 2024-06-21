@@ -89,7 +89,7 @@ header .head_ttl .detail dl:not(:last-child)::before{
 }
 #contentArea .toggle-container dl { 
     display: flex; column-gap: 5%; border-bottom: 1px solid #ddd; 
-    padding: 30px 0; 
+    padding: 30px 20px;
 }
 #contentArea .toggle-container dt { 
     width: 30%; font-size: 1.1em; font-weight: 500; 
@@ -144,5 +144,6 @@ footer .footer_inner a:hover i { color: #fff; transform: translateX(10px) transl
     header .image { margin: 0 auto; width: 50%;}
     header .head_main { display: block; text-align: center;}
     header .head_ttl { margin: 30px 0;}
-    header .head_ttl span{ margin: 20px 0};
+    header .head_ttl span{ margin: 20px 0;};
+    
 }

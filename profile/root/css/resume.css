@@ -174,7 +174,7 @@ header .head_ttl .detail dl:not(:last-child)::before {
   display: flex;
   column-gap: 5%;
   border-bottom: 1px solid #ddd;
-  padding: 30px 0; }
+  padding: 30px 20px; }
 
 #contentArea .toggle-container dt {
   width: 30%;
