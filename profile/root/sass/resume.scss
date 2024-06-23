@@ -87,18 +87,33 @@ header .head_ttl .detail dl:not(:last-child)::before{
 #contentArea i.rotate {
     transform: rotate(180deg);
 }
-#contentArea .toggle-container dl { 
-    display: flex; column-gap: 5%; border-bottom: 1px solid #ddd; 
-    padding: 30px 20px;
+#contentArea .toggle-container dl{ 
+    display: flex; 
+    column-gap: 5%; 
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd; 
+    padding: 30px 20px; 
 }
-#contentArea .toggle-container dt { 
+#contentArea .toggle-container dt{ 
     width: 30%; font-size: 1.1em; font-weight: 500; 
 }
-#contentArea .toggle-container dd { width: 65%; }
-#contentArea .toggle-container dd a { 
+#contentArea .toggle-container dd{ width: 65%; }
+#contentArea .toggle-container dd:nth-of-type(2){
+    width: 65%; 
+    margin-top: 10px;  margin-left: 35%;
+}
+#contentArea .toggle-container dd:nth-of-type(2) ul li{line-height: 2rem;}
+#contentArea .toggle-container dd:nth-of-type(2) .sboardLink{
+    display: inline-block; color: #333; 
+}
+#contentArea .toggle-container dd:nth-of-type(2) .sboardLink:hover{
+    background: none; color: rgb(0, 0, 255);;
+}
+#contentArea .toggle-container dd a{ 
     display: block; word-break:break-all; 
     position: static; font-size: 1rem; color: #ccc;
 }
+#contentArea .toggle-container dd a:hover{background: #fff;color: rgb(0, 0, 255);}
 #contentArea .toggle-container dd span { display: block; }
 
 /* footer */
@@ -137,6 +152,7 @@ footer .footer_inner a:hover i { color: #fff; transform: translateX(10px) transl
     #contentArea .toggle-container dt, 
     #contentArea .toggle-container dd { width: auto;}
     #contentArea .toggle-container dt { margin: 0 0 20px 0; }
+    #contentArea .toggle-container dd:nth-of-type(2){margin-left: 0; width: auto;}
     header .head_ttl .detail{font-size: 1.5vmax;}
 
 }
