@@ -335,6 +335,16 @@ img {
             margin-bottom: 10px;
             color: #666;
             font-weight: 700; }
+          #wrap #content section.profile .infoBox > ul > li dl a {
+            display: inline-block;
+            font-size: 1.5rem;
+            padding: 0 5px;
+            transition: .3s ease-out;
+            position: relative;
+            top: 0px; }
+            #wrap #content section.profile .infoBox > ul > li dl a:hover {
+              color: #ffdd00;
+              top: -3px; }
         #wrap #content section.profile .infoBox > ul > li:nth-of-type(1) {
           display: flex;
           gap: 20%; }
@@ -382,9 +392,9 @@ img {
               transform: translateY(-50%);
               opacity: 0; }
             #wrap #content section.profile .infoBox .link a:hover p {
-              transform: translateX(-30px); }
+              transform: translateX(-25px); }
             #wrap #content section.profile .infoBox .link a:hover img {
-              right: 50px;
+              right: 60px;
               opacity: 1; }
     #wrap #content section:not(.profile) h2 {
       font-size: 1.11rem;
@@ -458,7 +468,10 @@ img {
             background: var(--nest_subcol);
             float: right; }
         #wrap #content section:not(.profile) .contain .text_box .links {
-          overflow: hidden; }
+          overflow: hidden;
+          position: relative;
+          top: 50px;
+          opacity: 0; }
           #wrap #content section:not(.profile) .contain .text_box .links a {
             float: left;
             margin: 32px 30px 0 0;
@@ -484,9 +497,9 @@ img {
               transform: translateY(-50%);
               opacity: 0; }
             #wrap #content section:not(.profile) .contain .text_box .links a:hover p {
-              transform: translateX(-30px); }
+              transform: translateX(-25px); }
             #wrap #content section:not(.profile) .contain .text_box .links a:hover img {
-              right: 50px;
+              right: 60px;
               opacity: 1; }
     #wrap #content section.mobilever .contain .img_box .pc {
       width: auto;
@@ -529,5 +542,55 @@ img {
         top: 50%;
         transform: translate(-50%, 400%);
         font-size: 1.39rem; }
+        #wrap #content section.thanks div p:nth-of-type(2) a {
+          display: inline-block;
+          font-size: 1.5rem;
+          padding: 0 5px;
+          transition: .3s ease-out;
+          position: relative;
+          top: 5px; }
+          #wrap #content section.thanks div p:nth-of-type(2) a:hover {
+            color: #ffdd00;
+            top: 2px; }
+
+@media screen and (max-width: 1280px) {
+  #wrap #content section.home > div:nth-of-type(1) {
+    font-size: 9rem; }
+
+  #wrap #content section.profile .infoBox > ul .skills ul {
+    width: auto; }
+
+  #wrap #content section.profile .infoBox .link a {
+    font-size: 1rem; }
+
+  #wrap #content section:not(.profile) .contain .text_box .links a {
+    width: 45%; } }
+@media screen and (max-width: 1024px) {
+  #wrap #content section {
+    padding: 50px; }
+
+  #wrap #content section.profile .imgBox {
+    float: none;
+    margin: 70px auto 50px auto; }
+
+  #wrap #content section.profile .imgBox img {
+    width: 200px;
+    height: 200px; }
+
+  #wrap #content section.profile .imgBox::before {
+    width: 250px;
+    height: 250px; }
+
+  #wrap #content section.profile .infoBox {
+    width: auto; }
+
+  #wrap #content section.profile .infoBox > p {
+    display: none; }
+
+  #wrap #content section.profile .infoBox > ul > li:nth-of-type(1) dl:nth-of-type(1) {
+    width: 35%; }
+
+  #wrap #content section.profile .infoBox > ul .skills ul li img {
+    width: 70%; } }
 
 /*# sourceMappingURL=profile.css.map */

@@ -68,13 +68,16 @@ $(document).ready(function(){
         const rpOffset = rpSection.offset().top;
         const thanksOffset = thanksSection.offset().top;
         
-        if (scroll >= profileOffset) {
+        if (scroll >= thanksOffset) {
+            header.fadeOut();
+            rightNav.fadeOut();
+        } else if (scroll >= profileOffset) {
             header.fadeIn();
             rightNav.fadeIn();
-            $('.link a:eq(0)').animate({'top':'0','opacity':'1'},500);
-            $('.link a:eq(1)').delay(200).animate({'top':'0','opacity':'1'},500);
-            $('.link a:eq(2)').delay(400).animate({'top':'0','opacity':'1'},500);
-        }else {
+            $('.link a:eq(0)').animate({ 'top': '0', 'opacity': '1' }, 500);
+            $('.link a:eq(1)').delay(200).animate({ 'top': '0', 'opacity': '1' }, 500);
+            $('.link a:eq(2)').delay(400).animate({ 'top': '0', 'opacity': '1' }, 500);
+        } else {
             header.fadeOut();
             rightNav.fadeOut();
         }
@@ -96,11 +99,13 @@ $(document).ready(function(){
             $('.imgbox1').addClass('slideUp');
             pcSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
             pcSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
+            pcSection.find('.links').delay(400).animate({'top':'0px','opacity':'1'},500);
             //$('.b5').addClass('changeYellow3').removeClass('changeBlue3');
         }else if(scroll >= mobileOffset && scroll < rpOffset){
             $('.imgbox2').addClass('slideUp');
             mobSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
             mobSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
+            mobSection.find('.links').delay(400).animate({'top':'0px','opacity':'1'},500);
         } else if (scroll >= rpOffset && scroll < thanksOffset) {
             console.log('Adding changeBlue');
             $('.b1').addClass('changeBlue1').removeClass('changeYellow3');
@@ -109,6 +114,7 @@ $(document).ready(function(){
             $('.imgbox3').addClass('slideUp');
             rpSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
             rpSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
+            rpSection.find('.links').delay(400).animate({'top':'0px','opacity':'1'},500);
         } else if(scroll >= thanksOffset){
             $('.b1').removeClass('changeYellow3 changeBlue1');
             $('.b2').removeClass('changeYellow2 changeBlue2');
@@ -166,7 +172,6 @@ $(document).ready(function(){
 
         $('html,body').stop().animate({'scrollTop': nowTop}, 1000);
     });
-
 
 
 
