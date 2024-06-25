@@ -163,7 +163,7 @@ img{border: 0; vertical-align: top;}
             & li{
                 transform: translateX(-50%);
                 width: 5px; height: 5px;
-                background: #fff; border-radius: 50px;
+                background: rgba(255,255,255,.7); border-radius: 50px;
                 margin-bottom: 40px; transition: .5s ease-out;
 
                 & a{
@@ -173,7 +173,8 @@ img{border: 0; vertical-align: top;}
             }
             & .on{
                 width: 15px; height: 15px;
-                box-shadow: 0px 0px 70px 10px rgba(255,255,255,1);
+                background: #fff;
+                // box-shadow: 0px 0px 70px 10px rgba(255,255,255,1);
             }
         }
     }
@@ -408,8 +409,26 @@ img{border: 0; vertical-align: top;}
                     width: 50%; 
 
                     & .text{
-                        
                         & > ul{
+                            // transition: .5s ease-out;
+                            position: relative; top: 50px; opacity: 0;
+                        }
+                        & > ul:nth-of-type(1){
+                            list-style-type:disc;
+                            & li{
+                                padding: 5px;
+
+                                & a{
+                                    display: inline-block;
+                                    text-decoration:underline;
+                                    &:hover{
+                                        color: #ffdd00;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        & > ul:nth-of-type(2){
                             // margin-top: 50px;
                             & > li{
                                 margin: 30px 0;
@@ -424,69 +443,23 @@ img{border: 0; vertical-align: top;}
                             }
                             & > li:nth-of-type(1){
                                 display: flex; gap: 10%;
-                            }
-                            & > li:nth-of-type(2){
-                                display: flex; gap: 10%;
-
-                                & p{
-                                    font-weight: 700;color: #666;
-                                    // margin-bottom: 10px;
-                                }
-                                & > ul{
-                                    display: flex; gap: 100px;
-
-                                    & > li{
-                                        & ul{
-                                            & li{
-                                                margin-bottom: 10px;
-                                            }
-                                        }
+                                & > dl:last-child{
+                                    & > dd{
+                                        width: 40px; height: 40px;
+                                        display: block; border-radius: 100px;
+                                        margin-right: 10px;
                                     }
-                                }
-                            }
-                            & > li:nth-of-type(3){
-                                > ul{
-                                    display: flex; 
-                                    & li{
-                                        width: 50%;
-                                        & p{
-                                            font-weight: 700;color: #666;
-                                            margin-bottom: 10px;
-                                        }
-                                        & div{
-                                            display: flex; gap: 10px;
-                                            & span{
-                                                width: 50px; height: 50px;
-                                                display: block; border-radius: 100px;
-                                            }
-                                            & span:nth-of-type(1){
-                                                background: var(--nest_maincol1)
-                                            }
-                                            & span:nth-of-type(2){
-                                                background: var(--nest_maincol2)
-                                            }
-                                            & span:nth-of-type(3){
-                                                background: var(--nest_subcol)
-                                            }
-                                        }
+                                    & dd:nth-of-type(1){
+                                        background: var(--nest_maincol1);
+                                        float: left;
                                     }
-                                    & li:nth-of-type(2){
-                                        
-                                        & div{
-                                            gap: 10%;
-                                            & p{
-                                                font-size: 1.5rem;
-                                                font-weight: 400;
-                                                color: #fff;
-                                            }
-                                            & p:nth-of-type(2){
-                                                font-family: "Roboto", sans-serif;
-                                                font-size: 1.5rem;
-                                                padding-top: 5px;
-                                            }
-                                        }
-                                        
-                                        
+                                    & dd:nth-of-type(2){
+                                        background: var(--nest_maincol2);
+                                        float: left;
+                                    }
+                                    & dd:nth-of-type(3){
+                                        background: var(--nest_subcol);
+                                        float: right;
                                     }
                                 }
                             }
@@ -498,6 +471,9 @@ img{border: 0; vertical-align: top;}
                             float: left;
                             margin: 32px 30px 0 0;
                             @include btn1(30%);
+                        }
+                        & > img{
+                            
                         }
                     }
                     
@@ -543,30 +519,20 @@ img{border: 0; vertical-align: top;}
                 }
                 & .text_box{
                     & .text{
-                        & > ul{
-                            & > li:nth-of-type(3){
-                                & ul{
-                                    & li{
-                                        & div{
-                                            & span:nth-of-type(1){
-                                                background: var(--uni_maincol);
-                                            }
-                                            & span:nth-of-type(2){
-                                                background: #BB996A;
-                                            }
-                                            & span:nth-of-type(3){
-                                                background: #AC0000;
-                                            }
-                                        }
+                        & > ul:nth-of-type(2){
+                            & > li:nth-of-type(1){
+                                & dl:last-child{
+                                    & dd:nth-of-type(1){
+                                        background: var(--uni_maincol);
                                     }
-                                    & li:nth-of-type(2){
-                                        & div{
-                                            & p:nth-of-type(1){
-                                                font-family: "Kalnia", serif;
-                                            }
-                                        }
+                                    & dd:nth-of-type(2){
+                                        background: #BB996A;
+                                    }
+                                    & dd:nth-of-type(3){
+                                        background: #AC0000;
                                     }
                                 }
+                                
                             }
                         }
                     }

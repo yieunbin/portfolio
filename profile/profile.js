@@ -94,15 +94,21 @@ $(document).ready(function(){
             $('.b1').addClass('changeYellow3').removeClass('changeBlue1');
             $('.b2').addClass('changeYellow2').removeClass('changeBlue2');
             $('.imgbox1').addClass('slideUp');
+            pcSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
+            pcSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
             //$('.b5').addClass('changeYellow3').removeClass('changeBlue3');
         }else if(scroll >= mobileOffset && scroll < rpOffset){
             $('.imgbox2').addClass('slideUp');
+            mobSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
+            mobSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
         } else if (scroll >= rpOffset && scroll < thanksOffset) {
             console.log('Adding changeBlue');
             $('.b1').addClass('changeBlue1').removeClass('changeYellow3');
             $('.b2').addClass('changeBlue2').removeClass('changeYellow2');
             //$('.b5').addClass('changeBlue3').removeClass('changeYellow3');
             $('.imgbox3').addClass('slideUp');
+            rpSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
+            rpSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
         } else if(scroll >= thanksOffset){
             $('.b1').removeClass('changeYellow3 changeBlue1');
             $('.b2').removeClass('changeYellow2 changeBlue2');
@@ -160,7 +166,6 @@ $(document).ready(function(){
 
         $('html,body').stop().animate({'scrollTop': nowTop}, 1000);
     });
-
 
 
 

@@ -162,7 +162,7 @@ img {
       transform: translateX(-50%);
       width: 5px;
       height: 5px;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.7);
       border-radius: 50px;
       margin-bottom: 40px;
       transition: .5s ease-out; }
@@ -171,7 +171,7 @@ img {
     #wrap .rightNav ul .on {
       width: 15px;
       height: 15px;
-      box-shadow: 0px 0px 70px 10px white; }
+      background: #fff; }
   #wrap #content {
     width: 100%;
     clear: both; }
@@ -420,58 +420,43 @@ img {
         opacity: 1; }
       #wrap #content section:not(.profile) .contain .text_box {
         width: 50%; }
-        #wrap #content section:not(.profile) .contain .text_box .text > ul > li {
+        #wrap #content section:not(.profile) .contain .text_box .text > ul {
+          position: relative;
+          top: 50px;
+          opacity: 0; }
+        #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(1) {
+          list-style-type: disc; }
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(1) li {
+            padding: 5px; }
+            #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(1) li a {
+              display: inline-block;
+              text-decoration: underline; }
+              #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(1) li a:hover {
+                color: #ffdd00; }
+        #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li {
           margin: 30px 0; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul > li dl dt {
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li dl dt {
             font-weight: 700;
             margin-bottom: 10px;
             color: #666; }
-        #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(1) {
+        #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) {
           display: flex;
           gap: 10%; }
-        #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(2) {
-          display: flex;
-          gap: 10%; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(2) p {
-            font-weight: 700;
-            color: #666; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(2) > ul {
-            display: flex;
-            gap: 100px; }
-            #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(2) > ul > li ul li {
-              margin-bottom: 10px; }
-        #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul {
-          display: flex; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li {
-            width: 50%; }
-            #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li p {
-              font-weight: 700;
-              color: #666;
-              margin-bottom: 10px; }
-            #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li div {
-              display: flex;
-              gap: 10px; }
-              #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li div span {
-                width: 50px;
-                height: 50px;
-                display: block;
-                border-radius: 100px; }
-              #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li div span:nth-of-type(1) {
-                background: var(--nest_maincol1); }
-              #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li div span:nth-of-type(2) {
-                background: var(--nest_maincol2); }
-              #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li div span:nth-of-type(3) {
-                background: var(--nest_subcol); }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li:nth-of-type(2) div {
-            gap: 10%; }
-            #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li:nth-of-type(2) div p {
-              font-size: 1.5rem;
-              font-weight: 400;
-              color: #fff; }
-            #wrap #content section:not(.profile) .contain .text_box .text > ul > li:nth-of-type(3) > ul li:nth-of-type(2) div p:nth-of-type(2) {
-              font-family: "Roboto", sans-serif;
-              font-size: 1.5rem;
-              padding-top: 5px; }
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child > dd {
+            width: 40px;
+            height: 40px;
+            display: block;
+            border-radius: 100px;
+            margin-right: 10px; }
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child dd:nth-of-type(1) {
+            background: var(--nest_maincol1);
+            float: left; }
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child dd:nth-of-type(2) {
+            background: var(--nest_maincol2);
+            float: left; }
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child dd:nth-of-type(3) {
+            background: var(--nest_subcol);
+            float: right; }
         #wrap #content section:not(.profile) .contain .text_box .links {
           overflow: hidden; }
           #wrap #content section:not(.profile) .contain .text_box .links a {
@@ -526,14 +511,12 @@ img {
       left: -100%;
       top: 21vw;
       z-index: 30; }
-    #wrap #content section.rpweb .contain .text_box .text > ul > li:nth-of-type(3) ul li div span:nth-of-type(1) {
+    #wrap #content section.rpweb .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) dl:last-child dd:nth-of-type(1) {
       background: var(--uni_maincol); }
-    #wrap #content section.rpweb .contain .text_box .text > ul > li:nth-of-type(3) ul li div span:nth-of-type(2) {
+    #wrap #content section.rpweb .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) dl:last-child dd:nth-of-type(2) {
       background: #BB996A; }
-    #wrap #content section.rpweb .contain .text_box .text > ul > li:nth-of-type(3) ul li div span:nth-of-type(3) {
+    #wrap #content section.rpweb .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) dl:last-child dd:nth-of-type(3) {
       background: #AC0000; }
-    #wrap #content section.rpweb .contain .text_box .text > ul > li:nth-of-type(3) ul li:nth-of-type(2) div p:nth-of-type(1) {
-      font-family: "Kalnia", serif; }
     #wrap #content section.thanks {
       text-align: center; }
       #wrap #content section.thanks > p:nth-of-type(1) {
