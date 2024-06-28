@@ -90,15 +90,16 @@ img{border: 0; vertical-align: top;}
         opacity: 0;
     }
     &:hover{
-        & p{transform: translateX(-25px);}
-        & img{right: 60px;opacity: 1;}
+        & p{transform: translateX(-30px);}
+        & img{right: 50px;opacity: 1;}
     }
 }
 @mixin mailbtn($top){
     display: inline-block; font-size: 1.5rem;
-    padding: 0 5px;
+    // padding: 0 5px;
     transition: .3s ease-out;
     position: relative; top: $top;
+    vertical-align: middle;
 
     &:hover{
         color: #ffdd00; top: $top - 3px;
@@ -351,7 +352,14 @@ img{border: 0; vertical-align: top;}
                                 color: #666; font-weight: 700;
                             }
                             & a{
-                                @include mailbtn(0px);
+                                @include mailbtn(5px);
+                            }
+                        }
+                        & dl:nth-of-type(2){
+                            & dd{
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
                             }
                         }
                         
@@ -366,7 +374,7 @@ img{border: 0; vertical-align: top;}
                             color: #666; font-weight: 700;
                         }
                         & ul{
-                            width: 70%;
+                            width: 80%;
                             display: flex; gap: 15px;
                             flex-wrap: wrap;
                             
@@ -566,6 +574,10 @@ img{border: 0; vertical-align: top;}
                 transform: translate(-50%, 400%);
                 font-size: 1.39rem;
                 & p:nth-of-type(2){
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
                     & a{
                         @include mailbtn(5px);
                     }

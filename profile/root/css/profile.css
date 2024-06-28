@@ -338,13 +338,17 @@ img {
           #wrap #content section.profile .infoBox > ul > li dl a {
             display: inline-block;
             font-size: 1.5rem;
-            padding: 0 5px;
             transition: .3s ease-out;
             position: relative;
-            top: 0px; }
+            top: 5px;
+            vertical-align: middle; }
             #wrap #content section.profile .infoBox > ul > li dl a:hover {
               color: #ffdd00;
-              top: -3px; }
+              top: 2px; }
+          #wrap #content section.profile .infoBox > ul > li dl:nth-of-type(2) dd {
+            display: flex;
+            align-items: center;
+            gap: 5px; }
         #wrap #content section.profile .infoBox > ul > li:nth-of-type(1) {
           display: flex;
           gap: 20%; }
@@ -353,7 +357,7 @@ img {
           color: #666;
           font-weight: 700; }
         #wrap #content section.profile .infoBox > ul .skills ul {
-          width: 70%;
+          width: 80%;
           display: flex;
           gap: 15px;
           flex-wrap: wrap; }
@@ -392,9 +396,9 @@ img {
               transform: translateY(-50%);
               opacity: 0; }
             #wrap #content section.profile .infoBox .link a:hover p {
-              transform: translateX(-25px); }
+              transform: translateX(-30px); }
             #wrap #content section.profile .infoBox .link a:hover img {
-              right: 60px;
+              right: 50px;
               opacity: 1; }
     #wrap #content section:not(.profile) h2 {
       font-size: 1.11rem;
@@ -497,9 +501,9 @@ img {
               transform: translateY(-50%);
               opacity: 0; }
             #wrap #content section:not(.profile) .contain .text_box .links a:hover p {
-              transform: translateX(-25px); }
+              transform: translateX(-30px); }
             #wrap #content section:not(.profile) .contain .text_box .links a:hover img {
-              right: 60px;
+              right: 50px;
               opacity: 1; }
     #wrap #content section.mobilever .contain .img_box .pc {
       width: auto;
@@ -542,16 +546,20 @@ img {
         top: 50%;
         transform: translate(-50%, 400%);
         font-size: 1.39rem; }
-        #wrap #content section.thanks div p:nth-of-type(2) a {
-          display: inline-block;
-          font-size: 1.5rem;
-          padding: 0 5px;
-          transition: .3s ease-out;
-          position: relative;
-          top: 5px; }
-          #wrap #content section.thanks div p:nth-of-type(2) a:hover {
-            color: #ffdd00;
-            top: 2px; }
+        #wrap #content section.thanks div p:nth-of-type(2) {
+          display: flex;
+          align-items: center;
+          gap: 10px; }
+          #wrap #content section.thanks div p:nth-of-type(2) a {
+            display: inline-block;
+            font-size: 1.5rem;
+            transition: .3s ease-out;
+            position: relative;
+            top: 5px;
+            vertical-align: middle; }
+            #wrap #content section.thanks div p:nth-of-type(2) a:hover {
+              color: #ffdd00;
+              top: 2px; }
 
 @media screen and (max-width: 1280px) {
   #wrap #content section.home > div:nth-of-type(1) {

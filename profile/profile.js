@@ -33,7 +33,7 @@ $(document).ready(function(){
     //let typingBool = false;
     let typingIdx = 0;
 
-
+    $('.portfolioTxt').css('opacity', '0');
     function typing() {
         if (typingIdx < content.length) {
             $('.homeTitle').append(content[typingIdx]);
@@ -172,8 +172,6 @@ $(document).ready(function(){
 
         $('html,body').stop().animate({'scrollTop': nowTop}, 1000);
     });
-
-
 
 
 
