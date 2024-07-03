@@ -6,14 +6,17 @@ $(document).ready(function(){
     function printChcontent(){
         let chCon = '';
         chCon += '<ul>';
-        for (let a = 1; a < 8; a++){
-            chCon += '<li><div>';
-            chCon += '<img src="./images/sub4/ch'+a+'.jpg" alt=""></div>';
-            chCon += '<img src="./images/sub4/ch'+a+'_1.png" alt="" class="ch">';
-            chCon += '<img src="./images/sub4/ch'+a+'_logo.png" alt="'+chList[a-1]+'" class="chname">';
-            chCon += '</li>';
-        }
-        chCon += '</ul>';
+        chList.forEach((item, index) => {
+            let a = index + 1;
+            chCon += `<li><div>
+                    <img src="./images/sub4/ch${a}.jpg" alt=""></div>
+                    <img src="./images/sub4/ch${a}_1.png" alt="" class="ch">
+                    <img src="./images/sub4/ch${a}_logo.png" alt="${chList[index]}" class="chname">
+                    </li>
+            `;
+        });
+
+        chCon += `</ul>`;
         $('.chContent').html(chCon);
     }
     printChcontent();
@@ -63,11 +66,12 @@ $(document).ready(function(){
 
                 for (let i = 0; i < trList.length; i++) {
                     let trItem = '<li>';
-                    trItem += '<div><img src="' + trList[i].imglink + '" alt="">';
-                    trItem += '<span><i class="fa-solid fa-play"></i></span></div>';
-                    trItem += '<p>' + trList[i].toptxt + '</p>';
-                    trItem += '<p>' + trList[i].text + '</p>';
-                    trItem += '</li>';
+                    trItem += `<div><img src="${trList[i].imglink}" alt="">
+                            <span><i class="fa-solid fa-play"></i></span></div>
+                            <p>${trList[i].toptxt}</p>
+                            <p>${trList[i].text}</p>
+                            </li>
+                    `
                     
                     if (i < 4) {
                         trCon1 += trItem;
