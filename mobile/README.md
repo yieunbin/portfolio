@@ -5,7 +5,7 @@
 ## 🔗 URL
 http://bbeunbin.mycafe24.com/mobile/
 
-### ⚒️ SKILLS
+## ⚒️ SKILLS
 * HTML
 * CSS
 * JavaScript, jQuery, Media Query, Ajax, Json
