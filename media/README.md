@@ -3,7 +3,7 @@
 디자인부터 코딩까지 100% 기여하였습니다.
 6 pages (index, about, theme, show, trailer, gallery)
 
-## URL
+## 🔗 URL
 http://bbeunbin.mycafe24.com/media/
 
 ### ⚒️ SKILLS
