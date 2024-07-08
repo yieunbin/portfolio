@@ -21,9 +21,10 @@ PC 전용 웹, 모바일 웹, 반응형 웹 입니다.<br>
 ### ⚒️ SKILLS
 * HTML
 * CSS
-* JS / JQUERY
+* JavaScript, jQuery, Ajax, Json
 * php
-* swiper
+* 플러그인
+    + swiper
 * 그누보드 게시판
 
 ### ⚠️ 웹 표준 / 웹 접근성
