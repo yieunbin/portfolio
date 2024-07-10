@@ -6,10 +6,8 @@ PC 전용 웹, 모바일 웹, 반응형 웹 입니다.<br>
 * 고정형 웹
     + http://bbeunbin.mycafe24.com/
 * 모바일 웹 
-    + portfolio/mobile/
     + http://bbeunbin.mycafe24.com/mobile/
 * 반응형 웹
-    + portfolio/media/
     + http://bbeunbin.mycafe24.com/media/
 
 ## PC WEB
