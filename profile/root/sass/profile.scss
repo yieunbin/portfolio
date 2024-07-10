@@ -69,7 +69,7 @@ img{border: 0; vertical-align: top;}
 @include growstar(90px);
 @include growstar(310px);
 
-@mixin btn1($width){
+@mixin btn1($width, $moveRight){
     border: 1px solid #fff;
     width: $width;
     position: relative;
@@ -91,7 +91,7 @@ img{border: 0; vertical-align: top;}
     }
     &:hover{
         & p{transform: translateX(-30px);}
-        & img{right: 50px;opacity: 1;}
+        & img{right: $moveRight; opacity: 1;}
     }
 }
 @mixin mailbtn($top){
@@ -394,7 +394,7 @@ img{border: 0; vertical-align: top;}
                     
                     display: flex;justify-content: space-between;
                     & a{
-                        @include btn1(30%);
+                        @include btn1(30%, 50px);
                         position: relative; top: 50px; opacity: 0;
                     }
                 }
@@ -491,10 +491,11 @@ img{border: 0; vertical-align: top;}
                     & .links{
                         overflow: hidden;
                         position: relative; top: 50px; opacity: 0;
+                        display: flex;justify-content: space-between;
                         & a{
-                            float: left;
-                            margin: 32px 30px 0 0;
-                            @include btn1(30%);
+                            // float: left;
+                            margin: 20px 0;
+                            @include btn1(25%, 35px);
                         }
                     }
                     

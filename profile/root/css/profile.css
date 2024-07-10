@@ -475,12 +475,13 @@ img {
           overflow: hidden;
           position: relative;
           top: 50px;
-          opacity: 0; }
+          opacity: 0;
+          display: flex;
+          justify-content: space-between; }
           #wrap #content section:not(.profile) .contain .text_box .links a {
-            float: left;
-            margin: 32px 30px 0 0;
+            margin: 20px 0;
             border: 1px solid #fff;
-            width: 30%;
+            width: 25%;
             position: relative;
             padding: 15px 30px;
             font-size: 1.11rem;
@@ -503,7 +504,7 @@ img {
             #wrap #content section:not(.profile) .contain .text_box .links a:hover p {
               transform: translateX(-30px); }
             #wrap #content section:not(.profile) .contain .text_box .links a:hover img {
-              right: 50px;
+              right: 35px;
               opacity: 1; }
     #wrap #content section.mobilever .contain .img_box .pc {
       width: auto;
