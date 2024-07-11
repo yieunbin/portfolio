@@ -26,11 +26,11 @@ time, mark, audio, video{margin: 0; padding: 0; border: 0; }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section{display: block;}
 html{font-size: 16px;}
-body{font-family: "Noto Sans KR", sans-serif; color: #fff; background: #0F0F0F;}
+body{font-family: "Noto Sans KR", sans-serif; color: #333; }
 ol, ul{list-style: none;}
 table{border-collapse: collapse; border-spacing: 0;}
 address{font-style: normal}
-a{color: #fff; text-decoration: none; display: block; cursor: pointer;}
+a{color: #333; text-decoration: none; display: block; cursor: pointer;}
 img{border: 0; vertical-align: top;}
 
 .hidden{display: block; position: absolute;

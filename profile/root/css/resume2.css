@@ -38,8 +38,7 @@ html {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  color: #fff;
-  background: #0F0F0F; }
+  color: #333; }
 
 ol, ul {
   list-style: none; }
@@ -52,7 +51,7 @@ address {
   font-style: normal; }
 
 a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   display: block;
   cursor: pointer; }
