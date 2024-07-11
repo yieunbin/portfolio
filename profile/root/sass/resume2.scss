@@ -26,7 +26,7 @@ time, mark, audio, video{margin: 0; padding: 0; border: 0; }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section{display: block;}
 html{font-size: 18px;}
-body{font-family: "Noto Sans KR", sans-serif; color: #333; }
+body{font-family: "Noto Sans KR", sans-serif; color: #333;}
 ol, ul{list-style: none;}
 table{border-collapse: collapse; border-spacing: 0;}
 address{font-style: normal}
@@ -181,8 +181,10 @@ img{border: 0; vertical-align: top;}
         }
 
         & section{
-            float: right; width: 80%; height: 100vh; overflow-y: scroll;
-            background: #fff;
+            float: right; width: 80%; 
+            height: 100vh; 
+            overflow-y: scroll;
+            background: #fff; line-height: 1.7rem;
             // padding: 30px;
 
             & .tabs{
@@ -193,7 +195,7 @@ img{border: 0; vertical-align: top;}
                     display: flex; align-items: center;
 
                     & li{
-                        width: 20%; background: #ECECEC;
+                        width: 15.94%; background: #ECECEC;
                         border-left: 1px solid #fff; border-right: 1px solid #fff;
                         
                         & a{
@@ -210,7 +212,88 @@ img{border: 0; vertical-align: top;}
             }
 
             & .con{
-                margin-top: 45px; padding: 30px;
+                margin-top: 45px; padding: 30px;color: #ccc; 
+                & .indent1{
+                    margin-left: 40px;
+                    & span{color: #333;}
+
+                    & .indent2{
+                        margin-left: 70px; color: #333;
+                    }
+                }
+
+            }
+            // con1
+            & .con1{
+                display: flex; 
+
+                & .conLeft{
+                    width: 60%;
+                }
+                & .indent1{
+
+                    & .indent2{
+                        & p:first-child{
+                            position: relative; z-index: 1;
+                            
+                            &:hover{
+                                &::before{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        & p:first-child::before{
+                            content: ""; display: block; width: 0px; height: 100%;
+                            background: #ffc9198b; position: absolute; left: -70px; top: 0px;
+                            z-index: -1;transition: .5s ease-out;
+                        }
+                        & p:not(:first-child){
+
+                            &:hover{
+                                color: #FFC300;
+                                & span{
+                                    color: #00A4EC;
+                                }
+                            }
+                            
+                            
+                        }
+                    }
+
+                    & > ul{
+                        color: #333;
+                        & > li{
+                            & ul{
+                                display: flex; 
+                                width: 100%;
+                                & li:nth-of-type(1){
+                                    width: 15%;
+                                }
+                                & li:nth-of-type(2){
+                                    width: 65%;
+                                    text-align: left;
+                                }
+                                & li:nth-of-type(3){
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+                & .conRight{
+                    width: 40%; padding-left: 30px; 
+                    height: 85vh;
+                    position: relative;
+                    & p{
+                        margin: 86px 0 30px 0;
+                    }
+                    & img{border: 1px solid #333;}
+
+                    &::before{
+                        content: ""; display: block; width: 1px; height: 100%;
+                        background: #ccc; position: absolute; left: 0; top: -30px;
+                    }
+                }
             }
         }
     }
