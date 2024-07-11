@@ -69,4 +69,174 @@ img {
   overflow: hidden;
   color: #fff; }
 
+#wrap header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  #wrap header .headerLeft {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 50%; }
+    #wrap header .headerLeft h1 {
+      font-size: 1rem; }
+    #wrap header .headerLeft a {
+      padding: 5px 10px;
+      transition: .3s ease-out;
+      border-radius: 10px; }
+      #wrap header .headerLeft a:hover {
+        color: #fff;
+        background: #333; }
+  #wrap header .headerRight {
+    display: flex;
+    gap: 20px;
+    align-items: center; }
+    #wrap header .headerRight .battery {
+      width: 30px;
+      height: 16px;
+      border: 1px solid #333;
+      border-radius: 5px; }
+      #wrap header .headerRight .battery span {
+        display: block;
+        width: 20px;
+        height: 10px;
+        background: #333;
+        border-radius: 2px;
+        margin: 2px 0 0 2px; }
+    #wrap header .headerRight > span {
+      border: 1px solid #333;
+      padding: 0 10px;
+      border-radius: 5px;
+      line-height: 1.2rem; }
+#wrap article {
+  width: 100%;
+  background: #DDDDDD;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid #333;
+  position: fixed;
+  top: 46px; }
+  #wrap article .contentTop {
+    position: relative;
+    overflow: hidden; }
+    #wrap article .contentTop .btns {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      left: 30px;
+      top: 20px; }
+      #wrap article .contentTop .btns span {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px; }
+      #wrap article .contentTop .btns span:first-child {
+        background: #FE5F57; }
+      #wrap article .contentTop .btns span:nth-of-type(2) {
+        background: #FEBC2E; }
+      #wrap article .contentTop .btns span:last-child {
+        background: #2BC83F; }
+    #wrap article .contentTop .subtit {
+      background: #D2D2D2;
+      border: 1px solid #999;
+      width: 600px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin: 10px auto;
+      align-items: center;
+      border-radius: 5px; }
+      #wrap article .contentTop .subtit p {
+        font-size: 0.83rem;
+        padding: 5px; }
+  #wrap article nav {
+    width: 20%;
+    height: 100vw;
+    background: #F3F3F3;
+    float: left;
+    padding: 20px 0;
+    position: fixed;
+    top: 100px; }
+    #wrap article nav > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px; }
+      #wrap article nav > div div {
+        display: flex;
+        gap: 5px; }
+        #wrap article nav > div div span {
+          width: 5px;
+          height: 5px;
+          border-radius: 50px;
+          background: #333; }
+    #wrap article nav .depth1 > li > a {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      align-items: center;
+      font-weight: 600; }
+      #wrap article nav .depth1 > li > a i {
+        color: #999;
+        margin-left: 30px; }
+    #wrap article nav .depth1 > li .depth2 {
+      width: 100%; }
+      #wrap article nav .depth1 > li .depth2 i {
+        margin-left: 60px;
+        color: #999; }
+      #wrap article nav .depth1 > li .depth2 h4, #wrap article nav .depth1 > li .depth2 h5 {
+        font-weight: 400;
+        font-size: 1rem; }
+      #wrap article nav .depth1 > li .depth2 > li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+        width: 100%; }
+      #wrap article nav .depth1 > li .depth2 > li ul img {
+        margin-left: 90px; }
+    #wrap article nav .depth1 a {
+      transition: .5s ease-out;
+      line-height: 2.5rem; }
+      #wrap article nav .depth1 a:hover {
+        background: rgba(255, 221, 0, 0.422); }
+  #wrap article section {
+    float: right;
+    width: 80%;
+    height: 100vh;
+    overflow-y: scroll;
+    background: #fff; }
+    #wrap article section .tabs {
+      width: 100%;
+      position: fixed;
+      top: 100px; }
+      #wrap article section .tabs ul {
+        display: flex;
+        align-items: center; }
+        #wrap article section .tabs ul li {
+          width: 20%;
+          background: #ECECEC;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff; }
+          #wrap article section .tabs ul li a {
+            display: flex;
+            line-height: 2.5rem;
+            gap: 5px;
+            align-items: center;
+            color: #606060;
+            padding-left: 20px;
+            transition: .3s ease-out; }
+            #wrap article section .tabs ul li a:hover {
+              background: #fff;
+              color: #333; }
+          #wrap article section .tabs ul li .on {
+            background: #fff;
+            color: #333; }
+    #wrap article section .con {
+      margin-top: 45px;
+      padding: 30px; }
+
 /*# sourceMappingURL=resume2.css.map */
