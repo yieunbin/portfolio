@@ -69,6 +69,9 @@ img {
   overflow: hidden;
   color: #fff; }
 
+:root {
+  --pointYellow:rgba(255, 221, 0, 0.422); }
+
 #wrap header {
   display: flex;
   justify-content: space-between;
@@ -202,7 +205,7 @@ img {
       transition: .5s ease-out;
       line-height: 2.5rem; }
       #wrap article nav .depth1 a:hover {
-        background: rgba(255, 221, 0, 0.422); }
+        background: var(--pointYellow); }
   #wrap article section {
     float: right;
     width: 80%;
@@ -212,6 +215,7 @@ img {
     line-height: 1.7rem; }
     #wrap article section .tabs {
       width: 100%;
+      z-index: 10;
       position: fixed;
       top: 100px; }
       #wrap article section .tabs ul {
@@ -244,6 +248,8 @@ img {
         margin-left: 40px; }
         #wrap article section .con .indent1 span {
           color: #333; }
+        #wrap article section .con .indent1 > ul > li:hover {
+          background: var(--pointYellow); }
         #wrap article section .con .indent1 .indent2 {
           margin-left: 70px;
           color: #333; }
@@ -301,5 +307,21 @@ img {
           position: absolute;
           left: 0;
           top: -30px; }
+    #wrap article section .con2 .indent1 {
+      color: #333; }
+      #wrap article section .con2 .indent1 > ul > li {
+        margin-bottom: 50px; }
+        #wrap article section .con2 .indent1 > ul > li:hover {
+          background: none; }
+        #wrap article section .con2 .indent1 > ul > li ul li {
+          display: flex; }
+          #wrap article section .con2 .indent1 > ul > li ul li p:nth-of-type(1) {
+            width: 50%;
+            font-weight: 500; }
+          #wrap article section .con2 .indent1 > ul > li ul li p:nth-of-type(2) {
+            width: 30%;
+            color: #999; }
+          #wrap article section .con2 .indent1 > ul > li ul li:hover {
+            background: var(--pointYellow); }
 
 /*# sourceMappingURL=resume2.css.map */

@@ -36,7 +36,9 @@ img{border: 0; vertical-align: top;}
 .hidden{display: block; position: absolute;
     left: -1000%; width: 1px; height: 1px;
     overflow: hidden; color: #fff}
-
+:root{
+    --pointYellow:rgba(255, 221, 0, 0.422);
+}
 #wrap{
 
     & header{
@@ -174,7 +176,7 @@ img{border: 0; vertical-align: top;}
                     transition: .5s ease-out;
                     line-height: 2.5rem;
                     &:hover{
-                        background: rgba(255, 221, 0, 0.422);
+                        background: var(--pointYellow);
                     }
                 }
             }
@@ -188,7 +190,7 @@ img{border: 0; vertical-align: top;}
             // padding: 30px;
 
             & .tabs{
-                width: 100%;
+                width: 100%; z-index: 10;
                 position: fixed; top: 100px;
                 
                 & ul{
@@ -216,6 +218,13 @@ img{border: 0; vertical-align: top;}
                 & .indent1{
                     margin-left: 40px;
                     & span{color: #333;}
+                    & > ul{
+                        & > li{
+                            &:hover{
+                                background: var(--pointYellow);
+                            }
+                        }
+                    }
 
                     & .indent2{
                         margin-left: 70px; color: #333;
@@ -292,6 +301,35 @@ img{border: 0; vertical-align: top;}
                     &::before{
                         content: ""; display: block; width: 1px; height: 100%;
                         background: #ccc; position: absolute; left: 0; top: -30px;
+                    }
+                }
+            }
+
+            // con2
+            & .con2{
+                & .indent1{
+                    color: #333;
+
+                    & > ul{
+                        & > li{
+                            margin-bottom: 50px;
+                            &:hover{background: none;}
+                            & ul{
+                                & li{
+                                    display: flex;
+
+                                    & p:nth-of-type(1){
+                                        width: 50%; font-weight: 500;
+                                    }
+                                    & p:nth-of-type(2){
+                                        width: 30%; color: #999;
+                                    }
+                                    &:hover{
+                                        background: var(--pointYellow);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
