@@ -339,9 +339,38 @@ img{border: 0; vertical-align: top;}
             & .con3{
 
                 & .skillCon{
-
+                    color: #333;
                     & .skillTabs{
-                        
+                        display: flex; gap: 50px; 
+                        // margin-bottom: 30px;
+                        & li{
+                            transition: .3s ease-out; cursor: pointer;
+                            padding: 0 10px; color: #ccc;
+                        }
+                        & .now{
+                            color: #333; background: var(--pointYellow);
+                            font-weight: 500;
+                        }
+                    }
+                    & .skillsList{
+                        & ul{
+                            
+                            & li{
+
+                                & dl{
+                                    display: flex;
+                                    padding: 15px 0;
+                                    border-top: dashed 1px #ccc;
+
+                                    & dt{
+                                        width: 20%; font-weight: 500;
+                                    }
+                                    & dd{
+                                        width: 80%; font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
