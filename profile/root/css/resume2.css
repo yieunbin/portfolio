@@ -206,27 +206,27 @@ img {
       line-height: 2.5rem; }
       #wrap article nav .depth1 a:hover {
         background: var(--pointYellow); }
-  #wrap article section {
+  #wrap article section.info {
     float: right;
     width: 80%;
     height: 100vh;
     overflow-y: scroll;
     background: #fff;
     line-height: 1.7rem; }
-    #wrap article section .tabs {
+    #wrap article section.info .tabs {
       width: 100%;
       z-index: 10;
       position: fixed;
       top: 100px; }
-      #wrap article section .tabs ul {
+      #wrap article section.info .tabs ul {
         display: flex;
         align-items: center; }
-        #wrap article section .tabs ul li {
+        #wrap article section.info .tabs ul li {
           width: 15.94%;
           background: #ECECEC;
           border-left: 1px solid #fff;
           border-right: 1px solid #fff; }
-          #wrap article section .tabs ul li a {
+          #wrap article section.info .tabs ul li a {
             display: flex;
             line-height: 2.5rem;
             gap: 5px;
@@ -234,37 +234,37 @@ img {
             color: #606060;
             padding-left: 20px;
             transition: .3s ease-out; }
-            #wrap article section .tabs ul li a:hover {
+            #wrap article section.info .tabs ul li a:hover {
               background: #fff;
               color: #333; }
-          #wrap article section .tabs ul li .on {
+          #wrap article section.info .tabs ul li .on {
             background: #fff;
             color: #333; }
-    #wrap article section .con {
+    #wrap article section.info .con {
       margin-top: 45px;
       padding: 30px;
       color: #ccc; }
-      #wrap article section .con .indent1 {
+      #wrap article section.info .con .indent1 {
         margin-left: 40px; }
-        #wrap article section .con .indent1 span {
+        #wrap article section.info .con .indent1 span {
           color: #333; }
-        #wrap article section .con .indent1 .title {
+        #wrap article section.info .con .indent1 .title {
           font-weight: 700; }
-        #wrap article section .con .indent1 > ul > li:hover {
+        #wrap article section.info .con .indent1 > ul > li:hover {
           background: var(--pointYellow); }
-        #wrap article section .con .indent1 .indent2 {
+        #wrap article section.info .con .indent1 .indent2 {
           margin-left: 70px;
           color: #333; }
-    #wrap article section .con1 {
+    #wrap article section.info .con1 {
       display: flex; }
-      #wrap article section .con1 .conLeft {
+      #wrap article section.info .con1 .conLeft {
         width: 60%; }
-      #wrap article section .con1 .indent1 .indent2 p:first-child {
+      #wrap article section.info .con1 .indent1 .indent2 p:first-child {
         position: relative;
         z-index: 1; }
-        #wrap article section .con1 .indent1 .indent2 p:first-child:hover::before {
+        #wrap article section.info .con1 .indent1 .indent2 p:first-child:hover::before {
           width: 100%; }
-      #wrap article section .con1 .indent1 .indent2 p:first-child::before {
+      #wrap article section.info .con1 .indent1 .indent2 p:first-child::before {
         content: "";
         display: block;
         width: 0px;
@@ -275,32 +275,32 @@ img {
         top: 0px;
         z-index: -1;
         transition: .5s ease-out; }
-      #wrap article section .con1 .indent1 .indent2 p:not(:first-child):hover {
+      #wrap article section.info .con1 .indent1 .indent2 p:not(:first-child):hover {
         color: #FFC300; }
-        #wrap article section .con1 .indent1 .indent2 p:not(:first-child):hover span {
+        #wrap article section.info .con1 .indent1 .indent2 p:not(:first-child):hover span {
           color: #00A4EC; }
-      #wrap article section .con1 .indent1 > ul {
+      #wrap article section.info .con1 .indent1 > ul {
         color: #333; }
-        #wrap article section .con1 .indent1 > ul > li ul {
+        #wrap article section.info .con1 .indent1 > ul > li ul {
           display: flex;
           width: 100%; }
-          #wrap article section .con1 .indent1 > ul > li ul li:nth-of-type(1) {
+          #wrap article section.info .con1 .indent1 > ul > li ul li:nth-of-type(1) {
             width: 15%; }
-          #wrap article section .con1 .indent1 > ul > li ul li:nth-of-type(2) {
+          #wrap article section.info .con1 .indent1 > ul > li ul li:nth-of-type(2) {
             width: 65%;
             text-align: left; }
-          #wrap article section .con1 .indent1 > ul > li ul li:nth-of-type(3) {
+          #wrap article section.info .con1 .indent1 > ul > li ul li:nth-of-type(3) {
             width: 20%; }
-      #wrap article section .con1 .conRight {
+      #wrap article section.info .con1 .conRight {
         width: 40%;
         padding-left: 30px;
         height: 85vh;
         position: relative; }
-        #wrap article section .con1 .conRight p {
+        #wrap article section.info .con1 .conRight p {
           margin: 86px 0 30px 0; }
-        #wrap article section .con1 .conRight img {
+        #wrap article section.info .con1 .conRight img {
           border: 1px solid #333; }
-        #wrap article section .con1 .conRight::before {
+        #wrap article section.info .con1 .conRight::before {
           content: "";
           display: block;
           width: 1px;
@@ -309,44 +309,54 @@ img {
           position: absolute;
           left: 0;
           top: -30px; }
-    #wrap article section .con2 .indent1 > ul > li {
+    #wrap article section.info .con2 .indent1 > ul > li {
       margin-bottom: 50px;
       color: #333; }
-      #wrap article section .con2 .indent1 > ul > li:hover {
+      #wrap article section.info .con2 .indent1 > ul > li:hover {
         background: none; }
-      #wrap article section .con2 .indent1 > ul > li ul li {
+      #wrap article section.info .con2 .indent1 > ul > li ul li {
         display: flex; }
-        #wrap article section .con2 .indent1 > ul > li ul li p:nth-of-type(1) {
+        #wrap article section.info .con2 .indent1 > ul > li ul li p:nth-of-type(1) {
           width: 50%;
           font-weight: 500; }
-        #wrap article section .con2 .indent1 > ul > li ul li p:nth-of-type(2) {
+        #wrap article section.info .con2 .indent1 > ul > li ul li p:nth-of-type(2) {
           width: 30%;
           color: #999; }
-        #wrap article section .con2 .indent1 > ul > li ul li:hover {
+        #wrap article section.info .con2 .indent1 > ul > li ul li:hover {
           background: var(--pointYellow); }
-    #wrap article section .con3 .skillCon {
+    #wrap article section.info .con3 .skillCon {
       color: #333; }
-      #wrap article section .con3 .skillCon .skillTabs {
+      #wrap article section.info .con3 .skillCon .skillTabs {
         display: flex;
         gap: 50px; }
-        #wrap article section .con3 .skillCon .skillTabs li {
+        #wrap article section.info .con3 .skillCon .skillTabs li {
           transition: .3s ease-out;
           cursor: pointer;
           padding: 0 10px;
           color: #ccc; }
-        #wrap article section .con3 .skillCon .skillTabs .now {
+        #wrap article section.info .con3 .skillCon .skillTabs .now {
           color: #333;
           background: var(--pointYellow);
           font-weight: 500; }
-      #wrap article section .con3 .skillCon .skillsList ul li dl {
+      #wrap article section.info .con3 .skillCon .skillsList ul li dl {
         display: flex;
         padding: 15px 0;
         border-top: dashed 1px #ccc; }
-        #wrap article section .con3 .skillCon .skillsList ul li dl dt {
+        #wrap article section.info .con3 .skillCon .skillsList ul li dl dt {
           width: 20%;
           font-weight: 500; }
-        #wrap article section .con3 .skillCon .skillsList ul li dl dd {
+        #wrap article section.info .con3 .skillCon .skillsList ul li dl dd {
           width: 80%;
           font-weight: 400; }
+    #wrap article section.info .con4 .indent1 {
+      margin-bottom: 100px; }
+      #wrap article section.info .con4 .indent1 ul:nth-of-type(1) {
+        display: flex;
+        gap: 30px; }
+        #wrap article section.info .con4 .indent1 ul:nth-of-type(1) li {
+          color: #333; }
+          #wrap article section.info .con4 .indent1 ul:nth-of-type(1) li:hover {
+            color: #333;
+            background: none; }
 
 /*# sourceMappingURL=resume2.css.map */

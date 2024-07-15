@@ -182,7 +182,7 @@ img{border: 0; vertical-align: top;}
             }
         }
 
-        & section{
+        & section.info{
             float: right; width: 80%; 
             height: 100vh; 
             overflow-y: scroll;
@@ -370,6 +370,21 @@ img{border: 0; vertical-align: top;}
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+
+            // con4
+            & .con4{
+                & .indent1{
+                    margin-bottom: 100px;
+                    & ul:nth-of-type(1){
+                        display: flex; gap: 30px;
+
+                        & li{
+                            color: #333;
+                            &:hover{color: #333; background: none;}
                         }
                     }
                 }
