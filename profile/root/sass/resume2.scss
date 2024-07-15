@@ -218,6 +218,7 @@ img{border: 0; vertical-align: top;}
                 & .indent1{
                     margin-left: 40px;
                     & span{color: #333;}
+                    & .title{font-weight: 700;}
                     & > ul{
                         & > li{
                             &:hover{
@@ -308,11 +309,11 @@ img{border: 0; vertical-align: top;}
             // con2
             & .con2{
                 & .indent1{
-                    color: #333;
+                    // color: #333;
 
                     & > ul{
                         & > li{
-                            margin-bottom: 50px;
+                            margin-bottom: 50px; color: #333;
                             &:hover{background: none;}
                             & ul{
                                 & li{
@@ -330,6 +331,17 @@ img{border: 0; vertical-align: top;}
                                 }
                             }
                         }
+                    }
+                }
+            }
+
+            // con3
+            & .con3{
+
+                & .skillCon{
+
+                    & .skillTabs{
+                        
                     }
                 }
             }
