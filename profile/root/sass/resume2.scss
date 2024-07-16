@@ -69,6 +69,10 @@ img{border: 0; vertical-align: top;}
         border-color: $top $right $bottom $left;
     }
 }
+@keyframes rotateImg{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
 
 
 #wrap{
@@ -88,6 +92,11 @@ img{border: 0; vertical-align: top;}
             
             & h1{
                 font-size: 1rem; cursor: pointer;
+                display: flex; align-items: center;
+                & span{
+                    font-size: .9rem; font-weight: 400;
+                    display: inline-block; margin-left: 5px;
+                }
             }
             & a{
                 padding: 5px 10px;
@@ -195,6 +204,28 @@ img{border: 0; vertical-align: top;}
                     }
                 }
             }
+            & > div:last-child{
+                margin: 400px 0 0 20px;
+                position: relative; cursor: pointer;
+
+                & img{
+                    animation: rotateImg 3s infinite linear;
+                }
+                & a{
+                    position: relative; left: -100px;
+                    opacity: 0;
+                    transition: .3s ease-out;
+                }
+
+                &:hover{
+                    & img{
+                        animation-play-state: paused;
+                    }
+                    & a{
+                        left: -70px; opacity: 1;
+                    }
+                }
+            }
 
             & .depth1{
                 
@@ -263,7 +294,7 @@ img{border: 0; vertical-align: top;}
                     display: flex; align-items: center;
 
                     & li{
-                        width: 15.94%; background: #ECECEC;
+                        width: 15.95%; background: #ECECEC;
                         border-left: 1px solid #fff; border-right: 1px solid #fff;
                         
                         & a{

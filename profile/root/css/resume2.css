@@ -78,6 +78,11 @@ img {
   --appleGreen:#2BC83F;
   --black:#0F0F0F; }
 
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 #wrap .tooltip {
   position: absolute;
   left: 50%;
@@ -122,7 +127,14 @@ img {
     width: 50%; }
     #wrap header .headerLeft h1 {
       font-size: 1rem;
-      cursor: pointer; }
+      cursor: pointer;
+      display: flex;
+      align-items: center; }
+      #wrap header .headerLeft h1 span {
+        font-size: .9rem;
+        font-weight: 400;
+        display: inline-block;
+        margin-left: 5px; }
     #wrap header .headerLeft a {
       padding: 5px 10px;
       transition: .3s ease-out;
@@ -228,6 +240,22 @@ img {
           height: 5px;
           border-radius: 50px;
           background: #333; }
+    #wrap article nav > div:last-child {
+      margin: 400px 0 0 20px;
+      position: relative;
+      cursor: pointer; }
+      #wrap article nav > div:last-child img {
+        animation: rotateImg 3s infinite linear; }
+      #wrap article nav > div:last-child a {
+        position: relative;
+        left: -100px;
+        opacity: 0;
+        transition: .3s ease-out; }
+      #wrap article nav > div:last-child:hover img {
+        animation-play-state: paused; }
+      #wrap article nav > div:last-child:hover a {
+        left: -70px;
+        opacity: 1; }
     #wrap article nav .depth1 > li > a {
       display: flex;
       gap: 10px;
@@ -279,7 +307,7 @@ img {
         display: flex;
         align-items: center; }
         #wrap article section.info .tabs ul li {
-          width: 15.94%;
+          width: 15.95%;
           background: #ECECEC;
           border-left: 1px solid #fff;
           border-right: 1px solid #fff; }

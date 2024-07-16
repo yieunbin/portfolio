@@ -54,6 +54,7 @@ $(document).ready(function(){
     const pcSection = $('.pcver');
     const mobSection = $('.mobilever');
     const rpSection = $('.rpweb');
+    const resumeSection = $('.resumeWeb');
     const thanksSection = $('.thanks');
     let rpAnimated = false;
 
@@ -66,6 +67,7 @@ $(document).ready(function(){
         const pcOffset = pcSection.offset().top;
         const mobileOffset = mobSection.offset().top;
         const rpOffset = rpSection.offset().top;
+        const resumeOffset = resumeSection.offset().top;
         const thanksOffset = thanksSection.offset().top;
         
         if (scroll >= thanksOffset) {
@@ -106,7 +108,7 @@ $(document).ready(function(){
             mobSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
             mobSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
             mobSection.find('.links').delay(400).animate({'top':'0px','opacity':'1'},500);
-        } else if (scroll >= rpOffset && scroll < thanksOffset) {
+        } else if (scroll >= rpOffset && scroll < resumeOffset) {
             console.log('Adding changeBlue');
             $('.b1').addClass('changeBlue1').removeClass('changeYellow3');
             $('.b2').addClass('changeBlue2').removeClass('changeYellow2');
@@ -115,7 +117,10 @@ $(document).ready(function(){
             rpSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
             rpSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
             rpSection.find('.links').delay(400).animate({'top':'0px','opacity':'1'},500);
-        } else if(scroll >= thanksOffset){
+        } else if(scroll >= resumeOffset){
+            resumeSection.find('.detail1').animate({'top':'0px','opacity':'1'},500);
+            resumeSection.find('.detail2').delay(200).animate({'top':'0px','opacity':'1'},500);
+            resumeSection.find('.links').delay(400).animate({'top':'0px','opacity':'1'},500);
             $('.b1').removeClass('changeYellow3 changeBlue1');
             $('.b2').removeClass('changeYellow2 changeBlue2');
         } else {
@@ -125,7 +130,7 @@ $(document).ready(function(){
             //$('.b5').removeClass('changeYellow3 changeBlue3');
         }
     
-        for(var i=0; i<5;i++){
+        for(var i=0; i<6;i++){
 			if(scroll>=wh*i && scroll< wh*(i+1)){
 				$('#menu li').removeClass();
                 $('.rightNav ul li').removeClass();
@@ -136,24 +141,33 @@ $(document).ready(function(){
 		}
     });
 
-    $('section').on('mousewheel', function(event, delta) {
-        if (delta > 0) { 
-            const prevSection = $(this).prev('section');
-            if (prevSection.length) { 
-                const prev = prevSection.offset().top;
-                $('html, body').stop().animate({'scrollTop': prev}, 500);
+    let scrollTimeout;
+
+    $('section').on('wheel', function(event) {
+        event.preventDefault();
+    
+        clearTimeout(scrollTimeout);
+    
+        scrollTimeout = setTimeout(() => {
+            let delta = event.originalEvent.deltaY;
+    
+            if (delta < 0) {
+                const prevSection = $(this).prev('section');
+                if (prevSection.length) {
+                    const prev = prevSection.offset().top;
+                    $('html, body').stop().animate({ 'scrollTop': prev }, 500);
+                }
+            } else if (delta > 0) {
+                const nextSection = $(this).next('section');
+                if (nextSection.length) {
+                    const next = nextSection.offset().top;
+                    $('html, body').stop().animate({ 'scrollTop': next }, 500);
+                }else{
+                    const top = $('body').offset().top;
+                    $('html, body').stop().animate({'scrollTop': top}, 1000);
+                }
             }
-        } else if (delta < 0) { 
-            const nextSection = $(this).next('section');
-            if (nextSection.length) { 
-                const next = nextSection.offset().top;
-                $('html, body').stop().animate({'scrollTop': next}, 500);
-            } else { 
-                const top = $('body').offset().top;
-                $('html, body').stop().animate({'scrollTop': top}, 1000);
-            }
-        }
-        return false;
+        }, 100);
     });
     
     // menu
@@ -172,6 +186,10 @@ $(document).ready(function(){
 
         $('html,body').stop().animate({'scrollTop': nowTop}, 1000);
     });
+
+
+
+
 
 
 
