@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 html {
-  font-size: 18px; }
+  font-size: 16px; }
 
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -199,20 +199,25 @@ img {
         gap: 10px;
         font-size: 1rem;
         width: 100%; }
-      #wrap article nav .depth1 > li .depth2 > li ul img {
+      #wrap article nav .depth1 > li .depth2 > li ul li a:hover {
+        background: var(--pointYellow); }
+      #wrap article nav .depth1 > li .depth2 > li ul li a img {
         margin-left: 90px; }
+      #wrap article nav .depth1 > li .depth2 > li ul li .active {
+        background: var(--pointYellow); }
     #wrap article nav .depth1 a {
       transition: .5s ease-out;
       line-height: 2.5rem; }
-      #wrap article nav .depth1 a:hover {
-        background: var(--pointYellow); }
-  #wrap article section.info {
+  #wrap article section {
     float: right;
     width: 80%;
-    height: 100vh;
-    overflow-y: scroll;
     background: #fff;
-    line-height: 1.7rem; }
+    line-height: 1.7rem;
+    position: relative;
+    top: 2px; }
+  #wrap article section.info {
+    height: 100vh;
+    overflow-y: scroll; }
     #wrap article section.info .tabs {
       width: 100%;
       z-index: 10;
@@ -243,7 +248,8 @@ img {
     #wrap article section.info .con {
       margin-top: 45px;
       padding: 30px;
-      color: #ccc; }
+      color: #ccc;
+      display: none; }
       #wrap article section.info .con .indent1 {
         margin-left: 40px; }
         #wrap article section.info .con .indent1 span {
@@ -256,59 +262,61 @@ img {
           margin-left: 70px;
           color: #333; }
     #wrap article section.info .con1 {
-      display: flex; }
-      #wrap article section.info .con1 .conLeft {
-        width: 60%; }
-      #wrap article section.info .con1 .indent1 .indent2 p:first-child {
-        position: relative;
-        z-index: 1; }
-        #wrap article section.info .con1 .indent1 .indent2 p:first-child:hover::before {
-          width: 100%; }
-      #wrap article section.info .con1 .indent1 .indent2 p:first-child::before {
-        content: "";
-        display: block;
-        width: 0px;
-        height: 100%;
-        background: #ffc9198b;
-        position: absolute;
-        left: -70px;
-        top: 0px;
-        z-index: -1;
-        transition: .5s ease-out; }
-      #wrap article section.info .con1 .indent1 .indent2 p:not(:first-child):hover {
-        color: #FFC300; }
-        #wrap article section.info .con1 .indent1 .indent2 p:not(:first-child):hover span {
-          color: #00A4EC; }
-      #wrap article section.info .con1 .indent1 > ul {
-        color: #333; }
-        #wrap article section.info .con1 .indent1 > ul > li ul {
-          display: flex;
-          width: 100%; }
-          #wrap article section.info .con1 .indent1 > ul > li ul li:nth-of-type(1) {
-            width: 15%; }
-          #wrap article section.info .con1 .indent1 > ul > li ul li:nth-of-type(2) {
-            width: 65%;
-            text-align: left; }
-          #wrap article section.info .con1 .indent1 > ul > li ul li:nth-of-type(3) {
-            width: 20%; }
-      #wrap article section.info .con1 .conRight {
-        width: 40%;
-        padding-left: 30px;
-        height: 85vh;
-        position: relative; }
-        #wrap article section.info .con1 .conRight p {
-          margin: 86px 0 30px 0; }
-        #wrap article section.info .con1 .conRight img {
-          border: 1px solid #333; }
-        #wrap article section.info .con1 .conRight::before {
+      display: block; }
+      #wrap article section.info .con1 > div {
+        display: flex; }
+        #wrap article section.info .con1 > div .conLeft {
+          width: 60%; }
+        #wrap article section.info .con1 > div .indent1 .indent2 p:first-child {
+          position: relative;
+          z-index: 1; }
+          #wrap article section.info .con1 > div .indent1 .indent2 p:first-child:hover::before {
+            width: 100%; }
+        #wrap article section.info .con1 > div .indent1 .indent2 p:first-child::before {
           content: "";
           display: block;
-          width: 1px;
+          width: 0px;
           height: 100%;
-          background: #ccc;
+          background: #ffc9198b;
           position: absolute;
-          left: 0;
-          top: -30px; }
+          left: -70px;
+          top: 0px;
+          z-index: -1;
+          transition: .5s ease-out; }
+        #wrap article section.info .con1 > div .indent1 .indent2 p:not(:first-child):hover {
+          color: #FFC300; }
+          #wrap article section.info .con1 > div .indent1 .indent2 p:not(:first-child):hover span {
+            color: #00A4EC; }
+        #wrap article section.info .con1 > div .indent1 > ul {
+          color: #333; }
+          #wrap article section.info .con1 > div .indent1 > ul > li ul {
+            display: flex;
+            width: 100%; }
+            #wrap article section.info .con1 > div .indent1 > ul > li ul li:nth-of-type(1) {
+              width: 15%; }
+            #wrap article section.info .con1 > div .indent1 > ul > li ul li:nth-of-type(2) {
+              width: 65%;
+              text-align: left; }
+            #wrap article section.info .con1 > div .indent1 > ul > li ul li:nth-of-type(3) {
+              width: 20%; }
+        #wrap article section.info .con1 > div .conRight {
+          width: 40%;
+          padding-left: 30px;
+          height: 85vh;
+          position: relative; }
+          #wrap article section.info .con1 > div .conRight p {
+            margin: 86px 0 30px 0; }
+          #wrap article section.info .con1 > div .conRight img {
+            border: 1px solid #333; }
+          #wrap article section.info .con1 > div .conRight::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: #ccc;
+            position: absolute;
+            left: 0;
+            top: -30px; }
     #wrap article section.info .con2 .indent1 > ul > li {
       margin-bottom: 50px;
       color: #333; }
@@ -328,35 +336,39 @@ img {
       color: #333; }
       #wrap article section.info .con3 .skillCon .skillTabs {
         display: flex;
-        gap: 50px; }
+        width: 50%; }
         #wrap article section.info .con3 .skillCon .skillTabs li {
           transition: .3s ease-out;
           cursor: pointer;
-          padding: 0 10px;
+          width: 33.33%;
+          padding: 5px 10px;
           color: #ccc; }
         #wrap article section.info .con3 .skillCon .skillTabs .now {
           color: #333;
           background: var(--pointYellow);
           font-weight: 500; }
-      #wrap article section.info .con3 .skillCon .skillsList ul li dl {
-        display: flex;
-        padding: 15px 0;
-        border-top: dashed 1px #ccc; }
-        #wrap article section.info .con3 .skillCon .skillsList ul li dl dt {
-          width: 20%;
-          font-weight: 500; }
-        #wrap article section.info .con3 .skillCon .skillsList ul li dl dd {
-          width: 80%;
-          font-weight: 400; }
-    #wrap article section.info .con4 .indent1 {
-      margin-bottom: 100px; }
-      #wrap article section.info .con4 .indent1 ul:nth-of-type(1) {
-        display: flex;
-        gap: 30px; }
-        #wrap article section.info .con4 .indent1 ul:nth-of-type(1) li {
-          color: #333; }
-          #wrap article section.info .con4 .indent1 ul:nth-of-type(1) li:hover {
-            color: #333;
-            background: none; }
+      #wrap article section.info .con3 .skillCon .skillsList {
+        height: 500px;
+        overflow-y: scroll; }
+        #wrap article section.info .con3 .skillCon .skillsList ul li dl {
+          display: flex;
+          padding: 10px 0;
+          border-top: dashed 1px #ccc; }
+          #wrap article section.info .con3 .skillCon .skillsList ul li dl dt {
+            width: 20%;
+            font-weight: 500; }
+          #wrap article section.info .con3 .skillCon .skillsList ul li dl dd {
+            width: 80%;
+            font-weight: 400; }
+    #wrap article section.info .con4 .indent1 ul:nth-of-type(1) {
+      display: flex;
+      gap: 30px; }
+      #wrap article section.info .con4 .indent1 ul:nth-of-type(1) li {
+        color: #333; }
+        #wrap article section.info .con4 .indent1 ul:nth-of-type(1) li:hover {
+          color: #333;
+          background: none; }
+    #wrap article section.info .con4 > div:nth-of-type(2) {
+      margin-bottom: 50px; }
 
 /*# sourceMappingURL=resume2.css.map */

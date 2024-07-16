@@ -25,7 +25,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video{margin: 0; padding: 0; border: 0; }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section{display: block;}
-html{font-size: 18px;}
+html{font-size: 16px;}
 body{font-family: "Noto Sans KR", sans-serif; color: #333;}
 ol, ul{list-style: none;}
 table{border-collapse: collapse; border-spacing: 0;}
@@ -166,8 +166,19 @@ img{border: 0; vertical-align: top;}
                                 font-size: 1rem;width: 100%;
                             }
                             & ul{
+                                & li{
+
+                                    & a{
+                                        &:hover{
+                                            background: var(--pointYellow);
+                                        }
+                                        & img{margin-left: 90px;}
+                                    }
+                                    & .active{
+                                        background: var(--pointYellow);
+                                    }
+                                }
                                 
-                                & img{margin-left: 90px;}
                             }
                         }
                     }
@@ -175,19 +186,19 @@ img{border: 0; vertical-align: top;}
                 & a{
                     transition: .5s ease-out;
                     line-height: 2.5rem;
-                    &:hover{
-                        background: var(--pointYellow);
-                    }
+                    
                 }
             }
         }
+        & section{
+            float: right; width: 80%;
+            background: #fff; line-height: 1.7rem;
+            position: relative; top: 2px;
+        }
 
         & section.info{
-            float: right; width: 80%; 
             height: 100vh; 
             overflow-y: scroll;
-            background: #fff; line-height: 1.7rem;
-            // padding: 30px;
 
             & .tabs{
                 width: 100%; z-index: 10;
@@ -215,6 +226,7 @@ img{border: 0; vertical-align: top;}
 
             & .con{
                 margin-top: 45px; padding: 30px;color: #ccc; 
+                display: none;
                 & .indent1{
                     margin-left: 40px;
                     & span{color: #333;}
@@ -235,75 +247,78 @@ img{border: 0; vertical-align: top;}
             }
             // con1
             & .con1{
-                display: flex; 
-
-                & .conLeft{
-                    width: 60%;
-                }
-                & .indent1{
-
-                    & .indent2{
-                        & p:first-child{
-                            position: relative; z-index: 1;
-                            
-                            &:hover{
-                                &::before{
+                display: block;
+                & > div{
+                    display: flex; 
+                    & .conLeft{
+                        width: 60%;
+                    }
+                    & .indent1{
+    
+                        & .indent2{
+                            & p:first-child{
+                                position: relative; z-index: 1;
+                                
+                                &:hover{
+                                    &::before{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            & p:first-child::before{
+                                content: ""; display: block; width: 0px; height: 100%;
+                                background: #ffc9198b; position: absolute; left: -70px; top: 0px;
+                                z-index: -1;transition: .5s ease-out;
+                            }
+                            & p:not(:first-child){
+    
+                                &:hover{
+                                    color: #FFC300;
+                                    & span{
+                                        color: #00A4EC;
+                                    }
+                                }
+                                
+                                
+                            }
+                        }
+    
+                        & > ul{
+                            color: #333;
+                            & > li{
+                                & ul{
+                                    display: flex; 
                                     width: 100%;
+                                    & li:nth-of-type(1){
+                                        width: 15%;
+                                    }
+                                    & li:nth-of-type(2){
+                                        width: 65%;
+                                        text-align: left;
+                                    }
+                                    & li:nth-of-type(3){
+                                        width: 20%;
+                                    }
                                 }
                             }
-                        }
-                        & p:first-child::before{
-                            content: ""; display: block; width: 0px; height: 100%;
-                            background: #ffc9198b; position: absolute; left: -70px; top: 0px;
-                            z-index: -1;transition: .5s ease-out;
-                        }
-                        & p:not(:first-child){
-
-                            &:hover{
-                                color: #FFC300;
-                                & span{
-                                    color: #00A4EC;
-                                }
-                            }
-                            
-                            
                         }
                     }
-
-                    & > ul{
-                        color: #333;
-                        & > li{
-                            & ul{
-                                display: flex; 
-                                width: 100%;
-                                & li:nth-of-type(1){
-                                    width: 15%;
-                                }
-                                & li:nth-of-type(2){
-                                    width: 65%;
-                                    text-align: left;
-                                }
-                                & li:nth-of-type(3){
-                                    width: 20%;
-                                }
-                            }
+                    & .conRight{
+                        width: 40%; padding-left: 30px; 
+                        height: 85vh;
+                        position: relative;
+                        & p{
+                            margin: 86px 0 30px 0;
+                        }
+                        & img{border: 1px solid #333;}
+    
+                        &::before{
+                            content: ""; display: block; width: 1px; height: 100%;
+                            background: #ccc; position: absolute; left: 0; top: -30px;
                         }
                     }
                 }
-                & .conRight{
-                    width: 40%; padding-left: 30px; 
-                    height: 85vh;
-                    position: relative;
-                    & p{
-                        margin: 86px 0 30px 0;
-                    }
-                    & img{border: 1px solid #333;}
-
-                    &::before{
-                        content: ""; display: block; width: 1px; height: 100%;
-                        background: #ccc; position: absolute; left: 0; top: -30px;
-                    }
-                }
+                
             }
 
             // con2
@@ -341,11 +356,13 @@ img{border: 0; vertical-align: top;}
                 & .skillCon{
                     color: #333;
                     & .skillTabs{
-                        display: flex; gap: 50px; 
+                        display: flex; width: 50%;
                         // margin-bottom: 30px;
                         & li{
                             transition: .3s ease-out; cursor: pointer;
-                            padding: 0 10px; color: #ccc;
+                            width: 33.33%;
+                            padding: 5px 10px; 
+                            color: #ccc;
                         }
                         & .now{
                             color: #333; background: var(--pointYellow);
@@ -353,13 +370,14 @@ img{border: 0; vertical-align: top;}
                         }
                     }
                     & .skillsList{
+                        height: 500px; overflow-y: scroll;
                         & ul{
                             
                             & li{
 
                                 & dl{
                                     display: flex;
-                                    padding: 15px 0;
+                                    padding: 10px 0;
                                     border-top: dashed 1px #ccc;
 
                                     & dt{
@@ -378,7 +396,7 @@ img{border: 0; vertical-align: top;}
             // con4
             & .con4{
                 & .indent1{
-                    margin-bottom: 100px;
+                    
                     & ul:nth-of-type(1){
                         display: flex; gap: 30px;
 
@@ -388,6 +406,8 @@ img{border: 0; vertical-align: top;}
                         }
                     }
                 }
+                & > div:nth-of-type(2){margin-bottom: 50px;}
+                
             }
         }
     }
