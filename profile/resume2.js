@@ -10,11 +10,12 @@ function setTime(){
 
     let hour = newTime.getHours();
     let minute = newTime.getMinutes();
+    let minuteString = minute < 10 ? `0${minute}` : `${minute}`;
     let ampm = hour >= 12 ? '오후' : '오전';
     hour = hour % 12;
     hour = hour ? hour : 12; 
 
-    let writeTime = `${month}월 ${date}일 (${dayName[day]}) ${ampm} ${hour}:${minute}`;
+    let writeTime = `${month}월 ${date}일 (${dayName[day]}) ${ampm} ${hour}:${minuteString}`;
     dateBox.innerHTML = writeTime;
 }
 setInterval(setTime, 1000);

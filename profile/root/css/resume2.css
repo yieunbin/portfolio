@@ -70,7 +70,13 @@ img {
   color: #fff; }
 
 :root {
-  --pointYellow:rgba(255, 221, 0, 0.422); }
+  --pointYellow:rgba(255, 221, 0, 0.422);
+  --lightgray:#F3F3F3;
+  --lightgray2:#DDDDDD;
+  --appleRed:#FE5F57;
+  --appleYellow:#FEBC2E;
+  --appleGreen:#2BC83F;
+  --black:#0F0F0F; }
 
 #wrap header {
   display: flex;
@@ -117,7 +123,7 @@ img {
       line-height: 1.2rem; }
 #wrap article {
   width: 100%;
-  background: #DDDDDD;
+  background: var(--lightgray2);
   border-radius: 20px 20px 0 0;
   border: 1px solid #333;
   position: fixed;
@@ -137,11 +143,11 @@ img {
         height: 15px;
         border-radius: 50px; }
       #wrap article .contentTop .btns span:first-child {
-        background: #FE5F57; }
+        background: var(--appleRed); }
       #wrap article .contentTop .btns span:nth-of-type(2) {
-        background: #FEBC2E; }
+        background: var(--appleYellow); }
       #wrap article .contentTop .btns span:last-child {
-        background: #2BC83F; }
+        background: var(--appleGreen); }
     #wrap article .contentTop .subtit {
       background: #D2D2D2;
       border: 1px solid #999;
@@ -158,7 +164,7 @@ img {
   #wrap article nav {
     width: 20%;
     height: 100vw;
-    background: #F3F3F3;
+    background: var(--lightgray);
     float: left;
     padding: 20px 0;
     position: fixed;
@@ -167,7 +173,7 @@ img {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 30px; }
+      padding: 0 5%; }
       #wrap article nav > div div {
         display: flex;
         gap: 5px; }
@@ -184,11 +190,11 @@ img {
       font-weight: 600; }
       #wrap article nav .depth1 > li > a i {
         color: #999;
-        margin-left: 30px; }
+        margin-left: 5%; }
     #wrap article nav .depth1 > li .depth2 {
       width: 100%; }
       #wrap article nav .depth1 > li .depth2 i {
-        margin-left: 60px;
+        margin-left: 10%;
         color: #999; }
       #wrap article nav .depth1 > li .depth2 h4, #wrap article nav .depth1 > li .depth2 h5 {
         font-weight: 400;
@@ -202,7 +208,7 @@ img {
       #wrap article nav .depth1 > li .depth2 > li ul li a:hover {
         background: var(--pointYellow); }
       #wrap article nav .depth1 > li .depth2 > li ul li a img {
-        margin-left: 90px; }
+        margin-left: 20%; }
       #wrap article nav .depth1 > li .depth2 > li ul li .active {
         background: var(--pointYellow); }
     #wrap article nav .depth1 a {
@@ -370,5 +376,56 @@ img {
           background: none; }
     #wrap article section.info .con4 > div:nth-of-type(2) {
       margin-bottom: 50px; }
+    #wrap article section.info .portfolio {
+      padding: 100px 30px;
+      background: var(--black);
+      color: #fff;
+      font-weight: 300; }
+      #wrap article section.info .portfolio h3 {
+        font-size: 2rem;
+        font-weight: 400; }
+      #wrap article section.info .portfolio > ul {
+        counter-reset: pnumber;
+        margin-top: 50px; }
+        #wrap article section.info .portfolio > ul li {
+          display: flex;
+          gap: 3%;
+          padding: 50px 0;
+          border-top: 0.5px solid #ffffff7d; }
+          #wrap article section.info .portfolio > ul li dl {
+            width: 60%;
+            position: relative;
+            display: flex;
+            flex-direction: column; }
+            #wrap article section.info .portfolio > ul li dl dt {
+              position: relative;
+              font-size: 1.25rem;
+              margin-bottom: 20px; }
+              #wrap article section.info .portfolio > ul li dl dt::before {
+                content: "";
+                display: inline-block;
+                counter-increment: pnumber;
+                content: "0" counter(pnumber) ".";
+                color: var(--appleYellow);
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin-right: 5px; }
+            #wrap article section.info .portfolio > ul li dl dd a {
+              color: #fff;
+              transition: .3s ease-out;
+              display: inline-block;
+              font-weight: 500; }
+              #wrap article section.info .portfolio > ul li dl dd a:hover {
+                background: var(--appleYellow);
+                color: var(--black); }
+            #wrap article section.info .portfolio > ul li dl dd:nth-of-type(1) {
+              flex-grow: 1; }
+          #wrap article section.info .portfolio > ul li div {
+            width: 35%;
+            text-align: center; }
+            #wrap article section.info .portfolio > ul li div img {
+              width: 100%; }
+        #wrap article section.info .portfolio > ul li:nth-of-type(2) div img {
+          width: 40%; }
 
 /*# sourceMappingURL=resume2.css.map */
