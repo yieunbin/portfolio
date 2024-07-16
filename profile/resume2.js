@@ -20,6 +20,15 @@ function setTime(){
 }
 setInterval(setTime, 1000);
 
+// tooltip
+const langSpan = document.getElementById('lang');
+langSpan.addEventListener('mouseenter', function() {
+    this.textContent = '한';
+});
+langSpan.addEventListener('mouseleave', function() {
+    this.textContent = 'A';
+});
+
 // nav tab
 const navItems = document.querySelectorAll('.navTab li a');
 const tabMenu = document.querySelectorAll('.tabs ul li');
@@ -27,7 +36,25 @@ const contents = document.querySelectorAll('.con');
 const portfolioSection = document.querySelector('.portfolio');
 const infoSection = document.querySelector('.info');
 const navPfTab = document.querySelector('.pfTab li a');
+const resumeTitleText = document.getElementById('resumeTitleText');
 let windowHeight = window.innerHeight;
+
+resumeTitleText.addEventListener('click', function(){
+    tabMenu.forEach(function(tab) {
+        tab.querySelector('a').classList.remove('on');
+    });
+    tabMenu[0].querySelector('a').classList.add('on');
+    navPfTab.classList.remove('active');
+    navItems.forEach(item => item.classList.remove('active'));
+    navItems[0].classList.add('active');
+    contents.forEach(section => section.style.display = 'none');
+    contents[0].style.display = 'block';
+
+    infoSection.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 navItems.forEach(navItem => {
     navItem.addEventListener('click', function(e) {
