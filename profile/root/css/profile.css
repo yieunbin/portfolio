@@ -456,19 +456,19 @@ img {
         #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) {
           display: flex;
           gap: 10%; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child > dd {
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:nth-of-type(3) > dd {
             width: 40px;
             height: 40px;
             display: block;
             border-radius: 100px;
             margin-right: 10px; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child dd:nth-of-type(1) {
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:nth-of-type(3) dd:nth-of-type(1) {
             background: var(--nest_maincol1);
             float: left; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child dd:nth-of-type(2) {
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:nth-of-type(3) dd:nth-of-type(2) {
             background: var(--nest_maincol2);
             float: left; }
-          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:last-child dd:nth-of-type(3) {
+          #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:nth-of-type(3) dd:nth-of-type(3) {
             background: var(--nest_subcol);
             float: right; }
         #wrap #content section:not(.profile) .contain .text_box .links {
@@ -535,6 +535,43 @@ img {
       background: #BB996A; }
     #wrap #content section.rpweb .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) dl:last-child dd:nth-of-type(3) {
       background: #AC0000; }
+    #wrap #content section.resumeWeb .contain .img_box .gif {
+      top: 10%; }
+    #wrap #content section.resumeWeb .contain .text_box {
+      display: flex;
+      flex-direction: column; }
+      #wrap #content section.resumeWeb .contain .text_box .text {
+        flex-grow: 1; }
+      #wrap #content section.resumeWeb .contain .text_box .links {
+        justify-content: flex-start;
+        gap: 5%; }
+        #wrap #content section.resumeWeb .contain .text_box .links a {
+          border: 1px solid #fff;
+          width: 40%;
+          position: relative;
+          padding: 15px 30px;
+          font-size: 1.11rem;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          transition: .5s ease-out;
+          border-radius: 20px; }
+          #wrap #content section.resumeWeb .contain .text_box .links a p {
+            transform: translateX(0px);
+            transition: .5s ease-out; }
+          #wrap #content section.resumeWeb .contain .text_box .links a img {
+            transition: .5s ease-out;
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0; }
+          #wrap #content section.resumeWeb .contain .text_box .links a:hover p {
+            transform: translateX(-30px); }
+          #wrap #content section.resumeWeb .contain .text_box .links a:hover img {
+            right: 50px;
+            opacity: 1; }
     #wrap #content section.thanks {
       text-align: center; }
       #wrap #content section.thanks > p:nth-of-type(1) {
