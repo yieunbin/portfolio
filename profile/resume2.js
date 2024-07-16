@@ -37,7 +37,7 @@ navItems.forEach(navItem => {
 
         navPfTab.classList.remove('active');
         navItems.forEach(item => item.classList.remove('active'));
-        navItem.classList.add('active');
+        this.classList.add('active');
 
         contents.forEach(section => section.style.display = 'none');
         contents[index].style.display = 'block';
@@ -111,6 +111,8 @@ tabMenu.forEach(function(tab, index) {
                 tab.querySelector('a').classList.remove('on');
             });
             this.querySelector('a').classList.add('on');
+            navItems.forEach(item => item.classList.remove('active'));
+            navPfTab.classList.add('active');
             portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
