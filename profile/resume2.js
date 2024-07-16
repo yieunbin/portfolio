@@ -1,3 +1,24 @@
+// Time set
+function setTime(){
+    let dateBox = document.querySelector('.date');
+    let newTime = new Date();
+    let month = newTime.getMonth() + 1;
+    let date = newTime.getDate();
+    let day = newTime.getDay();
+    let dayName = ['일','월','화','수','목','금','토'];
+    //console.log(date);
+
+    let hour = newTime.getHours();
+    let minute = newTime.getMinutes();
+    let ampm = hour >= 12 ? '오후' : '오전';
+    hour = hour % 12;
+    hour = hour ? hour : 12; 
+
+    let writeTime = `${month}월 ${date}일 (${dayName[day]}) ${ampm} ${hour}:${minute}`;
+    dateBox.innerHTML = writeTime;
+}
+setInterval(setTime, 1000);
+
 // nav tab
 const navItems = document.querySelectorAll('.navTab li a');
 const tabMenu = document.querySelectorAll('.tabs ul li');
