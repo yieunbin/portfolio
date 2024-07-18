@@ -111,6 +111,9 @@ img {
     border-width: 10px;
     border-style: solid;
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent; }
+  #wrap .tooltip:hover {
+    opacity: 1;
+    bottom: -45px; }
 #wrap header {
   display: flex;
   justify-content: space-between;
@@ -138,7 +141,8 @@ img {
     #wrap header .headerLeft a {
       padding: 5px 10px;
       transition: .3s ease-out;
-      border-radius: 10px; }
+      border-radius: 10px;
+      position: relative; }
       #wrap header .headerLeft a:hover {
         color: #fff;
         background: #333; }
@@ -160,9 +164,6 @@ img {
         border-radius: 2px;
         margin: 2px 0 0 2px;
         transition: .5s ease-out; }
-      #wrap header .headerRight .battery:hover .tooltip {
-        opacity: 1;
-        bottom: -45px; }
       #wrap header .headerRight .battery:hover span:nth-of-type(1) {
         width: 23px;
         background: #f00; }
@@ -179,6 +180,9 @@ img {
       transform: scale(1.2); }
     #wrap header .headerRight .toggleImg:hover {
       transform: rotate(180deg); }
+    #wrap header .headerRight .date i {
+      font-size: 1.2rem;
+      padding-top: 4px; }
 #wrap article {
   width: 100%;
   background: var(--lightgray2);
@@ -241,20 +245,22 @@ img {
           border-radius: 50px;
           background: #333; }
     #wrap article nav > div:last-child {
-      margin: 400px 0 0 20px;
-      position: relative;
-      cursor: pointer; }
+      position: fixed;
+      left: -3%;
+      bottom: 50px;
+      cursor: pointer;
+      overflow: hidden; }
       #wrap article nav > div:last-child img {
         animation: rotateImg 3s infinite linear; }
       #wrap article nav > div:last-child a {
         position: relative;
-        left: -100px;
+        left: -50px;
         opacity: 0;
         transition: .3s ease-out; }
       #wrap article nav > div:last-child:hover img {
         animation-play-state: paused; }
       #wrap article nav > div:last-child:hover a {
-        left: -70px;
+        left: 20px;
         opacity: 1; }
     #wrap article nav .depth1 > li > a {
       display: flex;

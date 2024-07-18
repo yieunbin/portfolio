@@ -11,7 +11,7 @@ function setTime(){
     let hour = newTime.getHours();
     let minute = newTime.getMinutes();
     let minuteString = minute < 10 ? `0${minute}` : `${minute}`;
-    let ampm = hour >= 12 ? '오후' : '오전';
+    let ampm = hour >= 12 ? `<i class="fa-solid fa-moon"></i>` : `<i class="fa-solid fa-sun"></i>`;
     hour = hour % 12;
     hour = hour ? hour : 12; 
 
@@ -37,7 +37,6 @@ const portfolioSection = document.querySelector('.portfolio');
 const infoSection = document.querySelector('.info');
 const navPfTab = document.querySelector('.pfTab li a');
 const resumeTitleText = document.getElementById('resumeTitleText');
-let windowHeight = window.innerHeight;
 
 resumeTitleText.addEventListener('click', function(){
     tabMenu.forEach(function(tab) {
@@ -92,17 +91,21 @@ navPfTab.addEventListener('click', function(e){
 });
 
 
-// tab menu
+// resizing 
+let windowHeight = window.innerHeight;
 contents.forEach(content => {
     content.style.height = windowHeight + 'px';
 });
+document.querySelector('nav').style.height = windowHeight + 'px';
 window.addEventListener('resize', function() {
     windowHeight = window.innerHeight;
     contents.forEach(content => {
         content.style.height = windowHeight + 'px';
     });
+    document.querySelector('nav').style.height = windowHeight + 'px';
 });
 
+// tab
 tabMenu[0].querySelector('a').classList.add('on');
 contents[0].style.display = 'block';
 
@@ -159,14 +162,8 @@ fetch('./skill.json')
     })
     .then(function(data) {
         skillData = data;
-        const skills = data.skills;
-        const designSkill = data.designSkill;
-        const etcSkill = data.etcSkill;
-        
-        const skillsName = document.getElementsByClassName('skillsName');
-        const skillslist = document.getElementsByClassName('list');
-
         const tabs = document.querySelectorAll('.skillTabs li');
+
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
                 const skillType = this.getAttribute('data-skill-type');

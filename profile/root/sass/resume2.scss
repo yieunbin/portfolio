@@ -68,6 +68,7 @@ img{border: 0; vertical-align: top;}
         border-style: solid;
         border-color: $top $right $bottom $left;
     }
+    &:hover{opacity: 1; bottom: -45px;}
 }
 @keyframes rotateImg{
     0%{ transform: rotate(0deg);}
@@ -101,7 +102,7 @@ img{border: 0; vertical-align: top;}
             & a{
                 padding: 5px 10px;
                 transition: .3s ease-out;
-                border-radius: 10px;
+                border-radius: 10px; position: relative;
 
                 &:hover{
                     color: #fff; background: #333;
@@ -122,7 +123,6 @@ img{border: 0; vertical-align: top;}
                 }
 
                 &:hover{
-                    & .tooltip{opacity: 1; bottom: -45px;}
                     & span:nth-of-type(1){
                         width: 23px; background: #f00;
                     }
@@ -143,6 +143,11 @@ img{border: 0; vertical-align: top;}
             & .toggleImg{
                 &:hover{
                     transform: rotate(180deg);
+                }
+            }
+            & .date{
+                & i{
+                    font-size: 1.2rem; padding-top: 4px;
                 }
             }
         }
@@ -205,14 +210,15 @@ img{border: 0; vertical-align: top;}
                 }
             }
             & > div:last-child{
-                margin: 400px 0 0 20px;
-                position: relative; cursor: pointer;
+                // margin: 400px 0 0 20px;
+                position: fixed; left: -3%; bottom: 50px; 
+                cursor: pointer; overflow: hidden;
 
                 & img{
                     animation: rotateImg 3s infinite linear;
                 }
                 & a{
-                    position: relative; left: -100px;
+                    position: relative; left: -50px;
                     opacity: 0;
                     transition: .3s ease-out;
                 }
@@ -222,7 +228,7 @@ img{border: 0; vertical-align: top;}
                         animation-play-state: paused;
                     }
                     & a{
-                        left: -70px; opacity: 1;
+                        left: 20px; opacity: 1;
                     }
                 }
             }

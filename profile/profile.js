@@ -145,7 +145,6 @@ $(document).ready(function(){
 
     $('section').on('wheel', function(event) {
         event.preventDefault();
-    
         clearTimeout(scrollTimeout);
     
         scrollTimeout = setTimeout(() => {
