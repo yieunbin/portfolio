@@ -114,7 +114,8 @@ img {
   --nest_maincol2:#3B1D0C;
   --nest_subcol:#B0744D;
   --uni_maincol:#0368D9;
-  --uni_subcol:#152C75; }
+  --uni_subcol:#152C75;
+  --appleYellow:#FEBC2E; }
 
 #wrap {
   width: 100%;
@@ -471,6 +472,8 @@ img {
           #wrap #content section:not(.profile) .contain .text_box .text > ul:nth-of-type(2) > li:nth-of-type(1) > dl:nth-of-type(3) dd:nth-of-type(3) {
             background: var(--nest_subcol);
             float: right; }
+        #wrap #content section:not(.profile) .contain .text_box .text:hover span {
+          color: var(--appleYellow); }
         #wrap #content section:not(.profile) .contain .text_box .links {
           overflow: hidden;
           position: relative;
