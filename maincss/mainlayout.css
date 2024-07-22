@@ -53,7 +53,8 @@ background: #b1a79f;}
 
 .dock .ps{ margin-right:15px; margin-top: -5px; cursor:pointer; 
     display:block; float:left; width:70px; height:40px;
-    float: left;
+    float: left; 
+    transform: translate(0,0,0);
     -webkit-transform: translate(0,0,0);
     }
 

@@ -1,6 +1,6 @@
 // Time set
 function setTime(){
-    let dateBox = document.querySelector('.date');
+    let dateBox = document.querySelector('.date') as HTMLElement;
     let newTime = new Date();
     let month = newTime.getMonth() + 1;
     let date = newTime.getDate();
@@ -21,7 +21,7 @@ function setTime(){
 setInterval(setTime, 1000);
 
 // tooltip
-const langSpan = document.getElementById('lang');
+const langSpan = document.getElementById('lang')as HTMLElement;
 langSpan.addEventListener('mouseenter', function() {
     this.textContent = '한';
 });
@@ -30,19 +30,19 @@ langSpan.addEventListener('mouseleave', function() {
 });
 
 // nav tab
-const navItems = document.querySelectorAll('.navTab li a');
-const tabMenu = document.querySelectorAll('.tabs ul li');
-const contents = document.querySelectorAll('.con');
-const portfolioSection = document.querySelector('.portfolio');
-const infoSection = document.querySelector('.info');
-const navPfTab = document.querySelector('.pfTab li a');
-const resumeTitleText = document.getElementById('resumeTitleText');
+const navItems = document.querySelectorAll('.navTab li a') as NodeListOf<HTMLElement>;
+const tabMenu = document.querySelectorAll('.tabs ul li') as NodeListOf<HTMLElement>;
+const contents = document.querySelectorAll('.con') as NodeListOf<HTMLElement>;
+const portfolioSection = document.querySelector('.portfolio') as HTMLElement;;
+const infoSection = document.querySelector('.info') as HTMLElement;;
+const navPfTab = document.querySelector('.pfTab li a')as HTMLElement;
+const resumeTitleText = document.getElementById('resumeTitleText') as HTMLElement;;
 
 resumeTitleText.addEventListener('click', function(){
     tabMenu.forEach(function(tab) {
-        tab.querySelector('a').classList.remove('on');
+        (tab.querySelector('a') as HTMLElement).classList.remove('on');
     });
-    tabMenu[0].querySelector('a').classList.add('on');
+    (tabMenu[0].querySelector('a')as HTMLElement).classList.add('on');
     navPfTab.classList.remove('active');
     navItems.forEach(item => item.classList.remove('active'));
     navItems[0].classList.add('active');
@@ -59,7 +59,7 @@ navItems.forEach(navItem => {
     navItem.addEventListener('click', function(e) {
         e.preventDefault();
 
-        const index = Array.from(navItem.parentElement.parentElement.children).indexOf(navItem.parentElement);
+        const index = Array.from(navItem.parentElement!.parentElement!.children).indexOf(navItem.parentElement!);
 
         navPfTab.classList.remove('active');
         navItems.forEach(item => item.classList.remove('active'));
@@ -73,9 +73,9 @@ navItems.forEach(navItem => {
             behavior: 'smooth'
         });
 
-        const tabMenu = document.querySelectorAll('.tabs ul li'); 
-        tabMenu.forEach(tab => tab.querySelector('a').classList.remove('on'));
-        tabMenu[index].querySelector('a').classList.add('on');
+        const tabMenu = document.querySelectorAll('.tabs ul li') as NodeListOf<HTMLElement>; 
+        tabMenu.forEach(tab => (tab.querySelector('a') as HTMLElement).classList.remove('on'));
+        (tabMenu[index].querySelector('a') as HTMLElement).classList.add('on');
     });
 });
 navPfTab.addEventListener('click', function(e){
@@ -83,9 +83,9 @@ navPfTab.addEventListener('click', function(e){
     navItems.forEach(item => item.classList.remove('active'));
     this.classList.add('active');
     tabMenu.forEach(function(tab) {
-        tab.querySelector('a').classList.remove('on');
+        (tab.querySelector('a') as HTMLElement).classList.remove('on');
     });
-    tabMenu[4].querySelector('a').classList.add('on');
+    (tabMenu[4].querySelector('a') as HTMLElement).classList.add('on');
     
     portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
@@ -96,17 +96,17 @@ let windowHeight = window.innerHeight;
 contents.forEach(content => {
     content.style.height = windowHeight + 'px';
 });
-document.querySelector('nav').style.height = windowHeight + 'px';
+(document.querySelector('nav') as HTMLElement).style.height = windowHeight + 'px';
 window.addEventListener('resize', function() {
     windowHeight = window.innerHeight;
     contents.forEach(content => {
         content.style.height = windowHeight + 'px';
     });
-    document.querySelector('nav').style.height = windowHeight + 'px';
+    (document.querySelector('nav') as HTMLElement).style.height = windowHeight + 'px';
 });
 
 // tab
-tabMenu[0].querySelector('a').classList.add('on');
+(tabMenu[0].querySelector('a') as HTMLElement).classList.add('on');
 contents[0].style.display = 'block';
 
 tabMenu.forEach(function(tab, index) {
@@ -115,9 +115,9 @@ tabMenu.forEach(function(tab, index) {
 
         if (index < contents.length) {
             tabMenu.forEach(function(tab) {
-                tab.querySelector('a').classList.remove('on');
+                (tab.querySelector('a') as HTMLElement).classList.remove('on');
             });
-            this.querySelector('a').classList.add('on');
+            (this.querySelector('a') as HTMLElement).classList.add('on');
 
             contents.forEach(function(content) {
                 content.style.display = 'none';
@@ -138,9 +138,9 @@ tabMenu.forEach(function(tab, index) {
             });
         } else {
             tabMenu.forEach(function(tab) {
-                tab.querySelector('a').classList.remove('on');
+                (tab.querySelector('a') as HTMLElement).classList.remove('on');
             });
-            this.querySelector('a').classList.add('on');
+            (this.querySelector('a') as HTMLElement).classList.add('on');
             navItems.forEach(item => item.classList.remove('active'));
             navPfTab.classList.add('active');
             portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -151,7 +151,14 @@ tabMenu.forEach(function(tab, index) {
 
 
 // skill con_con3
-let skillData;
+interface Skill {
+    skillName: string;
+    skillTxt: string;
+}
+interface SkillData {
+    [key: string]: Skill[];
+}
+let skillData: SkillData;
 
 fetch('./skill.json')
     .then(function(response) {
@@ -162,20 +169,20 @@ fetch('./skill.json')
     })
     .then(function(data) {
         skillData = data;
-        const tabs = document.querySelectorAll('.skillTabs li');
+        const tabs = document.querySelectorAll('.skillTabs li') as NodeListOf<HTMLElement>;
 
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
-                const skillType = this.getAttribute('data-skill-type');
+                const skillType = this.getAttribute('data-skill-type')|| 'default';
                 tabs.forEach(t => t.classList.remove('now'));
                 this.classList.add('now');
                 updateSkillsList(skillType);
             });
         });
 
-        function updateSkillsList(skillType) {
+        function updateSkillsList(skillType: string) {
             const skills = skillData[skillType];
-            const skillsList = document.getElementById('skillsList');
+            const skillsList = document.getElementById('skillsList') as HTMLElement;
             skillsList.innerHTML = '';
 
             for (let i = 0; i < skills.length; i++) {
