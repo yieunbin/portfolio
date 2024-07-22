@@ -171,15 +171,6 @@ fetch('./skill.json')
         skillData = data;
         const tabs = document.querySelectorAll('.skillTabs li') as NodeListOf<HTMLElement>;
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const skillType = this.getAttribute('data-skill-type')|| 'default';
-                tabs.forEach(t => t.classList.remove('now'));
-                this.classList.add('now');
-                updateSkillsList(skillType);
-            });
-        });
-
         function updateSkillsList(skillType: string) {
             const skills = skillData[skillType];
             const skillsList = document.getElementById('skillsList') as HTMLElement;
@@ -202,6 +193,15 @@ fetch('./skill.json')
             }
         }
         updateSkillsList('skills');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const skillType = this.getAttribute('data-skill-type')|| 'default';
+                tabs.forEach(t => t.classList.remove('now'));
+                this.classList.add('now');
+                updateSkillsList(skillType);
+            });
+        });
     })
     .catch(function(error) {
         console.error('Error fetching data:', error);
